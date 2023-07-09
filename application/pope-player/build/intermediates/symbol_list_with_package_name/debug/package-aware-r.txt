@@ -4391,6 +4391,7 @@ drawable round_black_transparent_50
 drawable round_cast_24
 drawable round_folder_24
 drawable round_format_list_numbered_24
+drawable round_info_24
 drawable round_local_movies_24
 drawable round_more_horiz_24
 drawable round_music_video_24
@@ -5537,6 +5538,9 @@ id preview_playing
 id previous
 id primary
 id primary_textview
+id privacy_container
+id privacy_icon
+id privacy_text
 id progress
 id progressBar
 id progressBar2
@@ -7436,6 +7440,7 @@ string previous
 string previous_color
 string previous_next_song
 string primary_color
+string privacy_policy
 string produced_by
 string purchase
 string quit

@@ -387,6 +387,10 @@ object UiTools {
         }
 
 
+        v.findViewById<View>(R.id.privacy_container).setOnClickListener {
+            activity.openLinkIfPossible("https://dewords.org/privacy-policy-pp")
+        }
+
         v.findViewById<View>(R.id.about_sources_container).setOnClickListener {
             activity.openLinkIfPossible("https://github.com/ndscor/POPEPLAYER")
         }

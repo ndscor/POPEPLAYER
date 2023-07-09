@@ -4390,6 +4390,7 @@ int drawable round_black_transparent_50 0x7f08033e
 int drawable round_cast_24 0x7f08033f
 int drawable round_folder_24 0x7f080340
 int drawable round_format_list_numbered_24 0x7f080341
+int drawable round_info_24 0x7f080389
 int drawable round_local_movies_24 0x7f080342
 int drawable round_more_horiz_24 0x7f080343
 int drawable round_music_video_24 0x7f080344
@@ -5536,6 +5537,9 @@ int id preview_playing 0x7f0a0425
 int id previous 0x7f0a0426
 int id primary 0x7f0a0427
 int id primary_textview 0x7f0a0428
+int id privacy_container 0x7f0a0616
+int id privacy_icon 0x7f0a0617
+int id privacy_text 0x7f0a0618
 int id progress 0x7f0a0429
 int id progressBar 0x7f0a042a
 int id progressBar2 0x7f0a042b
@@ -7435,6 +7439,7 @@ int string previous 0x7f13034e
 int string previous_color 0x7f13034f
 int string previous_next_song 0x7f130350
 int string primary_color 0x7f130351
+int string privacy_policy 0x7f13052e
 int string produced_by 0x7f130352
 int string purchase 0x7f130353
 int string quit 0x7f130354
