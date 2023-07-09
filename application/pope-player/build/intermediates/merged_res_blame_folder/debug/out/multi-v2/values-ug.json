@@ -1,0 +1,19 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.dewords.pope.pope-player-mergeDebugResources-54:/values-ug/values-ug.xml",
+            "map": [
+                {
+                    "source": "/Users/dewords/Desktop/POPE PLAYER/medialibrary/build/intermediates/packaged_res/debug/values-ug/values-ug.xml",
+                    "from": {
+                        "startLines": "2,3,4",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "55,110,169",
+                        "endColumns": "54,58,53",
+                        "endOffsets": "105,164,218"
+                    }
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,2425 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.dewords.pope"
+4    android:installLocation="auto"
+5    android:versionCode="1001"
+6    android:versionName="1.0.0" >
+7
+8    <uses-sdk
+8-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:5:5-141
+9        android:minSdkVersion="23"
+9-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:5:5-141
+10        android:targetSdkVersion="33" />
+10-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:5:5-141
+11
+12    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
+12-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:7:5-76
+12-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:7:22-73
+13    <uses-permission
+13-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:8:5-10:37
+14        android:name="android.permission.READ_LOGS"
+14-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:9:9-52
+15        android:maxSdkVersion="18" /> <!-- android:maxSdkVersion="15" -->
+15-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:10:9-35
+16    <!-- vibration on audioplayer buttons long press -->
+17    <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE" />
+17-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:12:5-82
+17-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:12:22-79
+18    <uses-permission android:name="android.permission.VIBRATE" /> <!-- used for setting ringtone -->
+18-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:13:5-65
+18-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:13:22-63
+19    <uses-permission android:name="android.permission.WRITE_SETTINGS" /> <!-- STORAGE -->
+19-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:14:5-72
+19-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:14:22-70
+20    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /> <!-- Internet -->
+20-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:15:5-80
+20-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:15:22-78
+21    <uses-permission android:name="android.permission.INTERNET" /> <!-- Launch recommendations service once device is booted -->
+21-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:16:5-66
+21-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:16:22-64
+22    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" /> <!-- Audio search on TV -->
+22-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:17:5-80
+22-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:17:22-78
+23    <uses-permission android:name="android.permission.RECORD_AUDIO" /> <!-- USe foreground services -->
+23-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:18:5-70
+23-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:18:22-68
+24    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" /> <!-- normal -->
+24-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:19:5-76
+24-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:19:22-74
+25    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+25-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:20:5-78
+25-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:20:22-76
+26    <uses-permission android:name="android.permission.WAKE_LOCK" />
+26-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:21:5-67
+26-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:21:22-65
+27    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+27-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:22:5-79
+27-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:22:22-77
+28    <uses-permission android:name="android.permission.BLUETOOTH" />
+28-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:23:5-67
+28-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:23:22-65
+29    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+29-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:24:5-77
+29-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:24:22-75
+30    <uses-permission android:name="com.dewords.pope.permission.READ_EXTENSION_DATA" />
+30-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:25:5-86
+30-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:25:22-84
+31    <uses-permission android:name="com.android.providers.tv.permission.READ_EPG_DATA" />
+31-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:26:5-88
+31-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:26:22-86
+32    <uses-permission android:name="com.android.providers.tv.permission.WRITE_EPG_DATA" />
+32-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:27:5-89
+32-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:27:22-87
+33    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+33-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:28:5-76
+33-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:28:22-74
+34
+35    <!-- Custom permissions for our content provider -->
+36    <permission
+37        android:name="com.dewords.pope.MEDIA"
+37-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:32:9-46
+38        android:protectionLevel="signature" />
+38-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:33:9-44
+39
+40    <!-- Declare permissions used by our com.dewords.pope.app -->
+41    <uses-permission android:name="com.dewords.pope.MEDIA" />
+41-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:36:22-59
+42
+43    <uses-feature
+43-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:38:5-40:35
+44        android:name="android.software.leanback"
+44-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:39:9-49
+45        android:required="false" />
+45-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:40:9-33
+46    <uses-feature
+46-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:41:5-43:35
+47        android:name="android.hardware.touchscreen"
+47-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:42:9-52
+48        android:required="false" />
+48-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:43:9-33
+49    <uses-feature
+49-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:44:5-46:35
+50        android:name="android.hardware.microphone"
+50-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:45:9-51
+51        android:required="false" />
+51-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:46:9-33
+52    <uses-feature
+52-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:47:5-49:35
+53        android:name="android.hardware.bluetooth"
+53-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:48:9-50
+54        android:required="false" />
+54-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:49:9-33
+55
+56    <!-- Enable VLC in Samsung multiwindow mode -->
+57    <meta-data
+57-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:55:9-57:35
+58        android:name="com.samsung.android.sdk.multiwindow.enable"
+58-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:56:13-70
+59        android:value="true" />
+59-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:57:13-33
+60    <!-- Enable VLC in LG split window mode -->
+61    <meta-data
+61-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:59:9-61:35
+62        android:name="com.lge.support.SPLIT_WINDOW"
+62-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:60:13-56
+63        android:value="true" />
+63-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:61:13-33
+64    <!-- Android auto -->
+65    <meta-data
+65-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:63:9-65:58
+66        android:name="com.google.android.gms.car.application"
+66-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:64:13-66
+67        android:resource="@xml/automotive_app_desc" />
+67-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:65:13-56
+68    <meta-data
+68-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:66:9-68:63
+69        android:name="androidx.car.app.TintableAttributionIcon"
+69-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:67:13-68
+70        android:resource="@drawable/ic_auto_notif_audio" />
+70-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:68:13-61
+71    <meta-data
+71-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:69:9-71:55
+72        android:name="com.google.android.gms.car.notification.SmallIcon"
+72-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:70:13-77
+73        android:resource="@mipmap/pope_launcher" />
+73-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:71:13-53
+74    <meta-data
+74-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:72:9-74:34
+75        android:name="android.max_aspect"
+75-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:73:13-46
+76        android:value="3.0" />
+76-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:74:13-32
+77    <meta-data
+77-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:75:9-77:36
+78        android:name="android.allow_multiple_resumed_activities"
+78-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:76:13-69
+79        android:value="true" />
+79-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:77:13-33
+80
+81    <application
+81-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:79:5-1211:19
+82        android:name="com.dewords.pope.VLCApplication"
+82-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:80:9-39
+83        android:allowBackup="true"
+83-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:81:9-35
+84        android:appCategory="audio"
+84-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:82:9-36
+85        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+85-->[androidx.core:core:1.8.0] /Users/dewords/.gradle/caches/transforms-3/439b751538b36bb9cecec956d6e57d77/transformed/core-1.8.0/AndroidManifest.xml:24:18-86
+86        android:banner="@mipmap/pope_banner"
+86-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:83:9-45
+87        android:debuggable="true"
+88        android:extractNativeLibs="false"
+89        android:fullBackupContent="@xml/backup_rules"
+89-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:84:9-54
+90        android:hardwareAccelerated="true"
+90-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:85:9-43
+91        android:icon="@mipmap/pope_launcher"
+91-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:86:9-45
+92        android:label="@string/app_name"
+92-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:87:9-41
+93        android:largeHeap="true"
+93-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:88:9-33
+94        android:logo="@mipmap/pope_launcher"
+94-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:89:9-45
+95        android:requestLegacyExternalStorage="true"
+95-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:94:9-52
+96        android:roundIcon="@mipmap/pope_launcher"
+96-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:90:9-50
+97        android:supportsRtl="true"
+97-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:91:9-35
+98        android:testOnly="true"
+99        android:theme="@style/Theme.VLC.Transparent"
+99-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:92:9-53
+100        android:usesCleartextTraffic="true" >
+100-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:93:9-44
+101        <activity
+101-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:97:9-964:20
+102            android:name="com.dewords.pope.StartActivity"
+102-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:98:13-42
+103            android:exported="true"
+103-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:100:17-40
+104            android:theme="@style/Theme.VLC.Transparent.NoUI" >
+104-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:99:13-62
+105            <intent-filter>
+105-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:101:13-106:29
+106                <action android:name="android.intent.action.MAIN" />
+106-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:102:17-68
+106-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:102:25-66
+107
+108                <category android:name="android.intent.category.LAUNCHER" />
+108-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:104:17-76
+108-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:104:27-74
+109                <category android:name="android.intent.category.LEANBACK_LAUNCHER" />
+109-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:105:17-85
+109-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:105:27-83
+110            </intent-filter>
+111
+112            <meta-data
+112-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:108:13-110:52
+113                android:name="android.app.shortcuts"
+113-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:109:17-53
+114                android:resource="@xml/shortcuts" />
+114-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:110:17-50
+115
+116            <intent-filter>
+116-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:112:13-121:29
+117                <action android:name="android.intent.action.VIEW" />
+117-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:113:17-68
+117-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:113:25-66
+118
+119                <category android:name="android.intent.category.BROWSABLE" />
+119-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:115:17-77
+119-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:115:27-75
+120                <category android:name="android.intent.category.DEFAULT" />
+120-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:116:17-75
+120-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:116:27-73
+121
+122                <data
+123                    android:host="com.dewords.pope"
+123-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:119:21-52
+124                    android:scheme="vlclauncher" />
+124-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:120:21-49
+125            </intent-filter>
+126
+127            <!-- This filter captures protocols without type info -->
+128            <intent-filter>
+128-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:124:13-141:29
+129                <action android:name="android.intent.action.VIEW" />
+129-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:113:17-68
+129-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:113:25-66
+130
+131                <category android:name="android.intent.category.DEFAULT" />
+131-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:116:17-75
+131-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:116:27-73
+132                <category android:name="android.intent.category.BROWSABLE" />
+132-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:115:17-77
+132-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:115:27-75
+133
+134                <data android:scheme="rtmp" />
+134-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:120:21-49
+135                <data android:scheme="rtmpe" />
+135-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:120:21-49
+136                <data android:scheme="rtmps" />
+136-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:120:21-49
+137                <data android:scheme="rtp" />
+137-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:120:21-49
+138                <data android:scheme="rtsp" />
+138-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:120:21-49
+139                <data android:scheme="mms" />
+139-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:120:21-49
+140                <data android:scheme="mmsh" />
+140-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:120:21-49
+141                <data android:scheme="icyx" />
+141-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:120:21-49
+142                <data android:scheme="httplive" />
+142-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:120:21-49
+143                <data android:scheme="udp" />
+143-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:120:21-49
+144                <data android:scheme="vlc" />
+144-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:120:21-49
+145            </intent-filter>
+146            <!-- This filter captures protocols with type info -->
+147            <intent-filter>
+147-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:143:13-162:29
+148                <action android:name="android.intent.action.VIEW" />
+148-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:113:17-68
+148-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:113:25-66
+149
+150                <category android:name="android.intent.category.DEFAULT" />
+150-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:116:17-75
+150-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:116:27-73
+151                <category android:name="android.intent.category.BROWSABLE" />
+151-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:115:17-77
+151-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:115:27-75
+152
+153                <data android:mimeType="video/*" />
+153-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:149:23-49
+154                <data android:mimeType="audio/*" />
+154-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:149:23-49
+155                <data android:scheme="rtmp" />
+155-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:120:21-49
+156                <data android:scheme="rtmpe" />
+156-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:120:21-49
+157                <data android:scheme="rtmps" />
+157-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:120:21-49
+158                <data android:scheme="rtp" />
+158-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:120:21-49
+159                <data android:scheme="rtsp" />
+159-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:120:21-49
+160                <data android:scheme="mms" />
+160-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:120:21-49
+161                <data android:scheme="mmsh" />
+161-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:120:21-49
+162                <data android:scheme="icyx" />
+162-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:120:21-49
+163                <data android:scheme="httplive" />
+163-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:120:21-49
+164                <data android:scheme="udp" />
+164-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:120:21-49
+165                <data android:scheme="vlc" />
+165-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:120:21-49
+166            </intent-filter>
+167            <intent-filter>
+167-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:163:13-203:29
+168                <action android:name="android.intent.action.VIEW" />
+168-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:113:17-68
+168-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:113:25-66
+169
+170                <category android:name="android.intent.category.DEFAULT" />
+170-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:116:17-75
+170-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:116:27-73
+171                <category android:name="android.intent.category.BROWSABLE" />
+171-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:115:17-77
+171-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:115:27-75
+172
+173                <data android:scheme="" />
+173-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:120:21-49
+174                <data android:scheme="file" />
+174-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:120:21-49
+175                <data android:scheme="ftp" />
+175-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:120:21-49
+176                <data android:scheme="ftps" />
+176-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:120:21-49
+177                <data android:scheme="sftp" />
+177-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:120:21-49
+178                <data android:scheme="content" />
+178-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:120:21-49
+179                <data android:scheme="http" />
+179-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:120:21-49
+180                <data android:scheme="https" />
+180-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:120:21-49
+181                <data android:scheme="smb" />
+181-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:120:21-49
+182                <data android:mimeType="video/*" />
+182-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:149:23-49
+183                <data android:mimeType="audio/*" />
+183-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:149:23-49
+184                <data android:mimeType="*/rmvb" />
+184-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:149:23-49
+185                <data android:mimeType="*/avi" />
+185-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:149:23-49
+186                <data android:mimeType="*/mkv" />
+186-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:149:23-49
+187                <data android:mimeType="application/3gpp*" />
+187-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:149:23-49
+188                <data android:mimeType="application/mp4" />
+188-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:149:23-49
+189                <data android:mimeType="application/mpeg*" />
+189-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:149:23-49
+190                <data android:mimeType="application/ogg" />
+190-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:149:23-49
+191                <data android:mimeType="application/sdp" />
+191-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:149:23-49
+192                <data android:mimeType="application/vnd.3gp*" />
+192-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:149:23-49
+193                <data android:mimeType="application/vnd.apple.mpegurl" />
+193-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:149:23-49
+194                <data android:mimeType="application/vnd.dvd*" />
+194-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:149:23-49
+195                <data android:mimeType="application/vnd.dolby*" />
+195-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:149:23-49
+196                <data android:mimeType="application/vnd.rn-realmedia*" />
+196-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:149:23-49
+197                <data android:mimeType="application/x-iso9660-image" />
+197-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:149:23-49
+198                <data android:mimeType="application/x-extension-mp4" />
+198-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:149:23-49
+199                <data android:mimeType="application/x-flac" />
+199-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:149:23-49
+200                <data android:mimeType="application/x-matroska" />
+200-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:149:23-49
+201                <data android:mimeType="application/x-mpegURL" />
+201-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:149:23-49
+202                <data android:mimeType="application/x-ogg" />
+202-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:149:23-49
+203                <data android:mimeType="application/x-quicktimeplayer" />
+203-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:149:23-49
+204                <data android:mimeType="application/x-shockwave-flash" />
+204-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:149:23-49
+205                <data android:mimeType="application/xspf+xml" />
+205-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:149:23-49
+206                <data android:mimeType="misc/ultravox" />
+206-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:149:23-49
+207            </intent-filter>
+208            <intent-filter>
+208-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:204:13-937:29
+209                <action android:name="android.intent.action.VIEW" />
+209-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:113:17-68
+209-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:113:25-66
+210
+211                <category android:name="android.intent.category.DEFAULT" />
+211-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:116:17-75
+211-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:116:27-73
+212                <category android:name="android.intent.category.BROWSABLE" />
+212-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:115:17-77
+212-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:115:27-75
+213
+214                <data android:scheme="" />
+214-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:120:21-49
+215                <data android:scheme="file" />
+215-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:120:21-49
+216                <data android:scheme="ftp" />
+216-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:120:21-49
+217                <data android:scheme="content" />
+217-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:120:21-49
+218                <data android:scheme="http" />
+218-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:120:21-49
+219                <data android:scheme="https" />
+219-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:120:21-49
+220                <data android:host="*" />
+220-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:119:21-52
+221
+222                <!-- video -->
+223
+224                <data android:pathPattern=".*.3G2" />
+224-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+225                <data android:pathPattern=".*.3g2" />
+225-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+226                <data android:pathPattern=".*\\..*\\..*\\.3G2" />
+226-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+227                <data android:pathPattern=".*\\..*\\..*\\.3g2" />
+227-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+228                <data android:pathPattern=".*\\..*\\.3G2" />
+228-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+229                <data android:pathPattern=".*\\..*\\.3g2" />
+229-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+230                <data android:pathPattern=".*.3GP" />
+230-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+231                <data android:pathPattern=".*.3gp" />
+231-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+232                <data android:pathPattern=".*\\..*\\..*\\.3GP" />
+232-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+233                <data android:pathPattern=".*\\..*\\..*\\.3gp" />
+233-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+234                <data android:pathPattern=".*\\..*\\.3GP" />
+234-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+235                <data android:pathPattern=".*\\..*\\.3gp" />
+235-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+236                <data android:pathPattern=".*.3GP2" />
+236-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+237                <data android:pathPattern=".*.3gp2" />
+237-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+238                <data android:pathPattern=".*\\..*\\..*\\.3GP2" />
+238-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+239                <data android:pathPattern=".*\\..*\\..*\\.3gp2" />
+239-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+240                <data android:pathPattern=".*\\..*\\.3GP2" />
+240-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+241                <data android:pathPattern=".*\\..*\\.3gp2" />
+241-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+242                <data android:pathPattern=".*.3GPP" />
+242-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+243                <data android:pathPattern=".*.3gpp" />
+243-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+244                <data android:pathPattern=".*\\..*\\..*\\.3GPP" />
+244-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+245                <data android:pathPattern=".*\\..*\\..*\\.3gpp" />
+245-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+246                <data android:pathPattern=".*\\..*\\.3GPP" />
+246-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+247                <data android:pathPattern=".*\\..*\\.3gpp" />
+247-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+248                <data android:pathPattern=".*.AMV" />
+248-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+249                <data android:pathPattern=".*.amv" />
+249-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+250                <data android:pathPattern=".*\\..*\\..*\\.AMV" />
+250-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+251                <data android:pathPattern=".*\\..*\\..*\\.amv" />
+251-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+252                <data android:pathPattern=".*\\..*\\.AMV" />
+252-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+253                <data android:pathPattern=".*\\..*\\.amv" />
+253-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+254                <data android:pathPattern=".*.ASF" />
+254-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+255                <data android:pathPattern=".*.asf" />
+255-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+256                <data android:pathPattern=".*\\..*\\..*\\.ASF" />
+256-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+257                <data android:pathPattern=".*\\..*\\..*\\.asf" />
+257-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+258                <data android:pathPattern=".*\\..*\\.ASF" />
+258-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+259                <data android:pathPattern=".*\\..*\\.asf" />
+259-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+260                <data android:pathPattern=".*.AVI" />
+260-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+261                <data android:pathPattern=".*.avi" />
+261-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+262                <data android:pathPattern=".*\\..*\\..*\\.AVI" />
+262-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+263                <data android:pathPattern=".*\\..*\\..*\\.avi" />
+263-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+264                <data android:pathPattern=".*\\..*\\.AVI" />
+264-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+265                <data android:pathPattern=".*\\..*\\.avi" />
+265-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+266                <data android:pathPattern=".*.BIK" />
+266-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+267                <data android:pathPattern=".*.bik" />
+267-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+268                <data android:pathPattern=".*\\..*\\..*\\.BIK" />
+268-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+269                <data android:pathPattern=".*\\..*\\..*\\.bik" />
+269-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+270                <data android:pathPattern=".*\\..*\\.BIK" />
+270-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+271                <data android:pathPattern=".*\\..*\\.bik" />
+271-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+272                <data android:pathPattern=".*.DIVX" />
+272-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+273                <data android:pathPattern=".*.divx" />
+273-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+274                <data android:pathPattern=".*\\..*\\..*\\.DIVX" />
+274-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+275                <data android:pathPattern=".*\\..*\\..*\\.divx" />
+275-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+276                <data android:pathPattern=".*\\..*\\.DIVX" />
+276-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+277                <data android:pathPattern=".*\\..*\\.divx" />
+277-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+278                <data android:pathPattern=".*.DRC" />
+278-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+279                <data android:pathPattern=".*.drc" />
+279-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+280                <data android:pathPattern=".*\\..*\\..*\\.DRC" />
+280-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+281                <data android:pathPattern=".*\\..*\\..*\\.drc" />
+281-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+282                <data android:pathPattern=".*\\..*\\.DRC" />
+282-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+283                <data android:pathPattern=".*\\..*\\.drc" />
+283-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+284                <data android:pathPattern=".*.DV" />
+284-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+285                <data android:pathPattern=".*.dv" />
+285-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+286                <data android:pathPattern=".*\\..*\\..*\\.DV" />
+286-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+287                <data android:pathPattern=".*\\..*\\..*\\.dv" />
+287-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+288                <data android:pathPattern=".*\\..*\\.DV" />
+288-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+289                <data android:pathPattern=".*\\..*\\.dv" />
+289-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+290                <data android:pathPattern=".*.F4V" />
+290-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+291                <data android:pathPattern=".*.f4v" />
+291-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+292                <data android:pathPattern=".*\\..*\\..*\\.F4V" />
+292-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+293                <data android:pathPattern=".*\\..*\\..*\\.f4v" />
+293-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+294                <data android:pathPattern=".*\\..*\\.F4V" />
+294-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+295                <data android:pathPattern=".*\\..*\\.f4v" />
+295-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+296                <data android:pathPattern=".*.FLV" />
+296-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+297                <data android:pathPattern=".*.flv" />
+297-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+298                <data android:pathPattern=".*\\..*\\..*\\.FLV" />
+298-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+299                <data android:pathPattern=".*\\..*\\..*\\.flv" />
+299-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+300                <data android:pathPattern=".*\\..*\\.FLV" />
+300-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+301                <data android:pathPattern=".*\\..*\\.flv" />
+301-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+302                <data android:pathPattern=".*.GVI" />
+302-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+303                <data android:pathPattern=".*.gvi" />
+303-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+304                <data android:pathPattern=".*\\..*\\..*\\.GVI" />
+304-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+305                <data android:pathPattern=".*\\..*\\..*\\.gvi" />
+305-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+306                <data android:pathPattern=".*\\..*\\.GVI" />
+306-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+307                <data android:pathPattern=".*\\..*\\.gvi" />
+307-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+308                <data android:pathPattern=".*.GXF" />
+308-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+309                <data android:pathPattern=".*.gxf" />
+309-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+310                <data android:pathPattern=".*\\..*\\..*\\.GXF" />
+310-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+311                <data android:pathPattern=".*\\..*\\..*\\.gxf" />
+311-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+312                <data android:pathPattern=".*\\..*\\.GXF" />
+312-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+313                <data android:pathPattern=".*\\..*\\.gxf" />
+313-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+314                <data android:pathPattern=".*.ISMV" />
+314-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+315                <data android:pathPattern=".*.ismv" />
+315-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+316                <data android:pathPattern=".*\\..*\\..*\\.ISMV" />
+316-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+317                <data android:pathPattern=".*\\..*\\..*\\.ismv" />
+317-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+318                <data android:pathPattern=".*\\..*\\.ISMV" />
+318-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+319                <data android:pathPattern=".*\\..*\\.ismv" />
+319-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+320                <data android:pathPattern=".*.ISO" />
+320-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+321                <data android:pathPattern=".*.iso" />
+321-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+322                <data android:pathPattern=".*\\..*\\..*\\.ISO" />
+322-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+323                <data android:pathPattern=".*\\..*\\..*\\.iso" />
+323-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+324                <data android:pathPattern=".*\\..*\\.ISO" />
+324-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+325                <data android:pathPattern=".*\\..*\\.iso" />
+325-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+326                <data android:pathPattern=".*.M1V" />
+326-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+327                <data android:pathPattern=".*.m1v" />
+327-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+328                <data android:pathPattern=".*\\..*\\..*\\.M1V" />
+328-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+329                <data android:pathPattern=".*\\..*\\..*\\.m1v" />
+329-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+330                <data android:pathPattern=".*\\..*\\.M1V" />
+330-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+331                <data android:pathPattern=".*\\..*\\.m1v" />
+331-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+332                <data android:pathPattern=".*.M2T" />
+332-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+333                <data android:pathPattern=".*.m2t" />
+333-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+334                <data android:pathPattern=".*\\..*\\..*\\.M2T" />
+334-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+335                <data android:pathPattern=".*\\..*\\..*\\.m2t" />
+335-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+336                <data android:pathPattern=".*\\..*\\.M2T" />
+336-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+337                <data android:pathPattern=".*\\..*\\.m2t" />
+337-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+338                <data android:pathPattern=".*.M2TS" />
+338-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+339                <data android:pathPattern=".*.m2ts" />
+339-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+340                <data android:pathPattern=".*\\..*\\..*\\.M2TS" />
+340-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+341                <data android:pathPattern=".*\\..*\\..*\\.m2ts" />
+341-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+342                <data android:pathPattern=".*\\..*\\.M2TS" />
+342-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+343                <data android:pathPattern=".*\\..*\\.m2ts" />
+343-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+344                <data android:pathPattern=".*.M2V" />
+344-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+345                <data android:pathPattern=".*.m2v" />
+345-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+346                <data android:pathPattern=".*\\..*\\..*\\.M2V" />
+346-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+347                <data android:pathPattern=".*\\..*\\..*\\.m2v" />
+347-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+348                <data android:pathPattern=".*\\..*\\.M2V" />
+348-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+349                <data android:pathPattern=".*\\..*\\.m2v" />
+349-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+350                <data android:pathPattern=".*.M3U8" />
+350-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+351                <data android:pathPattern=".*.m3u8" />
+351-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+352                <data android:pathPattern=".*\\..*\\..*\\.M3U8" />
+352-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+353                <data android:pathPattern=".*\\..*\\..*\\.m3u8" />
+353-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+354                <data android:pathPattern=".*\\..*\\.M3U8" />
+354-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+355                <data android:pathPattern=".*\\..*\\.m3u8" />
+355-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+356                <data android:pathPattern=".*.M4V" />
+356-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+357                <data android:pathPattern=".*.m4v" />
+357-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+358                <data android:pathPattern=".*\\..*\\..*\\.M4V" />
+358-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+359                <data android:pathPattern=".*\\..*\\..*\\.m4v" />
+359-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+360                <data android:pathPattern=".*\\..*\\.M4V" />
+360-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+361                <data android:pathPattern=".*\\..*\\.m4v" />
+361-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+362                <data android:pathPattern=".*.MKV" />
+362-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+363                <data android:pathPattern=".*.mkv" />
+363-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+364                <data android:pathPattern=".*\\..*\\..*\\.MKV" />
+364-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+365                <data android:pathPattern=".*\\..*\\..*\\.mkv" />
+365-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+366                <data android:pathPattern=".*\\..*\\.MKV" />
+366-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+367                <data android:pathPattern=".*\\..*\\.mkv" />
+367-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+368                <data android:pathPattern=".*.MOV" />
+368-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+369                <data android:pathPattern=".*.mov" />
+369-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+370                <data android:pathPattern=".*\\..*\\..*\\.MOV" />
+370-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+371                <data android:pathPattern=".*\\..*\\..*\\.mov" />
+371-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+372                <data android:pathPattern=".*\\..*\\.MOV" />
+372-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+373                <data android:pathPattern=".*\\..*\\.mov" />
+373-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+374                <data android:pathPattern=".*.MP2" />
+374-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+375                <data android:pathPattern=".*.mp2" />
+375-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+376                <data android:pathPattern=".*\\..*\\..*\\.MP2" />
+376-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+377                <data android:pathPattern=".*\\..*\\..*\\.mp2" />
+377-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+378                <data android:pathPattern=".*\\..*\\.MP2" />
+378-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+379                <data android:pathPattern=".*\\..*\\.mp2" />
+379-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+380                <data android:pathPattern=".*.MP2V" />
+380-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+381                <data android:pathPattern=".*.mp2v" />
+381-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+382                <data android:pathPattern=".*\\..*\\..*\\.MP2V" />
+382-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+383                <data android:pathPattern=".*\\..*\\..*\\.mp2v" />
+383-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+384                <data android:pathPattern=".*\\..*\\.MP2V" />
+384-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+385                <data android:pathPattern=".*\\..*\\.mp2v" />
+385-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+386                <data android:pathPattern=".*.MP4" />
+386-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+387                <data android:pathPattern=".*.mp4" />
+387-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+388                <data android:pathPattern=".*\\..*\\..*\\.MP4" />
+388-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+389                <data android:pathPattern=".*\\..*\\..*\\.mp4" />
+389-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+390                <data android:pathPattern=".*\\..*\\.MP4" />
+390-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+391                <data android:pathPattern=".*\\..*\\.mp4" />
+391-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+392                <data android:pathPattern=".*.MP4V" />
+392-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+393                <data android:pathPattern=".*.mp4v" />
+393-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+394                <data android:pathPattern=".*\\..*\\..*\\.MP4V" />
+394-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+395                <data android:pathPattern=".*\\..*\\..*\\.mp4v" />
+395-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+396                <data android:pathPattern=".*\\..*\\.MP4V" />
+396-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+397                <data android:pathPattern=".*\\..*\\.mp4v" />
+397-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+398                <data android:pathPattern=".*.MPE" />
+398-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+399                <data android:pathPattern=".*.mpe" />
+399-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+400                <data android:pathPattern=".*\\..*\\..*\\.MPE" />
+400-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+401                <data android:pathPattern=".*\\..*\\..*\\.mpe" />
+401-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+402                <data android:pathPattern=".*\\..*\\.MPE" />
+402-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+403                <data android:pathPattern=".*\\..*\\.mpe" />
+403-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+404                <data android:pathPattern=".*.MPEG" />
+404-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+405                <data android:pathPattern=".*.mpeg" />
+405-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+406                <data android:pathPattern=".*\\..*\\..*\\.MPEG" />
+406-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+407                <data android:pathPattern=".*\\..*\\..*\\.mpeg" />
+407-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+408                <data android:pathPattern=".*\\..*\\.MPEG" />
+408-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+409                <data android:pathPattern=".*\\..*\\.mpeg" />
+409-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+410                <data android:pathPattern=".*.MPEG1" />
+410-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+411                <data android:pathPattern=".*.mpeg1" />
+411-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+412                <data android:pathPattern=".*\\..*\\..*\\.MPEG1" />
+412-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+413                <data android:pathPattern=".*\\..*\\..*\\.mpeg1" />
+413-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+414                <data android:pathPattern=".*\\..*\\.MPEG1" />
+414-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+415                <data android:pathPattern=".*\\..*\\.mpeg1" />
+415-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+416                <data android:pathPattern=".*.MPEG2" />
+416-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+417                <data android:pathPattern=".*.mpeg2" />
+417-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+418                <data android:pathPattern=".*\\..*\\..*\\.MPEG2" />
+418-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+419                <data android:pathPattern=".*\\..*\\..*\\.mpeg2" />
+419-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+420                <data android:pathPattern=".*\\..*\\.MPEG2" />
+420-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+421                <data android:pathPattern=".*\\..*\\.mpeg2" />
+421-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+422                <data android:pathPattern=".*.MPEG4" />
+422-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+423                <data android:pathPattern=".*.mpeg4" />
+423-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+424                <data android:pathPattern=".*\\..*\\..*\\.MPEG4" />
+424-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+425                <data android:pathPattern=".*\\..*\\..*\\.mpeg4" />
+425-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+426                <data android:pathPattern=".*\\..*\\.MPEG4" />
+426-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+427                <data android:pathPattern=".*\\..*\\.mpeg4" />
+427-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+428                <data android:pathPattern=".*.MPG" />
+428-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+429                <data android:pathPattern=".*.mpg" />
+429-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+430                <data android:pathPattern=".*\\..*\\..*\\.MPG" />
+430-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+431                <data android:pathPattern=".*\\..*\\..*\\.mpg" />
+431-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+432                <data android:pathPattern=".*\\..*\\.MPG" />
+432-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+433                <data android:pathPattern=".*\\..*\\.mpg" />
+433-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+434                <data android:pathPattern=".*.MPV2" />
+434-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+435                <data android:pathPattern=".*.mpv2" />
+435-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+436                <data android:pathPattern=".*\\..*\\..*\\.MPV2" />
+436-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+437                <data android:pathPattern=".*\\..*\\..*\\.mpv2" />
+437-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+438                <data android:pathPattern=".*\\..*\\.MPV2" />
+438-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+439                <data android:pathPattern=".*\\..*\\.mpv2" />
+439-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+440                <data android:pathPattern=".*.MTS" />
+440-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+441                <data android:pathPattern=".*.mts" />
+441-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+442                <data android:pathPattern=".*\\..*\\..*\\.MTS" />
+442-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+443                <data android:pathPattern=".*\\..*\\..*\\.mts" />
+443-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+444                <data android:pathPattern=".*\\..*\\.MTS" />
+444-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+445                <data android:pathPattern=".*\\..*\\.mts" />
+445-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+446                <data android:pathPattern=".*.MTV" />
+446-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+447                <data android:pathPattern=".*.mtv" />
+447-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+448                <data android:pathPattern=".*\\..*\\..*\\.MTV" />
+448-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+449                <data android:pathPattern=".*\\..*\\..*\\.mtv" />
+449-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+450                <data android:pathPattern=".*\\..*\\.MTV" />
+450-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+451                <data android:pathPattern=".*\\..*\\.mtv" />
+451-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+452                <data android:pathPattern=".*.MXF" />
+452-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+453                <data android:pathPattern=".*.mxf" />
+453-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+454                <data android:pathPattern=".*\\..*\\..*\\.MXF" />
+454-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+455                <data android:pathPattern=".*\\..*\\..*\\.mxf" />
+455-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+456                <data android:pathPattern=".*\\..*\\.MXF" />
+456-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+457                <data android:pathPattern=".*\\..*\\.mxf" />
+457-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+458                <data android:pathPattern=".*.MXG" />
+458-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+459                <data android:pathPattern=".*.mxg" />
+459-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+460                <data android:pathPattern=".*\\..*\\..*\\.MXG" />
+460-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+461                <data android:pathPattern=".*\\..*\\..*\\.mxg" />
+461-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+462                <data android:pathPattern=".*\\..*\\.MXG" />
+462-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+463                <data android:pathPattern=".*\\..*\\.mxg" />
+463-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+464                <data android:pathPattern=".*.NSV" />
+464-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+465                <data android:pathPattern=".*.nsv" />
+465-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+466                <data android:pathPattern=".*\\..*\\..*\\.NSV" />
+466-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+467                <data android:pathPattern=".*\\..*\\..*\\.nsv" />
+467-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+468                <data android:pathPattern=".*\\..*\\.NSV" />
+468-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+469                <data android:pathPattern=".*\\..*\\.nsv" />
+469-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+470                <data android:pathPattern=".*.NUT" />
+470-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+471                <data android:pathPattern=".*.nut" />
+471-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+472                <data android:pathPattern=".*\\..*\\..*\\.NUT" />
+472-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+473                <data android:pathPattern=".*\\..*\\..*\\.nut" />
+473-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+474                <data android:pathPattern=".*\\..*\\.NUT" />
+474-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+475                <data android:pathPattern=".*\\..*\\.nut" />
+475-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+476                <data android:pathPattern=".*.NUV" />
+476-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+477                <data android:pathPattern=".*.nuv" />
+477-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+478                <data android:pathPattern=".*\\..*\\..*\\.NUV" />
+478-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+479                <data android:pathPattern=".*\\..*\\..*\\.nuv" />
+479-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+480                <data android:pathPattern=".*\\..*\\.NUV" />
+480-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+481                <data android:pathPattern=".*\\..*\\.nuv" />
+481-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+482                <data android:pathPattern=".*.OGM" />
+482-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+483                <data android:pathPattern=".*.ogm" />
+483-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+484                <data android:pathPattern=".*\\..*\\..*\\.OGM" />
+484-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+485                <data android:pathPattern=".*\\..*\\..*\\.ogm" />
+485-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+486                <data android:pathPattern=".*\\..*\\.OGM" />
+486-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+487                <data android:pathPattern=".*\\..*\\.ogm" />
+487-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+488                <data android:pathPattern=".*.OGV" />
+488-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+489                <data android:pathPattern=".*.ogv" />
+489-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+490                <data android:pathPattern=".*\\..*\\..*\\.OGV" />
+490-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+491                <data android:pathPattern=".*\\..*\\..*\\.ogv" />
+491-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+492                <data android:pathPattern=".*\\..*\\.OGV" />
+492-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+493                <data android:pathPattern=".*\\..*\\.ogv" />
+493-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+494                <data android:pathPattern=".*.OGX" />
+494-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+495                <data android:pathPattern=".*.ogx" />
+495-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+496                <data android:pathPattern=".*\\..*\\..*\\.OGX" />
+496-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+497                <data android:pathPattern=".*\\..*\\..*\\.ogx" />
+497-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+498                <data android:pathPattern=".*\\..*\\.OGX" />
+498-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+499                <data android:pathPattern=".*\\..*\\.ogx" />
+499-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+500                <data android:pathPattern=".*.PS" />
+500-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+501                <data android:pathPattern=".*.ps" />
+501-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+502                <data android:pathPattern=".*\\..*\\..*\\.PS" />
+502-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+503                <data android:pathPattern=".*\\..*\\..*\\.ps" />
+503-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+504                <data android:pathPattern=".*\\..*\\.PS" />
+504-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+505                <data android:pathPattern=".*\\..*\\.ps" />
+505-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+506                <data android:pathPattern=".*.REC" />
+506-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+507                <data android:pathPattern=".*.rec" />
+507-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+508                <data android:pathPattern=".*\\..*\\..*\\.REC" />
+508-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+509                <data android:pathPattern=".*\\..*\\..*\\.rec" />
+509-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+510                <data android:pathPattern=".*\\..*\\.REC" />
+510-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+511                <data android:pathPattern=".*\\..*\\.rec" />
+511-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+512                <data android:pathPattern=".*.RM" />
+512-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+513                <data android:pathPattern=".*.rm" />
+513-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+514                <data android:pathPattern=".*\\..*\\..*\\.RM" />
+514-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+515                <data android:pathPattern=".*\\..*\\..*\\.rm" />
+515-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+516                <data android:pathPattern=".*\\..*\\.RM" />
+516-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+517                <data android:pathPattern=".*\\..*\\.rm" />
+517-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+518                <data android:pathPattern=".*.RMVB" />
+518-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+519                <data android:pathPattern=".*.rmvb" />
+519-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+520                <data android:pathPattern=".*\\..*\\..*\\.RMVB" />
+520-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+521                <data android:pathPattern=".*\\..*\\..*\\.rmvb" />
+521-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+522                <data android:pathPattern=".*\\..*\\.RMVB" />
+522-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+523                <data android:pathPattern=".*\\..*\\.rmvb" />
+523-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+524                <data android:pathPattern=".*.TOD" />
+524-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+525                <data android:pathPattern=".*.tod" />
+525-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+526                <data android:pathPattern=".*\\..*\\..*\\.TOD" />
+526-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+527                <data android:pathPattern=".*\\..*\\..*\\.tod" />
+527-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+528                <data android:pathPattern=".*\\..*\\.TOD" />
+528-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+529                <data android:pathPattern=".*\\..*\\.tod" />
+529-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+530                <data android:pathPattern=".*.TRP" />
+530-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+531                <data android:pathPattern=".*.trp" />
+531-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+532                <data android:pathPattern=".*\\..*\\..*\\.TRP" />
+532-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+533                <data android:pathPattern=".*\\..*\\..*\\.trp" />
+533-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+534                <data android:pathPattern=".*\\..*\\.TRP" />
+534-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+535                <data android:pathPattern=".*\\..*\\.trp" />
+535-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+536                <data android:pathPattern=".*.TS" />
+536-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+537                <data android:pathPattern=".*.ts" />
+537-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+538                <data android:pathPattern=".*\\..*\\..*\\.TS" />
+538-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+539                <data android:pathPattern=".*\\..*\\..*\\.ts" />
+539-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+540                <data android:pathPattern=".*\\..*\\.TS" />
+540-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+541                <data android:pathPattern=".*\\..*\\.ts" />
+541-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+542                <data android:pathPattern=".*.TTS" />
+542-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+543                <data android:pathPattern=".*.tts" />
+543-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+544                <data android:pathPattern=".*\\..*\\..*\\.TTS" />
+544-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+545                <data android:pathPattern=".*\\..*\\..*\\.tts" />
+545-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+546                <data android:pathPattern=".*\\..*\\.TTS" />
+546-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+547                <data android:pathPattern=".*\\..*\\.tts" />
+547-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+548                <data android:pathPattern=".*.VOB" />
+548-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+549                <data android:pathPattern=".*.vob" />
+549-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+550                <data android:pathPattern=".*\\..*\\..*\\.VOB" />
+550-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+551                <data android:pathPattern=".*\\..*\\..*\\.vob" />
+551-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+552                <data android:pathPattern=".*\\..*\\.VOB" />
+552-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+553                <data android:pathPattern=".*\\..*\\.vob" />
+553-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+554                <data android:pathPattern=".*.VRO" />
+554-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+555                <data android:pathPattern=".*.vro" />
+555-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+556                <data android:pathPattern=".*\\..*\\..*\\.VRO" />
+556-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+557                <data android:pathPattern=".*\\..*\\..*\\.vro" />
+557-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+558                <data android:pathPattern=".*\\..*\\.VRO" />
+558-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+559                <data android:pathPattern=".*\\..*\\.vro" />
+559-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+560                <data android:pathPattern=".*.WEBM" />
+560-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+561                <data android:pathPattern=".*.webm" />
+561-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+562                <data android:pathPattern=".*\\..*\\..*\\.WEBM" />
+562-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+563                <data android:pathPattern=".*\\..*\\..*\\.webm" />
+563-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+564                <data android:pathPattern=".*\\..*\\.WEBM" />
+564-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+565                <data android:pathPattern=".*\\..*\\.webm" />
+565-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+566                <data android:pathPattern=".*.WM" />
+566-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+567                <data android:pathPattern=".*.wm" />
+567-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+568                <data android:pathPattern=".*\\..*\\..*\\.WM" />
+568-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+569                <data android:pathPattern=".*\\..*\\..*\\.wm" />
+569-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+570                <data android:pathPattern=".*\\..*\\.WM" />
+570-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+571                <data android:pathPattern=".*\\..*\\.wm" />
+571-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+572                <data android:pathPattern=".*.WMV" />
+572-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+573                <data android:pathPattern=".*.wmv" />
+573-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+574                <data android:pathPattern=".*\\..*\\..*\\.WMV" />
+574-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+575                <data android:pathPattern=".*\\..*\\..*\\.wmv" />
+575-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+576                <data android:pathPattern=".*\\..*\\.WMV" />
+576-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+577                <data android:pathPattern=".*\\..*\\.wmv" />
+577-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+578                <data android:pathPattern=".*.WTV" />
+578-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+579                <data android:pathPattern=".*.wtv" />
+579-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+580                <data android:pathPattern=".*\\..*\\..*\\.WTV" />
+580-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+581                <data android:pathPattern=".*\\..*\\..*\\.wtv" />
+581-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+582                <data android:pathPattern=".*\\..*\\.WTV" />
+582-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+583                <data android:pathPattern=".*\\..*\\.wtv" />
+583-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+584                <data android:pathPattern=".*.XESC" />
+584-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+585                <data android:pathPattern=".*.xesc" />
+585-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+586                <data android:pathPattern=".*\\..*\\..*\\.XESC" />
+586-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+587                <data android:pathPattern=".*\\..*\\..*\\.xesc" />
+587-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+588                <data android:pathPattern=".*\\..*\\.XESC" />
+588-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+589                <data android:pathPattern=".*\\..*\\.xesc" />
+589-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+590
+591                <!-- audio -->
+592
+593                <data android:pathPattern=".*\\..*\\.3ga" />
+593-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+594                <data android:pathPattern=".*\\..*\\.3GA" />
+594-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+595                <data android:pathPattern=".*\\..*\\..*\\.3ga" />
+595-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+596                <data android:pathPattern=".*\\..*\\..*\\.3GA" />
+596-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+597                <data android:pathPattern=".*.3ga" />
+597-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+598                <data android:pathPattern=".*.3GA" />
+598-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+599                <data android:pathPattern=".*.669" />
+599-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+600                <data android:pathPattern=".*\\..*\\.669" />
+600-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+601                <data android:pathPattern=".*\\..*\\..*\\.669" />
+601-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+602                <data android:pathPattern=".*\\..*\\.a52" />
+602-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+603                <data android:pathPattern=".*\\..*\\.A52" />
+603-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+604                <data android:pathPattern=".*\\..*\\..*\\.a52" />
+604-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+605                <data android:pathPattern=".*\\..*\\..*\\.A52" />
+605-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+606                <data android:pathPattern=".*.a52" />
+606-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+607                <data android:pathPattern=".*.A52" />
+607-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+608                <data android:pathPattern=".*\\..*\\.aac" />
+608-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+609                <data android:pathPattern=".*\\..*\\.AAC" />
+609-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+610                <data android:pathPattern=".*\\..*\\..*\\.aac" />
+610-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+611                <data android:pathPattern=".*\\..*\\..*\\.AAC" />
+611-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+612                <data android:pathPattern=".*.aac" />
+612-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+613                <data android:pathPattern=".*.AAC" />
+613-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+614                <data android:pathPattern=".*\\..*\\.ac3" />
+614-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+615                <data android:pathPattern=".*\\..*\\.AC3" />
+615-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+616                <data android:pathPattern=".*\\..*\\..*\\.ac3" />
+616-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+617                <data android:pathPattern=".*\\..*\\..*\\.AC3" />
+617-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+618                <data android:pathPattern=".*.ac3" />
+618-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+619                <data android:pathPattern=".*.AC3" />
+619-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+620                <data android:pathPattern=".*\\..*\\.adt" />
+620-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+621                <data android:pathPattern=".*\\..*\\.ADT" />
+621-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+622                <data android:pathPattern=".*\\..*\\..*\\.adt" />
+622-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+623                <data android:pathPattern=".*\\..*\\..*\\.ADT" />
+623-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+624                <data android:pathPattern=".*.adt" />
+624-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+625                <data android:pathPattern=".*.ADT" />
+625-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+626                <data android:pathPattern=".*\\..*\\.adts" />
+626-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+627                <data android:pathPattern=".*\\..*\\.ADTS" />
+627-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+628                <data android:pathPattern=".*\\..*\\..*\\.adts" />
+628-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+629                <data android:pathPattern=".*\\..*\\..*\\.ADTS" />
+629-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+630                <data android:pathPattern=".*.adts" />
+630-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+631                <data android:pathPattern=".*.ADTS" />
+631-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+632                <data android:pathPattern=".*\\..*\\.aif" />
+632-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+633                <data android:pathPattern=".*\\..*\\.AIF" />
+633-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+634                <data android:pathPattern=".*\\..*\\..*\\.aif" />
+634-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+635                <data android:pathPattern=".*\\..*\\..*\\.AIF" />
+635-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+636                <data android:pathPattern=".*.aif" />
+636-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+637                <data android:pathPattern=".*.AIF" />
+637-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+638                <data android:pathPattern=".*\\..*\\.aifc" />
+638-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+639                <data android:pathPattern=".*\\..*\\.AIFC" />
+639-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+640                <data android:pathPattern=".*\\..*\\..*\\.aifc" />
+640-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+641                <data android:pathPattern=".*\\..*\\..*\\.AIFC" />
+641-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+642                <data android:pathPattern=".*.aifc" />
+642-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+643                <data android:pathPattern=".*.AIFC" />
+643-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+644                <data android:pathPattern=".*\\..*\\.aiff" />
+644-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+645                <data android:pathPattern=".*\\..*\\.AIFF" />
+645-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+646                <data android:pathPattern=".*\\..*\\..*\\.aiff" />
+646-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+647                <data android:pathPattern=".*\\..*\\..*\\.AIFF" />
+647-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+648                <data android:pathPattern=".*.aiff" />
+648-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+649                <data android:pathPattern=".*.AIFF" />
+649-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+650                <data android:pathPattern=".*\\..*\\.amr" />
+650-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+651                <data android:pathPattern=".*\\..*\\.AMR" />
+651-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+652                <data android:pathPattern=".*\\..*\\..*\\.amr" />
+652-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+653                <data android:pathPattern=".*\\..*\\..*\\.AMR" />
+653-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+654                <data android:pathPattern=".*.amr" />
+654-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+655                <data android:pathPattern=".*.AMR" />
+655-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+656                <data android:pathPattern=".*\\..*\\.aob" />
+656-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+657                <data android:pathPattern=".*\\..*\\.AOB" />
+657-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+658                <data android:pathPattern=".*\\..*\\..*\\.aob" />
+658-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+659                <data android:pathPattern=".*\\..*\\..*\\.AOB" />
+659-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+660                <data android:pathPattern=".*.aob" />
+660-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+661                <data android:pathPattern=".*.AOB" />
+661-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+662                <data android:pathPattern=".*\\..*\\.ape" />
+662-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+663                <data android:pathPattern=".*\\..*\\.APE" />
+663-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+664                <data android:pathPattern=".*\\..*\\..*\\.ape" />
+664-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+665                <data android:pathPattern=".*\\..*\\..*\\.APE" />
+665-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+666                <data android:pathPattern=".*.ape" />
+666-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+667                <data android:pathPattern=".*.APE" />
+667-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+668                <data android:pathPattern=".*\\..*\\.awb" />
+668-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+669                <data android:pathPattern=".*\\..*\\.AWB" />
+669-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+670                <data android:pathPattern=".*\\..*\\..*\\.awb" />
+670-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+671                <data android:pathPattern=".*\\..*\\..*\\.AWB" />
+671-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+672                <data android:pathPattern=".*.au" />
+672-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+673                <data android:pathPattern=".*.AU" />
+673-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+674                <data android:pathPattern=".*\\..*\\.au" />
+674-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+675                <data android:pathPattern=".*\\..*\\.AU" />
+675-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+676                <data android:pathPattern=".*\\..*\\..*\\.au" />
+676-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+677                <data android:pathPattern=".*\\..*\\..*\\.AU" />
+677-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+678                <data android:pathPattern=".*.aud" />
+678-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+679                <data android:pathPattern=".*.AUD" />
+679-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+680                <data android:pathPattern=".*\\..*\\.aud" />
+680-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+681                <data android:pathPattern=".*\\..*\\.AUD" />
+681-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+682                <data android:pathPattern=".*\\..*\\..*\\.aud" />
+682-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+683                <data android:pathPattern=".*\\..*\\..*\\.AUD" />
+683-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+684                <data android:pathPattern=".*.awb" />
+684-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+685                <data android:pathPattern=".*.AWB" />
+685-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+686                <data android:pathPattern=".*\\..*\\.caf" />
+686-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+687                <data android:pathPattern=".*\\..*\\.CAF" />
+687-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+688                <data android:pathPattern=".*\\..*\\..*\\.caf" />
+688-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+689                <data android:pathPattern=".*\\..*\\..*\\.CAF" />
+689-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+690                <data android:pathPattern=".*.caf" />
+690-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+691                <data android:pathPattern=".*.CAF" />
+691-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+692                <data android:pathPattern=".*\\..*\\.dts" />
+692-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+693                <data android:pathPattern=".*\\..*\\.DTS" />
+693-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+694                <data android:pathPattern=".*\\..*\\..*\\.dts" />
+694-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+695                <data android:pathPattern=".*\\..*\\..*\\.DTS" />
+695-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+696                <data android:pathPattern=".*.dts" />
+696-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+697                <data android:pathPattern=".*.DTS" />
+697-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+698                <data android:pathPattern=".*\\..*\\.flac" />
+698-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+699                <data android:pathPattern=".*\\..*\\.FLAC" />
+699-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+700                <data android:pathPattern=".*\\..*\\..*\\.flac" />
+700-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+701                <data android:pathPattern=".*\\..*\\..*\\.FLAC" />
+701-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+702                <data android:pathPattern=".*.flac" />
+702-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+703                <data android:pathPattern=".*.FLAC" />
+703-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+704                <data android:pathPattern=".*\\..*\\.it" />
+704-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+705                <data android:pathPattern=".*\\..*\\.IT" />
+705-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+706                <data android:pathPattern=".*\\..*\\..*\\.it" />
+706-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+707                <data android:pathPattern=".*\\..*\\..*\\.IT" />
+707-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+708                <data android:pathPattern=".*.it" />
+708-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+709                <data android:pathPattern=".*.IT" />
+709-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+710                <data android:pathPattern=".*\\..*\\.m4a" />
+710-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+711                <data android:pathPattern=".*\\..*\\.M4A" />
+711-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+712                <data android:pathPattern=".*\\..*\\..*\\.m4a" />
+712-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+713                <data android:pathPattern=".*\\..*\\..*\\.M4A" />
+713-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+714                <data android:pathPattern=".*.m4a" />
+714-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+715                <data android:pathPattern=".*.M4A" />
+715-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+716                <data android:pathPattern=".*\\..*\\.m4b" />
+716-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+717                <data android:pathPattern=".*\\..*\\.M4B" />
+717-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+718                <data android:pathPattern=".*\\..*\\..*\\.m4b" />
+718-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+719                <data android:pathPattern=".*\\..*\\..*\\.M4B" />
+719-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+720                <data android:pathPattern=".*.m4b" />
+720-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+721                <data android:pathPattern=".*.M4B" />
+721-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+722                <data android:pathPattern=".*\\..*\\.m4p" />
+722-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+723                <data android:pathPattern=".*\\..*\\.M4P" />
+723-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+724                <data android:pathPattern=".*\\..*\\..*\\.m4p" />
+724-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+725                <data android:pathPattern=".*\\..*\\..*\\.M4P" />
+725-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+726                <data android:pathPattern=".*.m4p" />
+726-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+727                <data android:pathPattern=".*.M4P" />
+727-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+728                <data android:pathPattern=".*\\..*\\.mid" />
+728-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+729                <data android:pathPattern=".*\\..*\\.MID" />
+729-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+730                <data android:pathPattern=".*\\..*\\..*\\.mid" />
+730-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+731                <data android:pathPattern=".*\\..*\\..*\\.MID" />
+731-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+732                <data android:pathPattern=".*.mid" />
+732-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+733                <data android:pathPattern=".*.MID" />
+733-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+734                <data android:pathPattern=".*\\..*\\.mka" />
+734-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+735                <data android:pathPattern=".*\\..*\\.MKA" />
+735-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+736                <data android:pathPattern=".*\\..*\\..*\\.mka" />
+736-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+737                <data android:pathPattern=".*\\..*\\..*\\.MKA" />
+737-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+738                <data android:pathPattern=".*.mka" />
+738-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+739                <data android:pathPattern=".*.MKA" />
+739-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+740                <data android:pathPattern=".*\\..*\\.mlp" />
+740-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+741                <data android:pathPattern=".*\\..*\\.MLP" />
+741-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+742                <data android:pathPattern=".*\\..*\\..*\\.mlp" />
+742-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+743                <data android:pathPattern=".*\\..*\\..*\\.MLP" />
+743-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+744                <data android:pathPattern=".*.mlp" />
+744-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+745                <data android:pathPattern=".*.MLP" />
+745-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+746                <data android:pathPattern=".*\\..*\\.mod" />
+746-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+747                <data android:pathPattern=".*\\..*\\.MOD" />
+747-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+748                <data android:pathPattern=".*\\..*\\..*\\.mod" />
+748-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+749                <data android:pathPattern=".*\\..*\\..*\\.MOD" />
+749-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+750                <data android:pathPattern=".*.mod" />
+750-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+751                <data android:pathPattern=".*.MOD" />
+751-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+752                <data android:pathPattern=".*\\..*\\.mp1" />
+752-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+753                <data android:pathPattern=".*\\..*\\.MP1" />
+753-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+754                <data android:pathPattern=".*\\..*\\..*\\.mp1" />
+754-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+755                <data android:pathPattern=".*\\..*\\..*\\.MP1" />
+755-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+756                <data android:pathPattern=".*.mp1" />
+756-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+757                <data android:pathPattern=".*.MP1" />
+757-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+758                <data android:pathPattern=".*\\..*\\.mp2" />
+758-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+759                <data android:pathPattern=".*\\..*\\.MP2" />
+759-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+760                <data android:pathPattern=".*\\..*\\..*\\.mp2" />
+760-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+761                <data android:pathPattern=".*\\..*\\..*\\.MP2" />
+761-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+762                <data android:pathPattern=".*.mp2" />
+762-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+763                <data android:pathPattern=".*.MP2" />
+763-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+764                <data android:pathPattern=".*\\..*\\.mp3" />
+764-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+765                <data android:pathPattern=".*\\..*\\.MP3" />
+765-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+766                <data android:pathPattern=".*\\..*\\..*\\.mp3" />
+766-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+767                <data android:pathPattern=".*\\..*\\..*\\.MP3" />
+767-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+768                <data android:pathPattern=".*.mp3" />
+768-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+769                <data android:pathPattern=".*.MP3" />
+769-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+770                <data android:pathPattern=".*\\..*\\.mpa" />
+770-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+771                <data android:pathPattern=".*\\..*\\.MPA" />
+771-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+772                <data android:pathPattern=".*\\..*\\..*\\.mpa" />
+772-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+773                <data android:pathPattern=".*\\..*\\..*\\.MPA" />
+773-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+774                <data android:pathPattern=".*.mpa" />
+774-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+775                <data android:pathPattern=".*.MPA" />
+775-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+776                <data android:pathPattern=".*\\..*\\.mpc" />
+776-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+777                <data android:pathPattern=".*\\..*\\.MPC" />
+777-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+778                <data android:pathPattern=".*\\..*\\..*\\.mpc" />
+778-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+779                <data android:pathPattern=".*\\..*\\..*\\.MPC" />
+779-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+780                <data android:pathPattern=".*.mpc" />
+780-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+781                <data android:pathPattern=".*.MPC" />
+781-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+782                <data android:pathPattern=".*\\..*\\.mpga" />
+782-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+783                <data android:pathPattern=".*\\..*\\.MPGA" />
+783-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+784                <data android:pathPattern=".*\\..*\\..*\\.mpga" />
+784-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+785                <data android:pathPattern=".*\\..*\\..*\\.MPGA" />
+785-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+786                <data android:pathPattern=".*.mpga" />
+786-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+787                <data android:pathPattern=".*.MPGA" />
+787-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+788                <data android:pathPattern=".*\\..*\\.oga" />
+788-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+789                <data android:pathPattern=".*\\..*\\.OGA" />
+789-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+790                <data android:pathPattern=".*\\..*\\..*\\.oga" />
+790-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+791                <data android:pathPattern=".*\\..*\\..*\\.OGA" />
+791-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+792                <data android:pathPattern=".*.oga" />
+792-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+793                <data android:pathPattern=".*.OGA" />
+793-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+794                <data android:pathPattern=".*\\..*\\.ogg" />
+794-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+795                <data android:pathPattern=".*\\..*\\.OGG" />
+795-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+796                <data android:pathPattern=".*\\..*\\..*\\.ogg" />
+796-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+797                <data android:pathPattern=".*\\..*\\..*\\.OGG" />
+797-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+798                <data android:pathPattern=".*.ogg" />
+798-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+799                <data android:pathPattern=".*.OGG" />
+799-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+800                <data android:pathPattern=".*\\..*\\.oma" />
+800-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+801                <data android:pathPattern=".*\\..*\\.OMA" />
+801-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+802                <data android:pathPattern=".*\\..*\\..*\\.oma" />
+802-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+803                <data android:pathPattern=".*\\..*\\..*\\.OMA" />
+803-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+804                <data android:pathPattern=".*.oma" />
+804-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+805                <data android:pathPattern=".*.OMA" />
+805-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+806                <data android:pathPattern=".*\\..*\\.opus" />
+806-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+807                <data android:pathPattern=".*\\..*\\.OPUS" />
+807-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+808                <data android:pathPattern=".*\\..*\\..*\\.opus" />
+808-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+809                <data android:pathPattern=".*\\..*\\..*\\.OPUS" />
+809-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+810                <data android:pathPattern=".*.opus" />
+810-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+811                <data android:pathPattern=".*.OPUS" />
+811-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+812                <data android:pathPattern=".*\\..*\\.ra" />
+812-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+813                <data android:pathPattern=".*\\..*\\.RA" />
+813-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+814                <data android:pathPattern=".*\\..*\\..*\\.ra" />
+814-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+815                <data android:pathPattern=".*\\..*\\..*\\.RA" />
+815-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+816                <data android:pathPattern=".*.ra" />
+816-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+817                <data android:pathPattern=".*.RA" />
+817-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+818                <data android:pathPattern=".*\\..*\\.rmi" />
+818-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+819                <data android:pathPattern=".*\\..*\\.RMI" />
+819-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+820                <data android:pathPattern=".*\\..*\\..*\\.rmi" />
+820-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+821                <data android:pathPattern=".*\\..*\\..*\\.RMI" />
+821-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+822                <data android:pathPattern=".*.rmi" />
+822-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+823                <data android:pathPattern=".*.RMI" />
+823-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+824                <data android:pathPattern=".*\\..*\\.s3m" />
+824-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+825                <data android:pathPattern=".*\\..*\\.S3M" />
+825-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+826                <data android:pathPattern=".*\\..*\\..*\\.s3m" />
+826-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+827                <data android:pathPattern=".*\\..*\\..*\\.S3M" />
+827-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+828                <data android:pathPattern=".*.s3m" />
+828-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+829                <data android:pathPattern=".*.S3M" />
+829-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+830                <data android:pathPattern=".*\\..*\\.spx" />
+830-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+831                <data android:pathPattern=".*\\..*\\.SPX" />
+831-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+832                <data android:pathPattern=".*\\..*\\..*\\.spx" />
+832-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+833                <data android:pathPattern=".*\\..*\\..*\\.SPX" />
+833-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+834                <data android:pathPattern=".*.spx" />
+834-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+835                <data android:pathPattern=".*.SPX" />
+835-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+836                <data android:pathPattern=".*\\..*\\.tta" />
+836-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+837                <data android:pathPattern=".*\\..*\\.TTA" />
+837-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+838                <data android:pathPattern=".*\\..*\\..*\\.tta" />
+838-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+839                <data android:pathPattern=".*\\..*\\..*\\.TTA" />
+839-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+840                <data android:pathPattern=".*.tta" />
+840-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+841                <data android:pathPattern=".*.TTA" />
+841-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+842                <data android:pathPattern=".*\\..*\\.voc" />
+842-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+843                <data android:pathPattern=".*\\..*\\.VOC" />
+843-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+844                <data android:pathPattern=".*\\..*\\..*\\.voc" />
+844-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+845                <data android:pathPattern=".*\\..*\\..*\\.VOC" />
+845-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+846                <data android:pathPattern=".*.voc" />
+846-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+847                <data android:pathPattern=".*.VOC" />
+847-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+848                <data android:pathPattern=".*\\..*\\.vqf" />
+848-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+849                <data android:pathPattern=".*\\..*\\.VQF" />
+849-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+850                <data android:pathPattern=".*\\..*\\..*\\.vqf" />
+850-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+851                <data android:pathPattern=".*\\..*\\..*\\.VQF" />
+851-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+852                <data android:pathPattern=".*.vqf" />
+852-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+853                <data android:pathPattern=".*.VQF" />
+853-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+854                <data android:pathPattern=".*\\..*\\.w64" />
+854-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+855                <data android:pathPattern=".*\\..*\\.W64" />
+855-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+856                <data android:pathPattern=".*\\..*\\..*\\.w64" />
+856-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+857                <data android:pathPattern=".*\\..*\\..*\\.W64" />
+857-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+858                <data android:pathPattern=".*.w64" />
+858-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+859                <data android:pathPattern=".*.W64" />
+859-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+860                <data android:pathPattern=".*\\..*\\.wav" />
+860-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+861                <data android:pathPattern=".*\\..*\\.WAV" />
+861-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+862                <data android:pathPattern=".*\\..*\\..*\\.wav" />
+862-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+863                <data android:pathPattern=".*\\..*\\..*\\.WAV" />
+863-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+864                <data android:pathPattern=".*.wav" />
+864-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+865                <data android:pathPattern=".*.WAV" />
+865-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+866                <data android:pathPattern=".*\\..*\\.wma" />
+866-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+867                <data android:pathPattern=".*\\..*\\.WMA" />
+867-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+868                <data android:pathPattern=".*\\..*\\..*\\.wma" />
+868-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+869                <data android:pathPattern=".*\\..*\\..*\\.WMA" />
+869-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+870                <data android:pathPattern=".*.wma" />
+870-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+871                <data android:pathPattern=".*.WMA" />
+871-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+872                <data android:pathPattern=".*\\..*\\.wv" />
+872-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+873                <data android:pathPattern=".*\\..*\\.WV" />
+873-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+874                <data android:pathPattern=".*\\..*\\..*\\.wv" />
+874-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+875                <data android:pathPattern=".*\\..*\\..*\\.WV" />
+875-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+876                <data android:pathPattern=".*.wv" />
+876-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+877                <data android:pathPattern=".*.WV" />
+877-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+878                <data android:pathPattern=".*\\..*\\.xa" />
+878-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+879                <data android:pathPattern=".*\\..*\\.XA" />
+879-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+880                <data android:pathPattern=".*\\..*\\..*\\.xa" />
+880-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+881                <data android:pathPattern=".*\\..*\\..*\\.XA" />
+881-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+882                <data android:pathPattern=".*.xa" />
+882-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+883                <data android:pathPattern=".*.XA" />
+883-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+884                <data android:pathPattern=".*\\..*\\.xm" />
+884-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+885                <data android:pathPattern=".*\\..*\\.XM" />
+885-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+886                <data android:pathPattern=".*\\..*\\..*\\.xm" />
+886-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+887                <data android:pathPattern=".*\\..*\\..*\\.XM" />
+887-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+888                <data android:pathPattern=".*.xm" />
+888-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+889                <data android:pathPattern=".*.XM" />
+889-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+890
+891                <!-- playlist -->
+892
+893                <data android:pathPattern=".*.asx" />
+893-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+894                <data android:pathPattern=".*.ASX" />
+894-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+895                <data android:pathPattern=".*\\..*\\.asx" />
+895-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+896                <data android:pathPattern=".*\\..*\\.ASX" />
+896-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+897                <data android:pathPattern=".*\\..*\\..*\\.asx" />
+897-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+898                <data android:pathPattern=".*\\..*\\..*\\.ASX" />
+898-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+899                <data android:pathPattern=".*.b4s" />
+899-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+900                <data android:pathPattern=".*.B4S" />
+900-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+901                <data android:pathPattern=".*\\..*\\.b4s" />
+901-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+902                <data android:pathPattern=".*\\..*\\.B4S" />
+902-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+903                <data android:pathPattern=".*\\..*\\..*\\.b4s" />
+903-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+904                <data android:pathPattern=".*\\..*\\..*\\.B4S" />
+904-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+905                <data android:pathPattern=".*.m3u" />
+905-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+906                <data android:pathPattern=".*.M3U" />
+906-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+907                <data android:pathPattern=".*\\..*\\.m3u" />
+907-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+908                <data android:pathPattern=".*\\..*\\.M3U" />
+908-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+909                <data android:pathPattern=".*\\..*\\..*\\.m3u" />
+909-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+910                <data android:pathPattern=".*\\..*\\..*\\.M3U" />
+910-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+911                <data android:pathPattern=".*.m3u8" />
+911-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+912                <data android:pathPattern=".*.M3U8" />
+912-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+913                <data android:pathPattern=".*\\..*\\.m3u8" />
+913-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+914                <data android:pathPattern=".*\\..*\\.M3U8" />
+914-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+915                <data android:pathPattern=".*\\..*\\..*\\.m3u8" />
+915-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+916                <data android:pathPattern=".*\\..*\\..*\\.M3U8" />
+916-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+917                <data android:pathPattern=".*.pls" />
+917-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+918                <data android:pathPattern=".*.PLS" />
+918-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+919                <data android:pathPattern=".*\\..*\\.pls" />
+919-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+920                <data android:pathPattern=".*\\..*\\.PLS" />
+920-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+921                <data android:pathPattern=".*\\..*\\..*\\.pls" />
+921-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+922                <data android:pathPattern=".*\\..*\\..*\\.PLS" />
+922-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+923                <data android:pathPattern=".*.ram" />
+923-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+924                <data android:pathPattern=".*.RAM" />
+924-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+925                <data android:pathPattern=".*\\..*\\.ram" />
+925-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+926                <data android:pathPattern=".*\\..*\\.RAM" />
+926-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+927                <data android:pathPattern=".*\\..*\\..*\\.ram" />
+927-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+928                <data android:pathPattern=".*\\..*\\..*\\.RAM" />
+928-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+929                <data android:pathPattern=".*.wpl" />
+929-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+930                <data android:pathPattern=".*.WPL" />
+930-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+931                <data android:pathPattern=".*\\..*\\.wpl" />
+931-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+932                <data android:pathPattern=".*\\..*\\.WPL" />
+932-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+933                <data android:pathPattern=".*\\..*\\..*\\.wpl" />
+933-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+934                <data android:pathPattern=".*\\..*\\..*\\.WPL" />
+934-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+935                <data android:pathPattern=".*.xspf" />
+935-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+936                <data android:pathPattern=".*.XSPF" />
+936-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+937                <data android:pathPattern=".*\\..*\\.xspf" />
+937-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+938                <data android:pathPattern=".*\\..*\\.XSPF" />
+938-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+939                <data android:pathPattern=".*\\..*\\..*\\.xspf" />
+939-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+940                <data android:pathPattern=".*\\..*\\..*\\.XSPF" />
+940-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:220:23-51
+941            </intent-filter>
+942            <intent-filter android:label="Play with VLC" >
+942-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:938:13-944:29
+942-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:938:28-57
+943                <action android:name="android.intent.action.SEND" />
+943-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:939:17-68
+943-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:939:25-66
+944
+945                <category android:name="android.intent.category.DEFAULT" />
+945-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:116:17-75
+945-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:116:27-73
+946
+947                <data android:mimeType="*/*" />
+947-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:149:23-49
+948            </intent-filter>
+949            <!-- Search -->
+950            <intent-filter>
+950-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:946:13-948:29
+951                <action android:name="android.intent.action.SEARCH" />
+951-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:947:17-70
+951-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:947:25-68
+952            </intent-filter>
+953            <intent-filter>
+953-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:949:13-953:29
+954                <action android:name="com.google.android.gms.actions.SEARCH_ACTION" />
+954-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:950:17-86
+954-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:950:25-84
+955
+956                <category android:name="android.intent.category.DEFAULT" />
+956-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:116:17-75
+956-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:116:27-73
+957            </intent-filter>
+958
+959            <meta-data
+959-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:955:13-957:53
+960                android:name="android.app.searchable"
+960-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:956:17-54
+961                android:resource="@xml/searchable" />
+961-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:957:17-51
+962
+963            <intent-filter>
+963-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:959:13-963:29
+964                <action android:name="android.media.action.MEDIA_PLAY_FROM_SEARCH" />
+964-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:960:17-85
+964-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:960:25-83
+965
+966                <category android:name="android.intent.category.DEFAULT" />
+966-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:116:17-75
+966-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:116:27-73
+967            </intent-filter>
+968        </activity>
+969        <activity
+969-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:965:9-975:20
+970            android:name="com.dewords.pope.gui.MainActivity"
+970-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:966:13-45
+971            android:icon="@mipmap/pope_launcher"
+971-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:967:13-49
+972            android:label="@string/app_name_new"
+972-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:968:13-49
+973            android:launchMode="singleTask"
+973-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:969:13-44
+974            android:theme="@style/Theme.VLC"
+974-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:970:13-45
+975            android:windowSoftInputMode="adjustPan" >
+975-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:971:13-52
+976            <meta-data
+976-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:955:13-957:53
+977                android:name="android.app.searchable"
+977-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:956:17-54
+978                android:resource="@xml/searchable" />
+978-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:957:17-51
+979        </activity>
+980        <activity
+980-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:976:9-978:58
+981            android:name="com.dewords.pope.gui.onboarding.OnboardingActivity"
+981-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:977:13-62
+982            android:theme="@style/Theme.VLC.Onboarding" />
+982-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:978:13-56
+983        <activity
+983-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:979:9-982:54
+984            android:name="com.dewords.pope.gui.SecondaryActivity"
+984-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:980:13-50
+985            android:theme="@style/Theme.VLC"
+985-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:981:13-45
+986            android:windowSoftInputMode="adjustPan" />
+986-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:982:13-52
+987        <activity
+987-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:983:9-985:56
+988            android:name="com.dewords.pope.gui.HeaderMediaListActivity"
+988-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:984:13-56
+989            android:theme="@style/Theme.VLC.NoStatus" />
+989-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:985:13-54
+990        <activity
+990-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:986:9-988:56
+991            android:name="com.dewords.pope.gui.InfoActivity"
+991-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:987:13-45
+992            android:theme="@style/Theme.VLC.NoStatus" />
+992-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:988:13-54
+993        <activity
+993-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:989:9-991:47
+994            android:name="com.dewords.pope.gui.LibrariesActivity"
+994-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:990:13-50
+995            android:theme="@style/Theme.VLC" />
+995-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:991:13-45
+996        <activity
+996-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:992:9-994:47
+997            android:name="com.dewords.pope.gui.AuthorsActivity"
+997-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:993:13-48
+998            android:theme="@style/Theme.VLC" />
+998-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:994:13-45
+999        <activity
+999-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:995:9-997:47
+1000            android:name="com.dewords.pope.gui.SearchActivity"
+1000-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:996:13-47
+1001            android:theme="@style/Theme.VLC" />
+1001-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:997:13-45
+1002        <activity
+1002-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:998:9-1012:20
+1003            android:name="com.dewords.pope.gui.SendCrashActivity"
+1003-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:999:13-50
+1004            android:enabled="false"
+1004-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:1006:13-36
+1005            android:excludeFromRecents="true"
+1005-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:1004:13-46
+1006            android:exported="true"
+1006-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:1005:13-36
+1007            android:icon="@mipmap/pope_launcher"
+1007-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:1002:13-49
+1008            android:label="@string/vlc_reporter"
+1008-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:1000:13-49
+1009            android:launchMode="singleTask"
+1009-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:1003:13-44
+1010            android:theme="@style/Theme.VLC.SendCrashDialog" >
+1010-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:1001:13-61
+1011            <intent-filter>
+1011-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:1007:13-1011:29
+1012                <action android:name="android.intent.action.MAIN" />
+1012-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:102:17-68
+1012-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:102:25-66
+1013
+1014                <category android:name="android.intent.category.LAUNCHER" />
+1014-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:104:17-76
+1014-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:104:27-74
+1015            </intent-filter>
+1016        </activity>
+1017        <activity
+1017-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:1013:9-1015:63
+1018            android:name="com.dewords.pope.gui.BetaWelcomeActivity"
+1018-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:1014:13-52
+1019            android:theme="@style/Theme.VLC.SendCrashDialog" />
+1019-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:1015:13-61
+1020        <activity
+1020-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:1016:9-1018:60
+1021            android:name="com.dewords.pope.gui.browser.FilePickerActivity"
+1021-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:1017:13-59
+1022            android:theme="@style/Theme.VLC.PickerDialog" />
+1022-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:1018:13-58
+1023        <activity
+1023-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:1019:9-1021:47
+1024            android:name="com.dewords.pope.gui.preferences.PreferencesActivity"
+1024-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:1020:13-64
+1025            android:theme="@style/Theme.VLC" />
+1025-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:1021:13-45
+1026        <activity
+1026-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:1022:9-1024:47
+1027            android:name="com.dewords.pope.gui.preferences.search.PreferenceSearchActivity"
+1027-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:1023:13-76
+1028            android:theme="@style/Theme.VLC" />
+1028-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:1024:13-45
+1029        <activity
+1029-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:1025:9-1027:48
+1030            android:name="com.dewords.moviepedia.ui.MediaScrapingActivity"
+1030-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:1026:13-75
+1031            android:theme="@style/Theme.VLC" />
+1031-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:1027:13-45
+1032        <activity
+1032-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:1029:9-1045:20
+1033            android:name="com.dewords.pope.gui.video.VideoPlayerActivity"
+1033-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:1030:13-58
+1034            android:configChanges="orientation|screenSize|smallestScreenSize|screenLayout|uiMode|keyboard|keyboardHidden|navigation"
+1034-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:1031:13-133
+1035            android:exported="true"
+1035-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:1032:13-36
+1036            android:finishOnTaskLaunch="true"
+1036-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:1033:13-46
+1037            android:launchMode="singleTask"
+1037-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:1034:13-44
+1038            android:resizeableActivity="true"
+1038-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:1035:13-46
+1039            android:supportsPictureInPicture="true"
+1039-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:1036:13-52
+1040            android:theme="@style/Theme.VLC.Player" >
+1040-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:1037:13-52
+1041            <intent-filter>
+1041-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:1039:13-1041:29
+1042                <action android:name="com.samsung.android.support.REMOTE_ACTION" />
+1042-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:1040:17-84
+1042-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:1040:25-81
+1043            </intent-filter>
+1044
+1045            <meta-data
+1045-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:1042:13-1043:54
+1046                android:name="com.samsung.android.support.REMOTE_ACTION"
+1046-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:1042:24-80
+1047                android:resource="@xml/air_actions" />
+1047-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:1043:17-52
+1048        </activity>
+1049        <activity
+1049-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:1046:9-1050:32
+1050            android:name="com.dewords.pope.gui.DialogActivity"
+1050-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:1047:13-47
+1051            android:configChanges="orientation|screenSize"
+1051-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:1048:13-59
+1052            android:label=""
+1052-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:1050:13-29
+1053            android:theme="@style/VLCTransparentTheme" />
+1053-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:1049:13-55
+1054        <activity
+1054-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:1052:9-1063:20
+1055            android:name="com.dewords.pope.widget.MiniPlayerConfigureActivity"
+1055-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:1053:17-67
+1056            android:excludeFromRecents="true"
+1056-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:1058:17-50
+1057            android:exported="true"
+1057-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:1054:17-40
+1058            android:launchMode="singleTop"
+1058-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:1056:17-47
+1059            android:noHistory="true"
+1059-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:1057:17-41
+1060            android:theme="@style/WidgetConfiguration" >
+1060-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:1055:17-59
+1061            <intent-filter>
+1061-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:1059:13-1062:29
+1062                <action android:name="android.intent.action.MAIN" />
+1062-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:102:17-68
+1062-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:102:25-66
+1063                <action android:name="android.appwidget.action.APPWIDGET_CONFIGURE" />
+1063-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:1061:17-87
+1063-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:1061:25-84
+1064            </intent-filter>
+1065        </activity>
+1066
+1067        <service
+1067-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:1065:9-1072:19
+1068            android:name="com.dewords.pope.PlaybackService"
+1068-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:1066:17-48
+1069            android:exported="true"
+1069-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:1067:17-40
+1070            android:foregroundServiceType="mediaPlayback" >
+1070-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:1068:17-62
+1071            <intent-filter>
+1071-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:1069:13-1071:29
+1072                <action android:name="android.media.browse.MediaBrowserService" />
+1072-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:1070:17-82
+1072-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:1070:25-80
+1073            </intent-filter>
+1074        </service>
+1075        <service
+1075-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:1073:9-1075:67
+1076            android:name="com.dewords.pope.MediaParsingService"
+1076-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:1074:17-52
+1077            android:foregroundServiceType="mediaProjection" />
+1077-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:1075:17-64
+1078
+1079        <receiver
+1079-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:1077:9-1092:20
+1080            android:name="com.dewords.pope.widget.VLCAppWidgetProviderWhite"
+1080-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:1078:13-61
+1081            android:exported="false"
+1081-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:1079:13-37
+1082            android:label="@string/widget_name_w" >
+1082-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:1080:13-50
+1083            <intent-filter>
+1083-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:1081:13-1087:29
+1084                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+1084-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:1082:17-83
+1084-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:1082:25-81
+1085                <action android:name="com.dewords.pope.widget.INIT" />
+1085-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:1083:25-68
+1086                <action android:name="com.dewords.pope.widget.UPDATE" />
+1086-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:1084:25-70
+1087                <action android:name="com.dewords.pope.widget.UPDATE_COVER" />
+1087-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:1085:25-76
+1088                <action android:name="com.dewords.pope.widget.UPDATE_POSITION" />
+1088-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:1086:25-79
+1089            </intent-filter>
+1090
+1091            <meta-data
+1091-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:1089:13-1091:60
+1092                android:name="android.appwidget.provider"
+1092-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:1090:17-58
+1093                android:resource="@xml/widget_provider_w" />
+1093-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:1091:17-58
+1094        </receiver>
+1095        <receiver
+1095-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:1093:9-1108:20
+1096            android:name="com.dewords.pope.widget.VLCAppWidgetProviderBlack"
+1096-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:1094:13-61
+1097            android:exported="false"
+1097-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:1095:13-37
+1098            android:label="@string/widget_name_b" >
+1098-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:1096:13-50
+1099            <intent-filter>
+1099-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:1081:13-1087:29
+1100                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+1100-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:1082:17-83
+1100-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:1082:25-81
+1101                <action android:name="com.dewords.pope.widget.INIT" />
+1101-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:1083:25-68
+1102                <action android:name="com.dewords.pope.widget.UPDATE" />
+1102-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:1084:25-70
+1103                <action android:name="com.dewords.pope.widget.UPDATE_COVER" />
+1103-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:1085:25-76
+1104                <action android:name="com.dewords.pope.widget.UPDATE_POSITION" />
+1104-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:1086:25-79
+1105            </intent-filter>
+1106
+1107            <meta-data
+1107-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:1089:13-1091:60
+1108                android:name="android.appwidget.provider"
+1108-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:1090:17-58
+1109                android:resource="@xml/widget_provider_b" />
+1109-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:1091:17-58
+1110        </receiver>
+1111        <receiver
+1111-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:1110:9-1125:20
+1112            android:name="com.dewords.pope.widget.MiniPlayerAppWidgetProvider"
+1112-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:1111:17-67
+1113            android:exported="true"
+1113-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:1112:17-40
+1114            android:label="@string/widget_name_mini_player" >
+1114-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:1113:17-64
+1115            <intent-filter>
+1115-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:1114:13-1120:29
+1116                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+1116-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:1082:17-83
+1116-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:1082:25-81
+1117                <action android:name="com.dewords.pope.widget.mini.INIT" />
+1117-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:1116:25-73
+1118                <action android:name="com.dewords.pope.widget.mini.UPDATE" />
+1118-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:1117:25-75
+1119                <action android:name="com.dewords.pope.widget.mini.UPDATE_COVER" />
+1119-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:1118:25-81
+1120                <action android:name="com.dewords.pope.widget.mini.UPDATE_POSITION" />
+1120-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:1119:25-84
+1121            </intent-filter>
+1122
+1123            <meta-data
+1123-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:1089:13-1091:60
+1124                android:name="android.appwidget.provider"
+1124-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:1090:17-58
+1125                android:resource="@xml/widget_provider_mini" />
+1125-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:1091:17-58
+1126        </receiver>
+1127        <receiver
+1127-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:1127:9-1132:20
+1128            android:name="androidx.media.session.MediaButtonReceiver"
+1128-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:1127:19-76
+1129            android:exported="true" >
+1129-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:1128:13-36
+1130            <intent-filter>
+1130-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:1129:13-1131:29
+1131                <action android:name="android.intent.action.MEDIA_BUTTON" />
+1131-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:1130:17-76
+1131-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:1130:25-74
+1132            </intent-filter>
+1133        </receiver>
+1134
+1135        <activity
+1135-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:1134:9-1141:56
+1136            android:name="com.dewords.pope.gui.video.benchmark.BenchActivity"
+1136-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:1135:13-62
+1137            android:configChanges="orientation|screenSize|smallestScreenSize|screenLayout"
+1137-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:1136:13-91
+1138            android:exported="true"
+1138-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:1137:13-36
+1139            android:launchMode="singleInstance"
+1139-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:1138:13-48
+1140            android:screenOrientation="landscape"
+1140-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:1139:13-50
+1141            android:theme="@style/Theme.VLC.Player" /> <!-- TV components -->
+1141-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:1140:13-52
+1142
+1143        <service
+1143-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:1143:9-1145:39
+1144            android:name="com.dewords.pope.RecommendationsService"
+1144-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:1144:13-51
+1145            android:exported="false" />
+1145-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:1145:13-37
+1146
+1147        <receiver
+1147-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:1147:9-1160:20
+1148            android:name="com.dewords.pope.TvReceiver"
+1148-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:1148:13-39
+1149            android:enabled="true"
+1149-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:1149:13-35
+1150            android:exported="true" >
+1150-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:1150:13-36
+1151            <intent-filter>
+1151-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:1151:13-1159:29
+1152                <action android:name="android.intent.action.BOOT_COMPLETED" />
+1152-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:1152:17-78
+1152-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:1152:25-76
+1153                <action android:name="android.media.tv.action.PREVIEW_PROGRAM_ADDED_TO_WATCH_NEXT" />
+1153-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:1153:17-101
+1153-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:1153:25-99
+1154                <action android:name="android.media.tv.ACTION_WATCH_NEXT_PROGRAM_BROWSABLE_DISABLED" />
+1154-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:1154:17-103
+1154-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:1154:25-101
+1155                <action android:name="android.media.tv.action.PREVIEW_PROGRAM_BROWSABLE_DISABLED" />
+1155-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:1155:17-100
+1155-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:1155:25-98
+1156                <action android:name="android.media.tv.action.INITIALIZE_PROGRAMS" />
+1156-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:1156:17-85
+1156-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:1156:25-83
+1157
+1158                <category android:name="android.intent.category.DEFAULT" />
+1158-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:116:17-75
+1158-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:116:27-73
+1159            </intent-filter>
+1160        </receiver>
+1161        <receiver
+1161-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:1161:9-1173:20
+1162            android:name="com.dewords.pope.StoragesMonitor"
+1162-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:1162:13-44
+1163            android:enabled="false"
+1163-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:1163:13-36
+1164            android:exported="true" >
+1164-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:1164:13-36
+1165            <intent-filter>
+1165-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:1165:13-1172:29
+1166                <action android:name="android.intent.action.MEDIA_MOUNTED" />
+1166-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:1166:17-77
+1166-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:1166:25-75
+1167                <action android:name="android.intent.action.MEDIA_REMOVED" />
+1167-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:1167:17-77
+1167-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:1167:25-75
+1168
+1169                <category android:name="android.intent.category.DEFAULT" />
+1169-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:116:17-75
+1169-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:116:27-73
+1170
+1171                <data android:scheme="file" />
+1171-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:120:21-49
+1172            </intent-filter>
+1173        </receiver>
+1174
+1175        <provider
+1176            android:name="com.dewords.pope.FileProvider"
+1176-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:1176:13-41
+1177            android:authorities="com.dewords.pope.thumbprovider"
+1177-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:1177:13-65
+1178            android:exported="true" />
+1178-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:1178:13-36
+1179        <provider
+1180            android:name="com.dewords.pope.ArtworkProvider"
+1180-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:1180:13-44
+1181            android:authorities="com.dewords.pope.artwork"
+1181-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:1181:13-59
+1182            android:exported="true" />
+1182-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:1182:13-36
+1183        <provider
+1184            android:name="androidx.core.content.FileProvider"
+1184-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:1184:13-62
+1185            android:authorities="com.dewords.pope.provider"
+1185-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:1185:13-60
+1186            android:exported="false"
+1186-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:1186:13-37
+1187            android:grantUriPermissions="true" >
+1187-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:1187:13-47
+1188            <meta-data
+1188-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:1188:13-1190:57
+1189                android:name="android.support.FILE_PROVIDER_PATHS"
+1189-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:1189:17-67
+1190                android:resource="@xml/provider_paths" />
+1190-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:1190:17-55
+1191        </provider>
+1192
+1193        <service
+1193-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:1193:9-1204:19
+1194            android:name="com.dewords.pope.PreviewVideoInputService"
+1194-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:1194:13-53
+1195            android:exported="false"
+1195-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:1195:13-37
+1196            android:permission="android.permission.BIND_TV_INPUT" >
+1196-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:1196:13-66
+1197            <intent-filter>
+1197-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:1197:13-1199:29
+1198                <action android:name="android.media.tv.TvInputService" />
+1198-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:1198:17-73
+1198-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:1198:25-71
+1199            </intent-filter>
+1200
+1201            <meta-data
+1201-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:1201:13-1203:62
+1202                android:name="android.media.tv.input"
+1202-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:1202:17-54
+1203                android:resource="@xml/previewinputservice" />
+1203-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:1203:17-60
+1204        </service>
+1205
+1206        <activity
+1206-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:1206:9-1208:50
+1207            android:name="com.dewords.pope.gui.DebugLogActivity"
+1207-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:1206:19-55
+1208            android:launchMode="singleTop"
+1208-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:1208:17-47
+1209            android:theme="@style/Theme.VLC" />
+1209-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:1207:17-49
+1210
+1211        <service
+1211-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:1209:9-1210:45
+1212            android:name="com.dewords.pope.DebugLogService"
+1212-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:1209:18-49
+1213            android:process=":logger" />
+1213-->/Users/dewords/Desktop/POPE PLAYER/application/pope-player/AndroidManifest.xml:1210:17-42
+1214
+1215        <provider
+1215-->[androidx.emoji2:emoji2:1.2.0] /Users/dewords/.gradle/caches/transforms-3/a3d1c2b2bb845f8400328e8dc8b11645/transformed/emoji2-1.2.0/AndroidManifest.xml:24:9-32:20
+1216            android:name="androidx.startup.InitializationProvider"
+1216-->[androidx.emoji2:emoji2:1.2.0] /Users/dewords/.gradle/caches/transforms-3/a3d1c2b2bb845f8400328e8dc8b11645/transformed/emoji2-1.2.0/AndroidManifest.xml:25:13-67
+1217            android:authorities="com.dewords.pope.androidx-startup"
+1217-->[androidx.emoji2:emoji2:1.2.0] /Users/dewords/.gradle/caches/transforms-3/a3d1c2b2bb845f8400328e8dc8b11645/transformed/emoji2-1.2.0/AndroidManifest.xml:26:13-68
+1218            android:exported="false" >
+1218-->[androidx.emoji2:emoji2:1.2.0] /Users/dewords/.gradle/caches/transforms-3/a3d1c2b2bb845f8400328e8dc8b11645/transformed/emoji2-1.2.0/AndroidManifest.xml:27:13-37
+1219            <meta-data
+1219-->[androidx.emoji2:emoji2:1.2.0] /Users/dewords/.gradle/caches/transforms-3/a3d1c2b2bb845f8400328e8dc8b11645/transformed/emoji2-1.2.0/AndroidManifest.xml:29:13-31:52
+1220                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+1220-->[androidx.emoji2:emoji2:1.2.0] /Users/dewords/.gradle/caches/transforms-3/a3d1c2b2bb845f8400328e8dc8b11645/transformed/emoji2-1.2.0/AndroidManifest.xml:30:17-75
+1221                android:value="androidx.startup" />
+1221-->[androidx.emoji2:emoji2:1.2.0] /Users/dewords/.gradle/caches/transforms-3/a3d1c2b2bb845f8400328e8dc8b11645/transformed/emoji2-1.2.0/AndroidManifest.xml:31:17-49
+1222            <meta-data
+1222-->[androidx.lifecycle:lifecycle-process:2.5.1] /Users/dewords/.gradle/caches/transforms-3/e4fa42c3405bc62eee6817af469eb9bc/transformed/lifecycle-process-2.5.1/AndroidManifest.xml:31:13-33:52
+1223                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+1223-->[androidx.lifecycle:lifecycle-process:2.5.1] /Users/dewords/.gradle/caches/transforms-3/e4fa42c3405bc62eee6817af469eb9bc/transformed/lifecycle-process-2.5.1/AndroidManifest.xml:32:17-78
+1224                android:value="androidx.startup" />
+1224-->[androidx.lifecycle:lifecycle-process:2.5.1] /Users/dewords/.gradle/caches/transforms-3/e4fa42c3405bc62eee6817af469eb9bc/transformed/lifecycle-process-2.5.1/AndroidManifest.xml:33:17-49
+1225        </provider>
+1226
+1227        <uses-library
+1227-->[androidx.window:window:1.0.0] /Users/dewords/.gradle/caches/transforms-3/85f1d42a23240a03fc931fad912cb6f0/transformed/window-1.0.0/AndroidManifest.xml:25:9-27:40
+1228            android:name="androidx.window.extensions"
+1228-->[androidx.window:window:1.0.0] /Users/dewords/.gradle/caches/transforms-3/85f1d42a23240a03fc931fad912cb6f0/transformed/window-1.0.0/AndroidManifest.xml:26:13-54
+1229            android:required="false" />
+1229-->[androidx.window:window:1.0.0] /Users/dewords/.gradle/caches/transforms-3/85f1d42a23240a03fc931fad912cb6f0/transformed/window-1.0.0/AndroidManifest.xml:27:13-37
+1230        <uses-library
+1230-->[androidx.window:window:1.0.0] /Users/dewords/.gradle/caches/transforms-3/85f1d42a23240a03fc931fad912cb6f0/transformed/window-1.0.0/AndroidManifest.xml:28:9-30:40
+1231            android:name="androidx.window.sidecar"
+1231-->[androidx.window:window:1.0.0] /Users/dewords/.gradle/caches/transforms-3/85f1d42a23240a03fc931fad912cb6f0/transformed/window-1.0.0/AndroidManifest.xml:29:13-51
+1232            android:required="false" />
+1232-->[androidx.window:window:1.0.0] /Users/dewords/.gradle/caches/transforms-3/85f1d42a23240a03fc931fad912cb6f0/transformed/window-1.0.0/AndroidManifest.xml:30:13-37
+1233
+1234        <service
+1234-->[androidx.room:room-runtime:2.4.3] /Users/dewords/.gradle/caches/transforms-3/8bf8b7b0ff0432c2c80959d5be25cf52/transformed/room-runtime-2.4.3/AndroidManifest.xml:25:9-28:40
+1235            android:name="androidx.room.MultiInstanceInvalidationService"
+1235-->[androidx.room:room-runtime:2.4.3] /Users/dewords/.gradle/caches/transforms-3/8bf8b7b0ff0432c2c80959d5be25cf52/transformed/room-runtime-2.4.3/AndroidManifest.xml:26:13-74
+1236            android:directBootAware="true"
+1236-->[androidx.room:room-runtime:2.4.3] /Users/dewords/.gradle/caches/transforms-3/8bf8b7b0ff0432c2c80959d5be25cf52/transformed/room-runtime-2.4.3/AndroidManifest.xml:27:13-43
+1237            android:exported="false" />
+1237-->[androidx.room:room-runtime:2.4.3] /Users/dewords/.gradle/caches/transforms-3/8bf8b7b0ff0432c2c80959d5be25cf52/transformed/room-runtime-2.4.3/AndroidManifest.xml:28:13-37
+1238    </application>
+1239
+1240</manifest>

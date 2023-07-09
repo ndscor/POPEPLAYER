@@ -1,0 +1,55 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.dewords.pope.pope-player-mergeDebugResources-54:/values-sw600dp-v13/values-sw600dp-v13.xml",
+            "map": [
+                {
+                    "source": "/Users/dewords/.gradle/caches/transforms-3/7169bf936d0c253b11cbfc6e0cf55d9a/transformed/material-1.7.0/res/values-sw600dp-v13/values-sw600dp-v13.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,10,11,12,13,14",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,115,185,256,328,386,444,553,617,673,732,795",
+                        "endLines": "2,3,4,5,6,7,9,10,11,12,13,17",
+                        "endColumns": "59,69,70,71,57,57,10,63,55,58,62,10",
+                        "endOffsets": "110,180,251,323,381,439,548,612,668,727,790,962"
+                    },
+                    "to": {
+                        "startLines": "12,13,14,15,16,17,18,20,31,32,36,37",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "727,787,857,928,1000,1058,1116,1225,1839,1895,2097,2160",
+                        "endLines": "12,13,14,15,16,17,19,20,31,32,36,40",
+                        "endColumns": "59,69,70,71,57,57,10,63,55,58,62,10",
+                        "endOffsets": "782,852,923,995,1053,1111,1220,1284,1890,1949,2155,2327"
+                    }
+                },
+                {
+                    "source": "/Users/dewords/.gradle/caches/transforms-3/4e0f4b369a3ad3460886be1188d6a47f/transformed/appcompat-1.5.0/res/values-sw600dp-v13/values-sw600dp-v13.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,124,193,263,337,413,472,543",
+                        "endColumns": "68,68,69,73,75,58,70,67",
+                        "endOffsets": "119,188,258,332,408,467,538,606"
+                    }
+                },
+                {
+                    "source": "/Users/dewords/Desktop/POPE PLAYER/application/resources/build/intermediates/packaged_res/debug/values-sw600dp-v13/values-sw600dp-v13.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,112,171,227,282,333,393,448,502,559,617,668,721,767,816",
+                        "endColumns": "56,58,55,54,50,59,54,53,56,57,50,52,45,48,47",
+                        "endOffsets": "107,166,222,277,328,388,443,497,554,612,663,716,762,811,859"
+                    },
+                    "to": {
+                        "startLines": "10,11,21,22,23,24,25,26,27,28,29,30,33,34,35",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "611,668,1289,1345,1400,1451,1511,1566,1620,1677,1735,1786,1954,2000,2049",
+                        "endColumns": "56,58,55,54,50,59,54,53,56,57,50,52,45,48,47",
+                        "endOffsets": "663,722,1340,1395,1446,1506,1561,1615,1672,1730,1781,1834,1995,2044,2092"
+                    }
+                }
+            ]
+        }
+    ]
+}

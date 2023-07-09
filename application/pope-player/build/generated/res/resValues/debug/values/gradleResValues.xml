@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Automatically generated file. DO NOT MODIFY -->
+
+    <!-- Value from build type: debug -->
+    <string name="benchmark_package_name" translatable="false">org.videolan.vlcbenchmark.debug</string>
+    <!-- Value from build type: debug -->
+    <string name="tv_provider_authority" translatable="false">com.dewords.pope.debug.tv</string>
+    <!-- Value from default config. -->
+    <string name="build_host" translatable="false">dewords@NITINs-MBP</string>
+    <!-- Value from default config. -->
+    <string name="build_time" translatable="false">2023-07-09</string>
+    <!-- Value from default config. -->
+    <string name="changelog" translatable="false">* Fix media controls not working after some time on Android 13\n* Fix audio notification icon transparency\n* Minor interface fixes\n* Crash fixes</string>
+
+</resources>

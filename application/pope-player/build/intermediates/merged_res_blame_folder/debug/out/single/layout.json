@@ -1,0 +1,286 @@
+[
+    {
+        "merged": "com.dewords.pope.pope-player-mergeDebugResources-55:/layout/player_overlay_tracks.xml",
+        "source": "com.dewords.pope.pope-player-pope-player-58:/layout/player_overlay_tracks.xml"
+    },
+    {
+        "merged": "com.dewords.pope.pope-player-mergeDebugResources-55:/layout/player_overlay_track_item.xml",
+        "source": "com.dewords.pope.pope-player-pope-player-58:/layout/player_overlay_track_item.xml"
+    },
+    {
+        "merged": "com.dewords.pope.pope-player-mergeDebugResources-55:/layout/subtitle_download_item.xml",
+        "source": "com.dewords.pope.pope-player-pope-player-58:/layout/subtitle_download_item.xml"
+    },
+    {
+        "merged": "com.dewords.pope.pope-player-mergeDebugResources-55:/layout/vlc_login_dialog.xml",
+        "source": "com.dewords.pope.pope-player-pope-player-58:/layout/vlc_login_dialog.xml"
+    },
+    {
+        "merged": "com.dewords.pope.pope-player-mergeDebugResources-55:/layout/about_authors_item.xml",
+        "source": "com.dewords.pope.pope-player-pope-player-58:/layout/about_authors_item.xml"
+    },
+    {
+        "merged": "com.dewords.pope.pope-player-mergeDebugResources-55:/layout/widget_content_full_player.xml",
+        "source": "com.dewords.pope.pope-player-pope-player-58:/layout/widget_content_full_player.xml"
+    },
+    {
+        "merged": "com.dewords.pope.pope-player-mergeDebugResources-55:/layout/widget_mini_initial.xml",
+        "source": "com.dewords.pope.pope-player-pope-player-58:/layout/widget_mini_initial.xml"
+    },
+    {
+        "merged": "com.dewords.pope.pope-player-mergeDebugResources-55:/layout/mrl_item.xml",
+        "source": "com.dewords.pope.pope-player-pope-player-58:/layout/mrl_item.xml"
+    },
+    {
+        "merged": "com.dewords.pope.pope-player-mergeDebugResources-55:/layout/chapter_list_item.xml",
+        "source": "com.dewords.pope.pope-player-pope-player-58:/layout/chapter_list_item.xml"
+    },
+    {
+        "merged": "com.dewords.pope.pope-player-mergeDebugResources-55:/layout/contextual_sheet.xml",
+        "source": "com.dewords.pope.pope-player-pope-player-58:/layout/contextual_sheet.xml"
+    },
+    {
+        "merged": "com.dewords.pope.pope-player-mergeDebugResources-55:/layout/player_hud.xml",
+        "source": "com.dewords.pope.pope-player-pope-player-58:/layout/player_hud.xml"
+    },
+    {
+        "merged": "com.dewords.pope.pope-player-mergeDebugResources-55:/layout/video_track_item.xml",
+        "source": "com.dewords.pope.pope-player-pope-player-58:/layout/video_track_item.xml"
+    },
+    {
+        "merged": "com.dewords.pope.pope-player-mergeDebugResources-55:/layout/moviepedia_item.xml",
+        "source": "com.dewords.pope.pope-player-pope-player-58:/layout/moviepedia_item.xml"
+    },
+    {
+        "merged": "com.dewords.pope.pope-player-mergeDebugResources-55:/layout/dialog_audio_controls_settings.xml",
+        "source": "com.dewords.pope.pope-player-pope-player-58:/layout/dialog_audio_controls_settings.xml"
+    },
+    {
+        "merged": "com.dewords.pope.pope-player-mergeDebugResources-55:/layout/dialog_widget_migration.xml",
+        "source": "com.dewords.pope.pope-player-pope-player-58:/layout/dialog_widget_migration.xml"
+    },
+    {
+        "merged": "com.dewords.pope.pope-player-mergeDebugResources-55:/layout/bookmark_item.xml",
+        "source": "com.dewords.pope.pope-player-pope-player-58:/layout/bookmark_item.xml"
+    },
+    {
+        "merged": "com.dewords.pope.pope-player-mergeDebugResources-55:/layout/search_activity.xml",
+        "source": "com.dewords.pope.pope-player-pope-player-58:/layout/search_activity.xml"
+    },
+    {
+        "merged": "com.dewords.pope.pope-player-mergeDebugResources-55:/layout/playlists_fragment.xml",
+        "source": "com.dewords.pope.pope-player-pope-player-58:/layout/playlists_fragment.xml"
+    },
+    {
+        "merged": "com.dewords.pope.pope-player-mergeDebugResources-55:/layout/browser_item.xml",
+        "source": "com.dewords.pope.pope-player-pope-player-58:/layout/browser_item.xml"
+    },
+    {
+        "merged": "com.dewords.pope.pope-player-mergeDebugResources-55:/layout/audio_browser_card_item.xml",
+        "source": "com.dewords.pope.pope-player-pope-player-58:/layout/audio_browser_card_item.xml"
+    },
+    {
+        "merged": "com.dewords.pope.pope-player-mergeDebugResources-55:/layout/directory_browser.xml",
+        "source": "com.dewords.pope.pope-player-pope-player-58:/layout/directory_browser.xml"
+    },
+    {
+        "merged": "com.dewords.pope.pope-player-mergeDebugResources-55:/layout/dialog_display_settings.xml",
+        "source": "com.dewords.pope.pope-player-pope-player-58:/layout/dialog_display_settings.xml"
+    },
+    {
+        "merged": "com.dewords.pope.pope-player-mergeDebugResources-55:/layout/activity_beta_welcome.xml",
+        "source": "com.dewords.pope.pope-player-pope-player-58:/layout/activity_beta_welcome.xml"
+    },
+    {
+        "merged": "com.dewords.pope.pope-player-mergeDebugResources-55:/layout/subtitle_downloader_dialog.xml",
+        "source": "com.dewords.pope.pope-player-pope-player-58:/layout/subtitle_downloader_dialog.xml"
+    },
+    {
+        "merged": "com.dewords.pope.pope-player-mergeDebugResources-55:/layout/history_item_card.xml",
+        "source": "com.dewords.pope.pope-player-pope-player-58:/layout/history_item_card.xml"
+    },
+    {
+        "merged": "com.dewords.pope.pope-player-mergeDebugResources-55:/layout/video_list_card.xml",
+        "source": "com.dewords.pope.pope-player-pope-player-58:/layout/video_list_card.xml"
+    },
+    {
+        "merged": "com.dewords.pope.pope-player-mergeDebugResources-55:/layout/moviepedia_activity.xml",
+        "source": "com.dewords.pope.pope-player-pope-player-58:/layout/moviepedia_activity.xml"
+    },
+    {
+        "merged": "com.dewords.pope.pope-player-mergeDebugResources-55:/layout/player_hud_right.xml",
+        "source": "com.dewords.pope.pope-player-pope-player-58:/layout/player_hud_right.xml"
+    },
+    {
+        "merged": "com.dewords.pope.pope-player-mergeDebugResources-55:/layout/dialog_renderers.xml",
+        "source": "com.dewords.pope.pope-player-pope-player-58:/layout/dialog_renderers.xml"
+    },
+    {
+        "merged": "com.dewords.pope.pope-player-mergeDebugResources-55:/layout/audio_browser_separator.xml",
+        "source": "com.dewords.pope.pope-player-pope-player-58:/layout/audio_browser_separator.xml"
+    },
+    {
+        "merged": "com.dewords.pope.pope-player-mergeDebugResources-55:/layout/context_item.xml",
+        "source": "com.dewords.pope.pope-player-pope-player-58:/layout/context_item.xml"
+    },
+    {
+        "merged": "com.dewords.pope.pope-player-mergeDebugResources-55:/layout/header_media_list_activity.xml",
+        "source": "com.dewords.pope.pope-player-pope-player-58:/layout/header_media_list_activity.xml"
+    },
+    {
+        "merged": "com.dewords.pope.pope-player-mergeDebugResources-55:/layout/dialog_video_controls_settings.xml",
+        "source": "com.dewords.pope.pope-player-pope-player-58:/layout/dialog_video_controls_settings.xml"
+    },
+    {
+        "merged": "com.dewords.pope.pope-player-mergeDebugResources-55:/layout/widget_mini_player_configure.xml",
+        "source": "com.dewords.pope.pope-player-pope-player-58:/layout/widget_mini_player_configure.xml"
+    },
+    {
+        "merged": "com.dewords.pope.pope-player-mergeDebugResources-55:/layout/mrl_dummy_item.xml",
+        "source": "com.dewords.pope.pope-player-pope-player-58:/layout/mrl_dummy_item.xml"
+    },
+    {
+        "merged": "com.dewords.pope.pope-player-mergeDebugResources-55:/layout/audio_album_track_item.xml",
+        "source": "com.dewords.pope.pope-player-pope-player-58:/layout/audio_album_track_item.xml"
+    },
+    {
+        "merged": "com.dewords.pope.pope-player-mergeDebugResources-55:/layout/vlc_question_dialog.xml",
+        "source": "com.dewords.pope.pope-player-pope-player-58:/layout/vlc_question_dialog.xml"
+    },
+    {
+        "merged": "com.dewords.pope.pope-player-mergeDebugResources-55:/layout/dialog_playlist.xml",
+        "source": "com.dewords.pope.pope-player-pope-player-58:/layout/dialog_playlist.xml"
+    },
+    {
+        "merged": "com.dewords.pope.pope-player-mergeDebugResources-55:/layout/search_item.xml",
+        "source": "com.dewords.pope.pope-player-pope-player-58:/layout/search_item.xml"
+    },
+    {
+        "merged": "com.dewords.pope.pope-player-mergeDebugResources-55:/layout/equalizer.xml",
+        "source": "com.dewords.pope.pope-player-pope-player-58:/layout/equalizer.xml"
+    },
+    {
+        "merged": "com.dewords.pope.pope-player-mergeDebugResources-55:/layout/preference_item.xml",
+        "source": "com.dewords.pope.pope-player-pope-player-58:/layout/preference_item.xml"
+    },
+    {
+        "merged": "com.dewords.pope.pope-player-mergeDebugResources-55:/layout/send_crash_activity.xml",
+        "source": "com.dewords.pope.pope-player-pope-player-58:/layout/send_crash_activity.xml"
+    },
+    {
+        "merged": "com.dewords.pope.pope-player-mergeDebugResources-55:/layout/video_grid_card.xml",
+        "source": "com.dewords.pope.pope-player-pope-player-58:/layout/video_grid_card.xml"
+    },
+    {
+        "merged": "com.dewords.pope.pope-player-mergeDebugResources-55:/layout/video_scale_item.xml",
+        "source": "com.dewords.pope.pope-player-pope-player-58:/layout/video_scale_item.xml"
+    },
+    {
+        "merged": "com.dewords.pope.pope-player-mergeDebugResources-55:/layout/ml_wizard_activity.xml",
+        "source": "com.dewords.pope.pope-player-pope-player-58:/layout/ml_wizard_activity.xml"
+    },
+    {
+        "merged": "com.dewords.pope.pope-player-mergeDebugResources-55:/layout/dialog_license.xml",
+        "source": "com.dewords.pope.pope-player-pope-player-58:/layout/dialog_license.xml"
+    },
+    {
+        "merged": "com.dewords.pope.pope-player-mergeDebugResources-55:/layout/dialog_norification_permission.xml",
+        "source": "com.dewords.pope.pope-player-pope-player-58:/layout/dialog_norification_permission.xml"
+    },
+    {
+        "merged": "com.dewords.pope.pope-player-mergeDebugResources-55:/layout/audio_browser_item.xml",
+        "source": "com.dewords.pope.pope-player-pope-player-58:/layout/audio_browser_item.xml"
+    },
+    {
+        "merged": "com.dewords.pope.pope-player-mergeDebugResources-55:/layout/video_grid.xml",
+        "source": "com.dewords.pope.pope-player-pope-player-58:/layout/video_grid.xml"
+    },
+    {
+        "merged": "com.dewords.pope.pope-player-mergeDebugResources-55:/layout/vlc_progress_dialog.xml",
+        "source": "com.dewords.pope.pope-player-pope-player-58:/layout/vlc_progress_dialog.xml"
+    },
+    {
+        "merged": "com.dewords.pope.pope-player-mergeDebugResources-55:/layout/simple_item.xml",
+        "source": "com.dewords.pope.pope-player-pope-player-58:/layout/simple_item.xml"
+    },
+    {
+        "merged": "com.dewords.pope.pope-player-mergeDebugResources-55:/layout/info_activity.xml",
+        "source": "com.dewords.pope.pope-player-pope-player-58:/layout/info_activity.xml"
+    },
+    {
+        "merged": "com.dewords.pope.pope-player-mergeDebugResources-55:/layout/preferences_search_activity.xml",
+        "source": "com.dewords.pope.pope-player-pope-player-58:/layout/preferences_search_activity.xml"
+    },
+    {
+        "merged": "com.dewords.pope.pope-player-mergeDebugResources-55:/layout/cover_media_switcher_item.xml",
+        "source": "com.dewords.pope.pope-player-pope-player-58:/layout/cover_media_switcher_item.xml"
+    },
+    {
+        "merged": "com.dewords.pope.pope-player-mergeDebugResources-55:/layout/dialog_duplication_warning.xml",
+        "source": "com.dewords.pope.pope-player-pope-player-58:/layout/dialog_duplication_warning.xml"
+    },
+    {
+        "merged": "com.dewords.pope.pope-player-mergeDebugResources-55:/layout/license_activity.xml",
+        "source": "com.dewords.pope.pope-player-pope-player-58:/layout/license_activity.xml"
+    },
+    {
+        "merged": "com.dewords.pope.pope-player-mergeDebugResources-55:/layout/browser_item_separator.xml",
+        "source": "com.dewords.pope.pope-player-pope-player-58:/layout/browser_item_separator.xml"
+    },
+    {
+        "merged": "com.dewords.pope.pope-player-mergeDebugResources-55:/layout/history_item.xml",
+        "source": "com.dewords.pope.pope-player-pope-player-58:/layout/history_item.xml"
+    },
+    {
+        "merged": "com.dewords.pope.pope-player-mergeDebugResources-55:/layout/widget_mini.xml",
+        "source": "com.dewords.pope.pope-player-pope-player-58:/layout/widget_mini.xml"
+    },
+    {
+        "merged": "com.dewords.pope.pope-player-mergeDebugResources-55:/layout/dialog_add_to_group.xml",
+        "source": "com.dewords.pope.pope-player-pope-player-58:/layout/dialog_add_to_group.xml"
+    },
+    {
+        "merged": "com.dewords.pope.pope-player-mergeDebugResources-55:/layout/card_browser_item.xml",
+        "source": "com.dewords.pope.pope-player-pope-player-58:/layout/card_browser_item.xml"
+    },
+    {
+        "merged": "com.dewords.pope.pope-player-mergeDebugResources-55:/layout/library_item.xml",
+        "source": "com.dewords.pope.pope-player-pope-player-58:/layout/library_item.xml"
+    },
+    {
+        "merged": "com.dewords.pope.pope-player-mergeDebugResources-55:/layout/mrl_card_item.xml",
+        "source": "com.dewords.pope.pope-player-pope-player-58:/layout/mrl_card_item.xml"
+    },
+    {
+        "merged": "com.dewords.pope.pope-player-mergeDebugResources-55:/layout/audio_player.xml",
+        "source": "com.dewords.pope.pope-player-pope-player-58:/layout/audio_player.xml"
+    },
+    {
+        "merged": "com.dewords.pope.pope-player-mergeDebugResources-55:/layout/dialog_ext_device.xml",
+        "source": "com.dewords.pope.pope-player-pope-player-58:/layout/dialog_ext_device.xml"
+    },
+    {
+        "merged": "com.dewords.pope.pope-player-mergeDebugResources-55:/layout/item_renderer.xml",
+        "source": "com.dewords.pope.pope-player-pope-player-58:/layout/item_renderer.xml"
+    },
+    {
+        "merged": "com.dewords.pope.pope-player-mergeDebugResources-55:/layout/about_authors_activity.xml",
+        "source": "com.dewords.pope.pope-player-pope-player-58:/layout/about_authors_activity.xml"
+    },
+    {
+        "merged": "com.dewords.pope.pope-player-mergeDebugResources-55:/layout/player_option_item.xml",
+        "source": "com.dewords.pope.pope-player-pope-player-58:/layout/player_option_item.xml"
+    },
+    {
+        "merged": "com.dewords.pope.pope-player-mergeDebugResources-55:/layout/playlist_item.xml",
+        "source": "com.dewords.pope.pope-player-pope-player-58:/layout/playlist_item.xml"
+    },
+    {
+        "merged": "com.dewords.pope.pope-player-mergeDebugResources-55:/layout/dialog_about_version.xml",
+        "source": "com.dewords.pope.pope-player-pope-player-58:/layout/dialog_about_version.xml"
+    },
+    {
+        "merged": "com.dewords.pope.pope-player-mergeDebugResources-55:/layout/dialog_widget_explanation.xml",
+        "source": "com.dewords.pope.pope-player-pope-player-58:/layout/dialog_widget_explanation.xml"
+    }
+]

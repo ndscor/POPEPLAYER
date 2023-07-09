@@ -1,0 +1,77 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.dewords.pope.pope-player-mergeDebugResources-54:/values-v23/values-v23.xml",
+            "map": [
+                {
+                    "source": "/Users/dewords/.gradle/caches/transforms-3/a620b6149f29b10944b4de608624bd6e/transformed/cardview-1.0.0/res/values-v23/values-v23.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endLines": "4",
+                        "endColumns": "12",
+                        "endOffsets": "200"
+                    },
+                    "to": {
+                        "startLines": "50",
+                        "startColumns": "4",
+                        "startOffsets": "3232",
+                        "endLines": "52",
+                        "endColumns": "12",
+                        "endOffsets": "3377"
+                    }
+                },
+                {
+                    "source": "/Users/dewords/.gradle/caches/transforms-3/7169bf936d0c253b11cbfc6e0cf55d9a/transformed/material-1.7.0/res/values-v23/values-v23.xml",
+                    "from": {
+                        "startLines": "2,5,8,13,17,20,23,26,31,34,38",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,271,481,801,1038,1245,1452,1655,1987,2189,2454",
+                        "endLines": "4,7,12,16,19,22,25,30,33,37,41",
+                        "endColumns": "10,10,10,10,10,10,10,10,10,10,10",
+                        "endOffsets": "266,476,796,1033,1240,1447,1650,1982,2184,2449,2722"
+                    },
+                    "to": {
+                        "startLines": "68,71,74,79,83,86,89,92,97,100,104",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "4216,4432,4642,4962,5199,5406,5613,5816,6148,6350,6615",
+                        "endLines": "70,73,78,82,85,88,91,96,99,103,107",
+                        "endColumns": "10,10,10,10,10,10,10,10,10,10,10",
+                        "endOffsets": "4427,4637,4957,5194,5401,5608,5811,6143,6345,6610,6883"
+                    }
+                },
+                {
+                    "source": "/Users/dewords/Desktop/POPE PLAYER/application/pope-player/res/values-v23/styles.xml",
+                    "from": {
+                        "startLines": "26,32,37",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "1132,1396,1672",
+                        "endLines": "30,36,41",
+                        "endColumns": "12,12,12",
+                        "endOffsets": "1390,1667,1962"
+                    },
+                    "to": {
+                        "startLines": "53,58,63",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "3382,3645,3921",
+                        "endLines": "57,62,67",
+                        "endColumns": "12,12,12",
+                        "endOffsets": "3640,3916,4211"
+                    }
+                },
+                {
+                    "source": "/Users/dewords/.gradle/caches/transforms-3/4e0f4b369a3ad3460886be1188d6a47f/transformed/appcompat-1.5.0/res/values-v23/values-v23.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,20,34,35,36,39,43,44,45,46",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,190,325,400,487,1225,1975,2094,2221,2443,2667,2782,2889,3002",
+                        "endLines": "2,3,4,5,19,33,34,35,38,42,43,44,45,49",
+                        "endColumns": "134,134,74,86,12,12,118,126,12,12,114,106,112,12",
+                        "endOffsets": "185,320,395,482,1220,1970,2089,2216,2438,2662,2777,2884,2997,3227"
+                    }
+                }
+            ]
+        }
+    ]
+}

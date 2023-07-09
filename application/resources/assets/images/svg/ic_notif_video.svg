@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="24"
+   height="24"
+   id="svg4682"
+   version="1.1"
+   inkscape:version="1.1.2 (0a00cf5339, 2022-02-04)"
+   sodipodi:docname="ic_notif_video.svg"
+   inkscape:export-filename="/home/corbax/Dev/android/Icons/Test 1/ic_play_normal.png"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <defs
+     id="defs4684" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="15.839192"
+     inkscape:cx="3.5355339"
+     inkscape:cy="13.037281"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="true"
+     inkscape:window-width="1920"
+     inkscape:window-height="1016"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:snap-grids="true"
+     inkscape:snap-bbox="true"
+     inkscape:bbox-paths="true"
+     inkscape:bbox-nodes="true"
+     inkscape:snap-bbox-edge-midpoints="true"
+     inkscape:snap-bbox-midpoints="true"
+     inkscape:object-paths="true"
+     inkscape:snap-intersection-paths="true"
+     inkscape:object-nodes="true"
+     inkscape:snap-smooth-nodes="true"
+     inkscape:snap-midpoints="true"
+     inkscape:snap-object-midpoints="true"
+     inkscape:snap-center="true"
+     inkscape:pagecheckerboard="1">
+    <inkscape:grid
+       type="xygrid"
+       id="grid3002" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata4687">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-1028.3622)">
+    <path
+       id="path6909"
+       style="fill:#000000;fill-opacity:1;stroke-width:0.999998"
+       d="M 10.289062 3 C 10.075363 3 9.8352625 3.0264969 9.6640625 3.1542969 C 9.3258625 3.4076969 9.1909844 3.8131062 8.8964844 4.6914062 C 8.6018844 5.5698063 8.5878906 5.6152344 8.5878906 5.6152344 C 9.4772906 6.0600344 10.1914 6.2072063 11 6.0039062 L 11 3.2460938 C 10.97 3.2170938 10.945156 3.1802969 10.910156 3.1542969 C 10.740156 3.0246969 10.502763 3 10.289062 3 z M 13 3 L 13 21 L 17 21 C 17.55 21 18 20.55 18 20 L 18 19 L 20 19 L 20 20 C 20 20.55 20.45 21 21 21 C 21.55 21 22 20.55 22 20 L 22 4 C 22 3.45 21.55 3 21 3 C 20.45 3 20 3.45 20 4 L 20 5 L 18 5 L 18 4 C 18 3.45 17.55 3 17 3 L 13 3 z M 18 7 L 20 7 L 20 9 L 18 9 L 18 7 z M 7.5117188 8.8457031 L 6.28125 12.539062 L 6.28125 12.548828 C 6.29225 12.547828 6.2938281 12.548828 6.2988281 12.548828 C 7.6443281 13.715228 9.3513531 14.180128 11.001953 13.986328 L 11.001953 9.828125 C 9.8369531 10.053025 8.677725 9.7257156 7.515625 8.8535156 L 7.5117188 8.8457031 z M 18 11 L 20 11 L 20 13 L 18 13 L 18 11 z M 4.3691406 14.384766 C 3.9602406 14.384766 3.5784844 14.693863 3.4589844 15.101562 L 2.7441406 17.539062 C 2.5103406 18.339162 2.2780688 19.1332 2.0429688 19.9375 C 1.9439688 20.2737 2.0423719 20.522459 2.2011719 20.693359 C 2.2991719 20.799159 2.4216031 20.874781 2.5332031 20.925781 C 2.6446031 20.975781 2.7204937 21 2.8085938 21 L 10.289062 21 L 11 21 L 11 17.923828 C 10.8806 17.934828 10.764831 17.958891 10.644531 17.962891 C 8.6458313 18.039891 6.6099937 17.449028 5.3710938 16.236328 C 5.1391938 16.009228 5.2171937 15.7741 5.3710938 15.3125 C 5.4733937 15.005 5.6679687 14.384766 5.6679688 14.384766 L 4.3691406 14.384766 z M 18 15 L 20 15 L 20 17 L 18 17 L 18 15 z "
+       transform="translate(0,1028.3622)" />
+  </g>
+</svg>

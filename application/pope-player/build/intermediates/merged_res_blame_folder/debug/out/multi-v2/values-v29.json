@@ -1,0 +1,52 @@
+{
+    "logs": [
+        {
+            "outputFile": "/Users/dewords/.gradle/daemon/7.4/com.dewords.pope.pope-player-mergeDebugResources-54:/values-v29/values-v29.xml",
+            "map": [
+                {
+                    "source": "/Users/dewords/Desktop/POPE PLAYER/application/pope-player/res/values-v29/styles.xml",
+                    "from": {
+                        "startLines": "26,35,43",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "1132,1581,1967",
+                        "endLines": "33,41,48",
+                        "endColumns": "12,12,12",
+                        "endOffsets": "1575,1961,2298"
+                    },
+                    "to": {
+                        "startLines": "2,10,17",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "55,417,716",
+                        "endLines": "9,16,22",
+                        "endColumns": "12,12,12",
+                        "endOffsets": "412,711,961"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "com.dewords.pope.pope-player-mergeDebugResources-54:/values-v29/values-v29.xml",
+            "map": [
+                {
+                    "source": "/Users/dewords/Desktop/POPE PLAYER/application/pope-player/res/values-v29/styles.xml",
+                    "from": {
+                        "startLines": "26,35,44",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "1132,1581,2035",
+                        "endLines": "33,42,49",
+                        "endColumns": "12,12,12",
+                        "endOffsets": "1575,2029,2366"
+                    },
+                    "to": {
+                        "startLines": "2,10,18",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "55,417,784",
+                        "endLines": "9,17,23",
+                        "endColumns": "12,12,12",
+                        "endOffsets": "412,779,1029"
+                    }
+                }
+            ]
+        }
+    ]
+}

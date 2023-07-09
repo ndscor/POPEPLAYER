@@ -1,0 +1,36 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.dewords.pope.pope-player-mergeDebugResources-54:/values-sw360dp-v13/values-sw360dp-v13.xml",
+            "map": [
+                {
+                    "source": "/Users/dewords/.gradle/caches/transforms-3/4e36cc214d960c632013168e9b43a54f/transformed/preference-1.1.1/res/values-sw360dp-v13/values-sw360dp-v13.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "71",
+                        "endOffsets": "122"
+                    }
+                },
+                {
+                    "source": "/Users/dewords/Desktop/POPE PLAYER/application/resources/build/intermediates/packaged_res/debug/values-sw360dp-v13/values-sw360dp-v13.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "45",
+                        "endOffsets": "96"
+                    },
+                    "to": {
+                        "startLines": "3",
+                        "startColumns": "4",
+                        "startOffsets": "127",
+                        "endColumns": "45",
+                        "endOffsets": "168"
+                    }
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "com.dewords.pope.pope-player-mergeDebugResources-55:/layout-land/audio_player.xml",
+        "source": "com.dewords.pope.pope-player-pope-player-58:/layout-land/audio_player.xml"
+    },
+    {
+        "merged": "com.dewords.pope.pope-player-mergeDebugResources-55:/layout-land/cover_media_switcher_item.xml",
+        "source": "com.dewords.pope.pope-player-pope-player-58:/layout-land/cover_media_switcher_item.xml"
+    },
+    {
+        "merged": "com.dewords.pope.pope-player-mergeDebugResources-55:/layout-land/player_overlay_tracks.xml",
+        "source": "com.dewords.pope.pope-player-pope-player-58:/layout-land/player_overlay_tracks.xml"
+    }
+]

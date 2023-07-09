@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- color prefernce -->
+    <string-array name="default_color_choice_values" translatable="false">
+        <item>#0288D1</item>
+        <item>#f44336</item>
+        <item>#E91E63</item>
+        <item>#9C27B0</item>
+        <item>#673AB7</item>
+        <item>#3F51B5</item>
+        <item>#03A9F4</item>
+        <item>#00BCD4</item>
+        <item>#009688</item>
+        <item>#4CAF50</item>
+        <item>#8BC34A</item>
+        <item>#CDDC39</item>
+        <item>#FFEB3B</item>
+        <item>#FFC107</item>
+        <item>#FF9800</item>
+        <item>#FF5722</item>
+        <item>#795548</item>
+        <item>#9E9E9E</item>
+        <item>#607D8B</item>
+        <item>#222222</item>
+    </string-array>
+
+    <color name="material_black_protected">#88000000</color>
+    <color name="accentColor">#286da6</color>
+
+    <color name="pope_theme">#000000</color>
+
+
+    <color name="primaryColor">#0288D1</color>
+
+
+
+</resources>

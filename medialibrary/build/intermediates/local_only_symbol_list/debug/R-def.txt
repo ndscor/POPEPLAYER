@@ -1,0 +1,6 @@
+R_DEF: Internal format may change without notice
+local
+string unknown_album
+string unknown_artist
+string unknown_genre
+string various_artists
