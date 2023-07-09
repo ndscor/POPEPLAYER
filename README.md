@@ -1,4 +1,8 @@
-Pope Player for android , based on VLC.
+Pope Player for android 
 
+Based On VLC https://github.com/videolan/vlc-android .
 
+Pope Player is licensed under the terms of the GNU General Public License version 3 (GPLv3).
+
+https://opensource.org/licenses/gpl-3.0.html
 
