@@ -30,9 +30,9 @@ import android.os.Looper
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.ViewStub
 import android.widget.FrameLayout
 import androidx.annotation.StringRes
-import androidx.appcompat.widget.ViewStubCompat
 import androidx.core.widget.NestedScrollView
 import androidx.leanback.widget.BrowseFrameLayout
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -62,7 +62,7 @@ class VideoPlayerOrientationDelegate(private val player: VideoPlayerActivity) {
      * Show the orientation overlay. Inflate it if it's not yet
      */
     private fun showOrientationOverlay() {
-        player.findViewById<ViewStubCompat?>(R.id.player_orientation_stub)?.let {
+        player.findViewById<ViewStub?>(R.id.player_orientation_stub)?.let {
             it.setVisible()
         }
         player.findViewById<FrameLayout>(R.id.orientation_background)?.let {

@@ -110,21 +110,6 @@
             ]
         },
         {
-            "outputFile": "/Users/dewords/.gradle/daemon/7.4/com.dewords.pope.pope-player-merged_res-56:/values-h720dp-v13_values-h720dp-v13.arsc.flat",
-            "map": [
-                {
-                    "source": "/Users/dewords/.gradle/caches/transforms-3/4e0f4b369a3ad3460886be1188d6a47f/transformed/appcompat-1.5.0/res/values-h720dp-v13/values-h720dp-v13.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "66",
-                        "endOffsets": "117"
-                    }
-                }
-            ]
-        },
-        {
             "outputFile": "/Users/dewords/.gradle/daemon/7.4/com.dewords.pope.pope-player-merged_res-56:/values-ldltr-v21_values-ldltr-v21.arsc.flat",
             "map": [
                 {
@@ -135,6 +120,21 @@
                         "startOffsets": "55",
                         "endColumns": "112",
                         "endOffsets": "163"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "/Users/dewords/.gradle/daemon/7.4/com.dewords.pope.pope-player-merged_res-56:/values-h720dp-v13_values-h720dp-v13.arsc.flat",
+            "map": [
+                {
+                    "source": "/Users/dewords/.gradle/caches/transforms-3/4e0f4b369a3ad3460886be1188d6a47f/transformed/appcompat-1.5.0/res/values-h720dp-v13/values-h720dp-v13.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "66",
+                        "endOffsets": "117"
                     }
                 }
             ]
@@ -1241,6 +1241,59 @@
             ]
         },
         {
+            "outputFile": "/Users/dewords/.gradle/daemon/7.4/com.dewords.pope.pope-player-merged_res-56:/values-v19_values-v19.arsc.flat",
+            "map": [
+                {
+                    "source": "/Users/dewords/Desktop/POPE PLAYER/application/resources/build/intermediates/packaged_res/debug/values-v19/values-v19.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "52",
+                        "endOffsets": "103"
+                    }
+                },
+                {
+                    "source": "/Users/dewords/.gradle/caches/transforms-3/06b23519c914a7ae0c5780afda4a64be/transformed/leanback-1.0.0/res/values-v19/values-v19.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endLines": "10",
+                        "endColumns": "12",
+                        "endOffsets": "659"
+                    },
+                    "to": {
+                        "startLines": "3",
+                        "startColumns": "4",
+                        "startOffsets": "108",
+                        "endLines": "11",
+                        "endColumns": "12",
+                        "endOffsets": "712"
+                    }
+                },
+                {
+                    "source": "/Users/dewords/Desktop/POPE PLAYER/application/pope-player/res/values-v19/styles.xml",
+                    "from": {
+                        "startLines": "3,5,9",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "115,169,318",
+                        "endLines": "3,7,11",
+                        "endColumns": "52,12,12",
+                        "endOffsets": "163,312,473"
+                    },
+                    "to": {
+                        "startLines": "12,13,16",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "717,769,844",
+                        "endLines": "12,15,18",
+                        "endColumns": "51,12,12",
+                        "endOffsets": "764,839,926"
+                    }
+                }
+            ]
+        },
+        {
             "outputFile": "/Users/dewords/.gradle/daemon/7.4/com.dewords.pope.pope-player-merged_res-56:/values-es_values-es.arsc.flat",
             "map": [
                 {
@@ -1362,59 +1415,6 @@
                         "startOffsets": "4198,4305,4406,4505,4602,4729,4844,4945,5037,5165,5290,5402,5530,5679,5804,5926,6031,6123,6251,6346,6449,6551,6653,6749,6862,6978,7111,7241,7347,7456,7573,7695,7807,7924,8011,8105,8207,8341,12421",
                         "endColumns": "106,100,98,96,126,114,100,91,127,124,111,127,148,124,121,104,91,127,94,102,101,101,95,112,115,132,129,105,108,116,121,111,116,86,93,101,133,152,89",
                         "endOffsets": "4300,4401,4500,4597,4724,4839,4940,5032,5160,5285,5397,5525,5674,5799,5921,6026,6118,6246,6341,6444,6546,6648,6744,6857,6973,7106,7236,7342,7451,7568,7690,7802,7919,8006,8100,8202,8336,8489,12506"
-                    }
-                }
-            ]
-        },
-        {
-            "outputFile": "/Users/dewords/.gradle/daemon/7.4/com.dewords.pope.pope-player-merged_res-56:/values-v19_values-v19.arsc.flat",
-            "map": [
-                {
-                    "source": "/Users/dewords/Desktop/POPE PLAYER/application/resources/build/intermediates/packaged_res/debug/values-v19/values-v19.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "52",
-                        "endOffsets": "103"
-                    }
-                },
-                {
-                    "source": "/Users/dewords/.gradle/caches/transforms-3/06b23519c914a7ae0c5780afda4a64be/transformed/leanback-1.0.0/res/values-v19/values-v19.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endLines": "10",
-                        "endColumns": "12",
-                        "endOffsets": "659"
-                    },
-                    "to": {
-                        "startLines": "3",
-                        "startColumns": "4",
-                        "startOffsets": "108",
-                        "endLines": "11",
-                        "endColumns": "12",
-                        "endOffsets": "712"
-                    }
-                },
-                {
-                    "source": "/Users/dewords/Desktop/POPE PLAYER/application/pope-player/res/values-v19/styles.xml",
-                    "from": {
-                        "startLines": "3,5,9",
-                        "startColumns": "4,4,4",
-                        "startOffsets": "115,169,318",
-                        "endLines": "3,7,11",
-                        "endColumns": "52,12,12",
-                        "endOffsets": "163,312,473"
-                    },
-                    "to": {
-                        "startLines": "12,13,16",
-                        "startColumns": "4,4,4",
-                        "startOffsets": "717,769,844",
-                        "endLines": "12,15,18",
-                        "endColumns": "51,12,12",
-                        "endOffsets": "764,839,926"
                     }
                 }
             ]

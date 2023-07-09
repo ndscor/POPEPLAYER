@@ -52,12 +52,12 @@
         "source": "/Users/dewords/.gradle/daemon/7.4/com.dewords.pope.pope-player-pope-player-58:/xml/preferences_video.xml"
     },
     {
-        "merged": "/Users/dewords/.gradle/daemon/7.4/com.dewords.pope.pope-player-merged_res-56:/layout_about_authors_item.xml.flat",
-        "source": "/Users/dewords/.gradle/daemon/7.4/com.dewords.pope.pope-player-pope-player-58:/layout/about_authors_item.xml"
-    },
-    {
         "merged": "/Users/dewords/.gradle/daemon/7.4/com.dewords.pope.pope-player-merged_res-56:/mipmap-hdpi_pope_launcher_round.png.flat",
         "source": "/Users/dewords/.gradle/daemon/7.4/com.dewords.pope.pope-player-pope-player-58:/mipmap-hdpi/pope_launcher_round.png"
+    },
+    {
+        "merged": "/Users/dewords/.gradle/daemon/7.4/com.dewords.pope.pope-player-merged_res-56:/layout_about_authors_item.xml.flat",
+        "source": "/Users/dewords/.gradle/daemon/7.4/com.dewords.pope.pope-player-pope-player-58:/layout/about_authors_item.xml"
     },
     {
         "merged": "/Users/dewords/.gradle/daemon/7.4/com.dewords.pope.pope-player-merged_res-56:/layout_player.xml.flat",
@@ -72,12 +72,12 @@
         "source": "/Users/dewords/.gradle/daemon/7.4/com.dewords.pope.pope-player-pope-player-58:/layout/recycler_section_header.xml"
     },
     {
-        "merged": "/Users/dewords/.gradle/daemon/7.4/com.dewords.pope.pope-player-merged_res-56:/drawable_round_read_more_24.xml.flat",
-        "source": "/Users/dewords/.gradle/daemon/7.4/com.dewords.pope.pope-player-pope-player-58:/drawable/round_read_more_24.xml"
-    },
-    {
         "merged": "/Users/dewords/.gradle/daemon/7.4/com.dewords.pope.pope-player-merged_res-56:/xml_backup_rules.xml.flat",
         "source": "/Users/dewords/.gradle/daemon/7.4/com.dewords.pope.pope-player-pope-player-58:/xml/backup_rules.xml"
+    },
+    {
+        "merged": "/Users/dewords/.gradle/daemon/7.4/com.dewords.pope.pope-player-merged_res-56:/drawable_round_read_more_24.xml.flat",
+        "source": "/Users/dewords/.gradle/daemon/7.4/com.dewords.pope.pope-player-pope-player-58:/drawable/round_read_more_24.xml"
     },
     {
         "merged": "/Users/dewords/.gradle/daemon/7.4/com.dewords.pope.pope-player-merged_res-56:/layout_player_overlay_seek.xml.flat",
@@ -104,36 +104,36 @@
         "source": "/Users/dewords/.gradle/daemon/7.4/com.dewords.pope.pope-player-pope-player-58:/layout/bookmark_item.xml"
     },
     {
-        "merged": "/Users/dewords/.gradle/daemon/7.4/com.dewords.pope.pope-player-merged_res-56:/layout_preference_item.xml.flat",
-        "source": "/Users/dewords/.gradle/daemon/7.4/com.dewords.pope.pope-player-pope-player-58:/layout/preference_item.xml"
+        "merged": "/Users/dewords/.gradle/daemon/7.4/com.dewords.pope.pope-player-merged_res-56:/layout_mrl_item.xml.flat",
+        "source": "/Users/dewords/.gradle/daemon/7.4/com.dewords.pope.pope-player-pope-player-58:/layout/mrl_item.xml"
     },
     {
         "merged": "/Users/dewords/.gradle/daemon/7.4/com.dewords.pope.pope-player-merged_res-56:/layout_dialog_video_resume.xml.flat",
         "source": "/Users/dewords/.gradle/daemon/7.4/com.dewords.pope.pope-player-pope-player-58:/layout/dialog_video_resume.xml"
     },
     {
-        "merged": "/Users/dewords/.gradle/daemon/7.4/com.dewords.pope.pope-player-merged_res-56:/layout_mrl_item.xml.flat",
-        "source": "/Users/dewords/.gradle/daemon/7.4/com.dewords.pope.pope-player-pope-player-58:/layout/mrl_item.xml"
-    },
-    {
-        "merged": "/Users/dewords/.gradle/daemon/7.4/com.dewords.pope.pope-player-merged_res-56:/menu_bottom_navigation.xml.flat",
-        "source": "/Users/dewords/.gradle/daemon/7.4/com.dewords.pope.pope-player-pope-player-58:/menu/bottom_navigation.xml"
+        "merged": "/Users/dewords/.gradle/daemon/7.4/com.dewords.pope.pope-player-merged_res-56:/layout_preference_item.xml.flat",
+        "source": "/Users/dewords/.gradle/daemon/7.4/com.dewords.pope.pope-player-pope-player-58:/layout/preference_item.xml"
     },
     {
         "merged": "/Users/dewords/.gradle/daemon/7.4/com.dewords.pope.pope-player-merged_res-56:/layout_player_hud.xml.flat",
         "source": "/Users/dewords/.gradle/daemon/7.4/com.dewords.pope.pope-player-pope-player-58:/layout/player_hud.xml"
     },
     {
+        "merged": "/Users/dewords/.gradle/daemon/7.4/com.dewords.pope.pope-player-merged_res-56:/menu_bottom_navigation.xml.flat",
+        "source": "/Users/dewords/.gradle/daemon/7.4/com.dewords.pope.pope-player-pope-player-58:/menu/bottom_navigation.xml"
+    },
+    {
         "merged": "/Users/dewords/.gradle/daemon/7.4/com.dewords.pope.pope-player-merged_res-56:/layout_audio_browser.xml.flat",
         "source": "/Users/dewords/.gradle/daemon/7.4/com.dewords.pope.pope-player-pope-player-58:/layout/audio_browser.xml"
     },
     {
-        "merged": "/Users/dewords/.gradle/daemon/7.4/com.dewords.pope.pope-player-merged_res-56:/layout_vlc_progress_dialog.xml.flat",
-        "source": "/Users/dewords/.gradle/daemon/7.4/com.dewords.pope.pope-player-pope-player-58:/layout/vlc_progress_dialog.xml"
-    },
-    {
         "merged": "/Users/dewords/.gradle/daemon/7.4/com.dewords.pope.pope-player-merged_res-56:/layout_dialog_about_version.xml.flat",
         "source": "/Users/dewords/.gradle/daemon/7.4/com.dewords.pope.pope-player-pope-player-58:/layout/dialog_about_version.xml"
+    },
+    {
+        "merged": "/Users/dewords/.gradle/daemon/7.4/com.dewords.pope.pope-player-merged_res-56:/layout_vlc_progress_dialog.xml.flat",
+        "source": "/Users/dewords/.gradle/daemon/7.4/com.dewords.pope.pope-player-pope-player-58:/layout/vlc_progress_dialog.xml"
     },
     {
         "merged": "/Users/dewords/.gradle/daemon/7.4/com.dewords.pope.pope-player-merged_res-56:/layout_onboarding_notification_permission.xml.flat",
@@ -192,12 +192,12 @@
         "source": "/Users/dewords/.gradle/daemon/7.4/com.dewords.pope.pope-player-pope-player-58:/layout/audioplayercontainer.xml"
     },
     {
-        "merged": "/Users/dewords/.gradle/daemon/7.4/com.dewords.pope.pope-player-merged_res-56:/drawable_checkmark_white.xml.flat",
-        "source": "/Users/dewords/.gradle/daemon/7.4/com.dewords.pope.pope-player-pope-player-58:/drawable/checkmark_white.xml"
-    },
-    {
         "merged": "/Users/dewords/.gradle/daemon/7.4/com.dewords.pope.pope-player-merged_res-56:/mipmap-xxhdpi_pope_launcher_foreground.png.flat",
         "source": "/Users/dewords/.gradle/daemon/7.4/com.dewords.pope.pope-player-pope-player-58:/mipmap-xxhdpi/pope_launcher_foreground.png"
+    },
+    {
+        "merged": "/Users/dewords/.gradle/daemon/7.4/com.dewords.pope.pope-player-merged_res-56:/drawable_checkmark_white.xml.flat",
+        "source": "/Users/dewords/.gradle/daemon/7.4/com.dewords.pope.pope-player-pope-player-58:/drawable/checkmark_white.xml"
     },
     {
         "merged": "/Users/dewords/.gradle/daemon/7.4/com.dewords.pope.pope-player-merged_res-56:/mipmap-xhdpi_pope_launcher_foreground.png.flat",
@@ -346,10 +346,6 @@
     {
         "merged": "/Users/dewords/.gradle/daemon/7.4/com.dewords.pope.pope-player-merged_res-56:/menu_action_mode_history.xml.flat",
         "source": "/Users/dewords/.gradle/daemon/7.4/com.dewords.pope.pope-player-pope-player-58:/menu/action_mode_history.xml"
-    },
-    {
-        "merged": "com.dewords.pope.pope-player-merged_res-56:/layout_main.xml.flat",
-        "source": "com.dewords.pope.pope-player-pope-player-58:/layout/main.xml"
     },
     {
         "merged": "/Users/dewords/.gradle/daemon/7.4/com.dewords.pope.pope-player-merged_res-56:/layout_license_activity.xml.flat",
@@ -918,6 +914,10 @@
     {
         "merged": "/Users/dewords/.gradle/daemon/7.4/com.dewords.pope.pope-player-merged_res-56:/layout_dialog_sd_write.xml.flat",
         "source": "/Users/dewords/.gradle/daemon/7.4/com.dewords.pope.pope-player-pope-player-58:/layout/dialog_sd_write.xml"
+    },
+    {
+        "merged": "com.dewords.pope.pope-player-merged_res-56:/layout-land_audio_player.xml.flat",
+        "source": "com.dewords.pope.pope-player-pope-player-58:/layout-land/audio_player.xml"
     },
     {
         "merged": "/Users/dewords/.gradle/daemon/7.4/com.dewords.pope.pope-player-merged_res-56:/layout_dialog_license.xml.flat",

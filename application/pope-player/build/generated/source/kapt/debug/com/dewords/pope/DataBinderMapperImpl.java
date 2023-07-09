@@ -359,11 +359,11 @@ public class DataBinderMapperImpl extends DataBinderMapper {
         throw new IllegalArgumentException("The tag for audio_browser_separator is invalid. Received: " + tag);
       }
       case  LAYOUT_AUDIOPLAYER: {
-        if ("layout/audio_player_0".equals(tag)) {
-          return new AudioPlayerBindingImpl(component, view);
-        }
         if ("layout-land/audio_player_0".equals(tag)) {
           return new AudioPlayerBindingLandImpl(component, view);
+        }
+        if ("layout/audio_player_0".equals(tag)) {
+          return new AudioPlayerBindingImpl(component, view);
         }
         throw new IllegalArgumentException("The tag for audio_player is invalid. Received: " + tag);
       }
@@ -942,8 +942,8 @@ public class DataBinderMapperImpl extends DataBinderMapper {
       sKeys.put("layout/audio_browser_card_item_0", com.dewords.pope.R.layout.audio_browser_card_item);
       sKeys.put("layout/audio_browser_item_0", com.dewords.pope.R.layout.audio_browser_item);
       sKeys.put("layout/audio_browser_separator_0", com.dewords.pope.R.layout.audio_browser_separator);
-      sKeys.put("layout/audio_player_0", com.dewords.pope.R.layout.audio_player);
       sKeys.put("layout-land/audio_player_0", com.dewords.pope.R.layout.audio_player);
+      sKeys.put("layout/audio_player_0", com.dewords.pope.R.layout.audio_player);
       sKeys.put("layout/bookmark_item_0", com.dewords.pope.R.layout.bookmark_item);
       sKeys.put("layout/browser_item_0", com.dewords.pope.R.layout.browser_item);
       sKeys.put("layout/browser_item_separator_0", com.dewords.pope.R.layout.browser_item_separator);

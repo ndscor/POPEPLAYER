@@ -94,7 +94,7 @@ public class AudioPlayerBindingImpl extends AudioPlayerBinding  {
             , (android.widget.ImageView) bindings[25]
             , (androidx.constraintlayout.widget.Barrier) bindings[36]
             , (androidx.constraintlayout.widget.ConstraintLayout) bindings[54]
-            , (androidx.appcompat.widget.ViewStubCompat) bindings[53]
+            , new androidx.databinding.ViewStubProxy((android.view.ViewStub) bindings[53])
             , (android.view.View) bindings[41]
             , (androidx.constraintlayout.widget.Guideline) bindings[48]
             , (androidx.constraintlayout.widget.ConstraintLayout) bindings[0]
@@ -122,7 +122,7 @@ public class AudioPlayerBindingImpl extends AudioPlayerBinding  {
             , (com.google.android.material.chip.ChipGroup) bindings[37]
             , (com.google.android.material.chip.Chip) bindings[38]
             , (android.widget.FrameLayout) bindings[51]
-            , (androidx.appcompat.widget.ViewStubCompat) bindings[52]
+            , new androidx.databinding.ViewStubProxy((android.view.ViewStub) bindings[52])
             , (android.widget.ImageView) bindings[8]
             , (com.google.android.material.textfield.TextInputLayout) bindings[34]
             , (android.widget.ImageView) bindings[9]
@@ -148,6 +148,7 @@ public class AudioPlayerBindingImpl extends AudioPlayerBinding  {
         this.advFunction.setTag(null);
         this.audioForward10.setTag(null);
         this.audioRewind10.setTag(null);
+        this.bookmarksStub.setContainingBinding(this);
         this.contentLayout.setTag(null);
         this.headerLargePlayPause.setTag(null);
         this.headerNext.setTag(null);
@@ -159,6 +160,7 @@ public class AudioPlayerBindingImpl extends AudioPlayerBinding  {
         this.length.setTag(null);
         this.next.setTag(null);
         this.playPause.setTag(null);
+        this.playerOptionsStub.setContainingBinding(this);
         this.playlistSearch.setTag(null);
         this.playlistSwitch.setTag(null);
         this.previous.setTag(null);
@@ -398,6 +400,12 @@ public class AudioPlayerBindingImpl extends AudioPlayerBinding  {
             // api target 1
 
             this.shuffle.setVisibility(canShuffleViewVISIBLEViewINVISIBLE);
+        }
+        if (bookmarksStub.getBinding() != null) {
+            executeBindingsOn(bookmarksStub.getBinding());
+        }
+        if (playerOptionsStub.getBinding() != null) {
+            executeBindingsOn(playerOptionsStub.getBinding());
         }
     }
     // Listener Stub Implementations

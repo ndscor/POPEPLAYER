@@ -11,13 +11,13 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.widget.AppCompatImageView;
-import androidx.appcompat.widget.ViewStubCompat;
 import androidx.constraintlayout.widget.Barrier;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.constraintlayout.widget.Guideline;
 import androidx.databinding.Bindable;
 import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;
+import androidx.databinding.ViewStubProxy;
 import androidx.recyclerview.widget.RecyclerView;
 import com.dewords.pope.R;
 import com.dewords.pope.gui.audio.AudioPlayer;
@@ -86,7 +86,7 @@ public abstract class AudioPlayerBinding extends ViewDataBinding {
   public final ConstraintLayout bookmarkMarkerContainer;
 
   @NonNull
-  public final ViewStubCompat bookmarksStub;
+  public final ViewStubProxy bookmarksStub;
 
   @NonNull
   public final View bottomGradient;
@@ -209,7 +209,7 @@ public abstract class AudioPlayerBinding extends ViewDataBinding {
   public final FrameLayout playerOptionsContainer;
 
   @NonNull
-  public final ViewStubCompat playerOptionsStub;
+  public final ViewStubProxy playerOptionsStub;
 
   @NonNull
   public final ImageView playlistSearch;
@@ -346,7 +346,7 @@ public abstract class AudioPlayerBinding extends ViewDataBinding {
       ImageView abRepeatStop, ImageView advFunction, ImageView audioForward10,
       TextView audioForwardText, HeaderMediaSwitcher audioMediaSwitcher, TextView audioPlayProgress,
       ImageView audioRewind10, TextView audioRewindText, ImageView backgroundView, Barrier barrier,
-      ConstraintLayout bookmarkMarkerContainer, ViewStubCompat bookmarksStub, View bottomGradient,
+      ConstraintLayout bookmarkMarkerContainer, ViewStubProxy bookmarksStub, View bottomGradient,
       Guideline centerGuideline, ConstraintLayout contentLayout,
       CoverMediaSwitcher coverMediaSwitcher, Guideline guideline13, Guideline guideline14,
       Guideline guideline8, Guideline guideline9, Guideline guidelineHeaderBottom,
@@ -356,12 +356,11 @@ public abstract class AudioPlayerBinding extends ViewDataBinding {
       TextView headerTime, ImageView hingeGoLeft, ImageView hingeGoRight, TextView length,
       ImageView next, AppCompatImageView playPause, ChipGroup playbackChips,
       Chip playbackSpeedQuickAction, FrameLayout playerOptionsContainer,
-      ViewStubCompat playerOptionsStub, ImageView playlistSearch,
-      TextInputLayout playlistSearchText, ImageView playlistSwitch, ImageView previous,
-      ProgressBar progressBar, ImageView repeat, ImageView shuffle, Chip sleepQuickAction,
-      TextView songSubtitle, TextView songTitle, TextView songTrackInfo, RecyclerView songsList,
-      View songsListGuide, TextView time, AccessibleSeekBar timeline, View topGradient,
-      ConstraintLayout trackInfoContainer) {
+      ViewStubProxy playerOptionsStub, ImageView playlistSearch, TextInputLayout playlistSearchText,
+      ImageView playlistSwitch, ImageView previous, ProgressBar progressBar, ImageView repeat,
+      ImageView shuffle, Chip sleepQuickAction, TextView songSubtitle, TextView songTitle,
+      TextView songTrackInfo, RecyclerView songsList, View songsListGuide, TextView time,
+      AccessibleSeekBar timeline, View topGradient, ConstraintLayout trackInfoContainer) {
     super(_bindingComponent, _root, _localFieldCount);
     this.abRepeatContainer = abRepeatContainer;
     this.abRepeatMarkerA = abRepeatMarkerA;
