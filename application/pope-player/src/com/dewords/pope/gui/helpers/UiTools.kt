@@ -355,34 +355,54 @@ object UiTools {
         val logo = v.findViewById<ImageView>(R.id.logo)
         val konfettiView = v.findViewById<KonfettiView>(R.id.konfetti)
         logo.setOnClickListener {
-            logo.animate().rotationBy(360F).translationY(-24.dp.toFloat()).setDuration(600).setInterpolator(AccelerateDecelerateInterpolator()).withEndAction {
-                logo.animate().translationY(0F).setStartDelay(75).setDuration(300).setInterpolator(OvershootInterpolator(3.0F)).withEndAction {
+            logo.animate().rotationBy(360F).translationY(-24.dp.toFloat()).setDuration(600)
+                .setInterpolator(AccelerateDecelerateInterpolator()).withEndAction {
+                logo.animate().translationY(0F).setStartDelay(75).setDuration(300)
+                    .setInterpolator(OvershootInterpolator(3.0F)).withEndAction {
 
                 }
                 konfettiView.build()
-                        .addColors(ContextCompat.getColor(activity, R.color.blue900), ContextCompat.getColor(activity, R.color.blue900), ContextCompat.getColor(activity, R.color.blue900))
-                        .setDirection(315.0, 360.0)
-                        .setSpeed(3f, 9f)
-                        .setFadeOutEnabled(true)
-                        .setTimeToLive(2000L)
-                        .addShapes(Shape.Circle, Shape.Square)
-                        .addSizes(Size(4))
-                        .setPosition(logo.x + logo.width - 12.dp, logo.x + logo.width - 12.dp, logo.y + logo.height - 24.dp, logo.y + logo.height + 24.dp)
-                        .setRotationEnabled(false)
-                        .setDelay(275)
-                        .burst(35)
+                    .addColors(
+                        ContextCompat.getColor(activity, R.color.blue900),
+                        ContextCompat.getColor(activity, R.color.blue900),
+                        ContextCompat.getColor(activity, R.color.blue900)
+                    )
+                    .setDirection(315.0, 360.0)
+                    .setSpeed(3f, 9f)
+                    .setFadeOutEnabled(true)
+                    .setTimeToLive(2000L)
+                    .addShapes(Shape.Circle, Shape.Square)
+                    .addSizes(Size(4))
+                    .setPosition(
+                        logo.x + logo.width - 12.dp,
+                        logo.x + logo.width - 12.dp,
+                        logo.y + logo.height - 24.dp,
+                        logo.y + logo.height + 24.dp
+                    )
+                    .setRotationEnabled(false)
+                    .setDelay(275)
+                    .burst(35)
                 konfettiView.build()
-                        .addColors(ContextCompat.getColor(activity, R.color.blue900), ContextCompat.getColor(activity, R.color.blue900), ContextCompat.getColor(activity, R.color.blue900))
-                        .setDirection(180.0, 225.0)
-                        .setSpeed(3f, 9f)
-                        .setFadeOutEnabled(true)
-                        .setTimeToLive(2000L)
-                        .addShapes(Shape.Circle, Shape.Square)
-                        .addSizes(Size(4))
-                        .setPosition(logo.x + 12.dp, logo.x + 12.dp, logo.y + logo.height - 24.dp, logo.y + logo.height + 24.dp)
-                        .setRotationEnabled(false)
-                        .setDelay(275)
-                        .burst(35)
+                    .addColors(
+                        ContextCompat.getColor(activity, R.color.blue900),
+                        ContextCompat.getColor(activity, R.color.blue900),
+                        ContextCompat.getColor(activity, R.color.blue900)
+                    )
+                    .setDirection(180.0, 225.0)
+                    .setSpeed(3f, 9f)
+                    .setFadeOutEnabled(true)
+                    .setTimeToLive(2000L)
+                    .addShapes(Shape.Circle, Shape.Square)
+                    .addSizes(Size(4))
+                    .setPosition(
+                        logo.x + 12.dp,
+                        logo.x + 12.dp,
+                        logo.y + logo.height - 24.dp,
+                        logo.y + logo.height + 24.dp
+                    )
+                    .setRotationEnabled(false)
+                    .setDelay(275)
+                    .burst(35)
             }
         }
 
@@ -402,8 +422,26 @@ object UiTools {
             activity.startActivity(Intent(activity, LibrariesActivity::class.java))
         }
         v.findViewById<View>(R.id.about_vlc_card).setOnClickListener {
+            var licenseText = ""
+            activity.lifecycleScope.launchWhenStarted {
+                licenseText = AppContextProvider.appResources.openRawResource(R.raw.pope_license)
+                    .bufferedReader().use {
+                        it.readText()
+                    }
+            }
 
+            LicenseDialog.newInstance(
+                LibraryWithLicense(
+                    activity.getString(R.string.app_name),
+                    activity.getString(R.string.about_copyright),
+                    activity.getString(R.string.about_license),
+                    licenseText,
+                    "https://www.gnu.org/licenses/old-licenses/gpl-2.0.txt"
+                )
+            ).show(activity.supportFragmentManager, "LicenseDialog")
         }
+
+
 //        VLCBilling.getInstance(activity.application).addStatusListener {
 //            manageDonationVisibility(activity,donationsButton)
 //        }

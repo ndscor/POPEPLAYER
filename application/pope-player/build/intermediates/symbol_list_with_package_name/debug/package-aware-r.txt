@@ -4794,6 +4794,7 @@ id controls_container
 id controls_dock
 id coordinator
 id copy_to_clipboard
+id copyleft
 id copyright
 id cos
 id counterclockwise
@@ -5180,6 +5181,7 @@ id libraries_icon
 id libraries_text
 id libvlc_revision
 id libvlc_version
+id license
 id license_button
 id licenses
 id lightTheme
@@ -6588,6 +6590,7 @@ raw lb_voice_no_input
 raw lb_voice_open
 raw lb_voice_success
 raw libraries
+raw pope_license
 raw vlc_locales
 string Medialibrary_progress
 string ab_repeat

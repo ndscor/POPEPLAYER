@@ -4793,6 +4793,7 @@ int id controls_container 0x7f0a013d
 int id controls_dock 0x7f0a013e
 int id coordinator 0x7f0a013f
 int id copy_to_clipboard 0x7f0a0140
+int id copyleft 0x7f0a061a
 int id copyright 0x7f0a0141
 int id cos 0x7f0a0142
 int id counterclockwise 0x7f0a0143
@@ -5179,6 +5180,7 @@ int id libraries_icon 0x7f0a02bf
 int id libraries_text 0x7f0a02c0
 int id libvlc_revision 0x7f0a02c1
 int id libvlc_version 0x7f0a02c2
+int id license 0x7f0a061b
 int id license_button 0x7f0a02c3
 int id licenses 0x7f0a02c4
 int id lightTheme 0x7f0a02c5
@@ -6587,6 +6589,7 @@ int raw lb_voice_no_input 0x7f120003
 int raw lb_voice_open 0x7f120004
 int raw lb_voice_success 0x7f120005
 int raw libraries 0x7f120006
+int raw pope_license 0x7f120008
 int raw vlc_locales 0x7f120007
 int string Medialibrary_progress 0x7f130000
 int string ab_repeat 0x7f130001

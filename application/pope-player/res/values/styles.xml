@@ -25,15 +25,15 @@
         <item name="textInputStyle">@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox
         </item>
 
-        <item name="colorPrimary">@color/blue900</item>
-        <item name="colorPrimaryDark">@color/blue900</item>
-        <item name="colorSecondary">@color/blue900</item>
+        <item name="colorPrimary">@color/black</item>
+        <item name="colorPrimaryDark">@color/black</item>
+        <item name="colorSecondary">@color/black</item>
         <item name="colorOnSecondary">@color/grey50</item>
         <item name="colorOnPrimary">@color/white</item>
-        <item name="colorAccent">@color/blue900</item>
+        <item name="colorAccent">@color/black</item>
         <item name="windowActionModeOverlay">true</item>
         <item name="colorOnSurface">@color/black</item>
-        <item name="colorControlHighlight">@color/blue900</item>
+        <item name="colorControlHighlight">@color/black</item>
         <item name="colorControlNormal">@color/grey700</item>
 
 
@@ -56,14 +56,14 @@
         <item name="background_actionbar">@color/white</item>
         <item name="audio_player_background_tint">@color/white_transparent_75</item>
         <item name="background_audio_tips">@color/white_transparent_95</item>
-        <item name="audio_browser_separator">@color/blue900</item>
+        <item name="audio_browser_separator">@color/black</item>
         <item name="dialog_circle_background">@color/dialog_circle_background</item>
         <item name="font_default">@color/grey900</item>
         <item name="font_light">@color/grey700</item>
         <item name="font_audio_light">@color/grey700</item>
         <item name="list_subtitle">@color/list_subtitle</item>
         <item name="list_title">@color/list_title</item>
-        <item name="donate_card">@color/blue900</item>
+        <item name="donate_card">@color/black</item>
         <item name="donate_item_background">@drawable/donate_background_color</item>
         <item name="android:windowBackground">@color/white</item>
         <item name="audio_chips_color">@color/black_transparent_75</item>
