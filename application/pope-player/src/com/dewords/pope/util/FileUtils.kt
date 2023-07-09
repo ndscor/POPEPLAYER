@@ -42,9 +42,9 @@ import org.videolan.libvlc.util.AndroidUtil
 import org.videolan.medialibrary.Tools
 import org.videolan.medialibrary.interfaces.Medialibrary
 import org.videolan.medialibrary.interfaces.media.MediaWrapper
-import com.dewords.poperesources.AndroidDevices
-import com.dewords.poperesources.AppContextProvider
-import com.dewords.poperesources.util.isExternalStorageManager
+import org.videolan.resources.AndroidDevices
+import org.videolan.resources.AppContextProvider
+import org.videolan.resources.util.isExternalStorageManager
 import org.videolan.tools.*
 import com.dewords.pope.R
 import com.dewords.pope.media.MediaUtils

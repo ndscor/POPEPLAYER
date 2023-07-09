@@ -20,7 +20,7 @@ public class BookmarkItemBindingImpl extends BookmarkItemBinding implements com.
     private final androidx.constraintlayout.widget.ConstraintLayout mboundView0;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback3;
+    private final android.view.View.OnClickListener mCallback1;
     @Nullable
     private final android.view.View.OnClickListener mCallback2;
     // values
@@ -45,8 +45,8 @@ public class BookmarkItemBindingImpl extends BookmarkItemBinding implements com.
         this.selector.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback3 = new com.dewords.pope.generated.callback.OnClickListener(this, 2);
-        mCallback2 = new com.dewords.pope.generated.callback.OnClickListener(this, 1);
+        mCallback1 = new com.dewords.pope.generated.callback.OnClickListener(this, 1);
+        mCallback2 = new com.dewords.pope.generated.callback.OnClickListener(this, 2);
         invalidateAll();
     }
 
@@ -154,35 +154,14 @@ public class BookmarkItemBindingImpl extends BookmarkItemBinding implements com.
             // api target 1
 
             com.dewords.pope.gui.helpers.UiToolsKt.setEllipsizeModeByPref(this.audioItemTitle, true);
-            this.itemMore.setOnClickListener(mCallback3);
-            this.selector.setOnClickListener(mCallback2);
+            this.itemMore.setOnClickListener(mCallback2);
+            this.selector.setOnClickListener(mCallback1);
         }
     }
     // Listener Stub Implementations
     // callback impls
     public final void _internalCallbackOnClick(int sourceId , android.view.View callbackArg_0) {
         switch(sourceId) {
-            case 2: {
-                // localize variables for thread safety
-                // bookmark
-                org.videolan.medialibrary.interfaces.media.Bookmark bookmark = mBookmark;
-                // holder
-                com.dewords.pope.gui.helpers.BookmarkAdapter.ViewHolder holder = mHolder;
-                // holder != null
-                boolean holderJavaLangObjectNull = false;
-
-
-
-                holderJavaLangObjectNull = (holder) != (null);
-                if (holderJavaLangObjectNull) {
-
-
-
-
-                    holder.onMoreClick(callbackArg_0, bookmark);
-                }
-                break;
-            }
             case 1: {
                 // localize variables for thread safety
                 // bookmark
@@ -201,6 +180,27 @@ public class BookmarkItemBindingImpl extends BookmarkItemBinding implements com.
 
 
                     holder.onClick(callbackArg_0, bookmark);
+                }
+                break;
+            }
+            case 2: {
+                // localize variables for thread safety
+                // bookmark
+                org.videolan.medialibrary.interfaces.media.Bookmark bookmark = mBookmark;
+                // holder
+                com.dewords.pope.gui.helpers.BookmarkAdapter.ViewHolder holder = mHolder;
+                // holder != null
+                boolean holderJavaLangObjectNull = false;
+
+
+
+                holderJavaLangObjectNull = (holder) != (null);
+                if (holderJavaLangObjectNull) {
+
+
+
+
+                    holder.onMoreClick(callbackArg_0, bookmark);
                 }
                 break;
             }

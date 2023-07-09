@@ -26,7 +26,7 @@ import android.content.SharedPreferences
 import android.os.Bundle
 import androidx.preference.Preference
 import org.videolan.libvlc.util.AndroidUtil
-import com.dewords.poperesources.AndroidDevices
+import org.videolan.resources.AndroidDevices
 import org.videolan.tools.*
 import com.dewords.pope.R
 import com.dewords.pope.gui.video.VideoPlayerActivity

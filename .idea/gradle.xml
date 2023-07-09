@@ -12,14 +12,17 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/application" />
+            <option value="$PROJECT_DIR$/application/app" />
             <option value="$PROJECT_DIR$/application/live-plot-graph" />
             <option value="$PROJECT_DIR$/application/mediadb" />
+            <option value="$PROJECT_DIR$/application/moviepedia" />
             <option value="$PROJECT_DIR$/application/pope-player" />
             <option value="$PROJECT_DIR$/application/resources" />
             <option value="$PROJECT_DIR$/application/television" />
             <option value="$PROJECT_DIR$/application/tools" />
             <option value="$PROJECT_DIR$/libvlcjni" />
             <option value="$PROJECT_DIR$/libvlcjni/libvlc" />
+            <option value="$PROJECT_DIR$/lvl_library" />
             <option value="$PROJECT_DIR$/medialibrary" />
           </set>
         </option>

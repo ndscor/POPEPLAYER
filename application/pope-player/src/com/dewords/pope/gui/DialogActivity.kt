@@ -27,8 +27,8 @@ import android.os.Bundle
 import android.view.View
 import org.videolan.libvlc.Dialog
 import org.videolan.medialibrary.interfaces.media.MediaWrapper
-import com.dewords.poperesources.util.parcelable
-import com.dewords.poperesources.util.parcelableList
+import org.videolan.resources.util.parcelable
+import org.videolan.resources.util.parcelableList
 import com.dewords.pope.R
 import com.dewords.pope.gui.dialogs.DeviceDialog
 import com.dewords.pope.gui.dialogs.NetworkServerDialog

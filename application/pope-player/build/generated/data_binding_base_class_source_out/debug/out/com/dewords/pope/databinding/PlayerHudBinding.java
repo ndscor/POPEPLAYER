@@ -18,7 +18,6 @@ import androidx.databinding.ViewDataBinding;
 import androidx.databinding.ViewStubProxy;
 import androidx.legacy.widget.Space;
 import androidx.lifecycle.LiveData;
-import com.dewords.liveplotgraph.PlotView;
 import com.dewords.pope.R;
 import com.dewords.pope.gui.video.VideoPlayerActivity;
 import com.dewords.pope.gui.view.AccessibleSeekBar;
@@ -27,6 +26,7 @@ import com.dewords.pope.gui.view.SwipeToUnlockView;
 import com.dewords.pope.media.Progress;
 import java.lang.Deprecated;
 import java.lang.Object;
+import org.videolan.liveplotgraph.PlotView;
 
 public abstract class PlayerHudBinding extends ViewDataBinding {
   @NonNull

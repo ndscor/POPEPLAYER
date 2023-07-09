@@ -1,6 +1,6 @@
 package com.dewords.pope.viewmodels.tv
 
-import com.dewords.poperesources.util.HeaderProvider
+import org.videolan.resources.util.HeaderProvider
 
 interface TvBrowserModel<T> {
     fun isEmpty() : Boolean

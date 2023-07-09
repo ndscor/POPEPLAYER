@@ -33,8 +33,8 @@ import androidx.preference.Preference
 import androidx.preference.TwoStatePreference
 import com.dewords.pope.BuildConfig
 import org.videolan.medialibrary.interfaces.Medialibrary
-import com.dewords.poperesources.AndroidDevices
-import com.dewords.poperesources.AppContextProvider
+import org.videolan.resources.AndroidDevices
+import org.videolan.resources.AppContextProvider
 import org.videolan.tools.*
 import com.dewords.pope.R
 import com.dewords.pope.gui.helpers.UiTools

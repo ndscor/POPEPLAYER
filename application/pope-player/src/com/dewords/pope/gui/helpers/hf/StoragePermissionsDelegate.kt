@@ -40,12 +40,12 @@ import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import org.videolan.libvlc.util.AndroidUtil
-import com.dewords.poperesources.AndroidDevices
-import com.dewords.poperesources.EXTRA_FIRST_RUN
-import com.dewords.poperesources.EXTRA_UPGRADE
-import com.dewords.poperesources.SCHEME_PACKAGE
-import com.dewords.poperesources.util.isExternalStorageManager
-import com.dewords.poperesources.util.startMedialibrary
+import org.videolan.resources.AndroidDevices
+import org.videolan.resources.EXTRA_FIRST_RUN
+import org.videolan.resources.EXTRA_UPGRADE
+import org.videolan.resources.SCHEME_PACKAGE
+import org.videolan.resources.util.isExternalStorageManager
+import org.videolan.resources.util.startMedialibrary
 import org.videolan.tools.*
 import com.dewords.pope.gui.onboarding.ONBOARDING_DONE_KEY
 import com.dewords.pope.util.FileUtils
@@ -109,7 +109,7 @@ class StoragePermissionsDelegate : BaseHeadlessFragment() {
                 return@registerForActivityResult
             }
             when (askedPermission) {
-                Permissions.PERMISSION_STORAGE_TAG, Permissions.MANAGE_EXTERNAL_STORAGE -> {
+                Permissions.PERMISSION_STORAGE_TAG, Permissions.READ_EXTERNAL_STORAGE -> {
                     // If request is cancelled, the result arrays are empty.
                     if(activity == null) return@registerForActivityResult
                     if (isGranted || isExternalStorageManager()) {
@@ -130,31 +130,15 @@ class StoragePermissionsDelegate : BaseHeadlessFragment() {
         }
 
     private fun requestStorageAccess(write: Boolean) {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R && !askOnlyRead) {
-            val uri = Uri.fromParts(SCHEME_PACKAGE, requireContext().packageName, null)
-            val intent = Intent(android.provider.Settings.ACTION_MANAGE_APP_ALL_FILES_ACCESS_PERMISSION, uri)
-            if (intent.isCallable(requireActivity())) {
-               if (withDialog) Permissions.showExternalPermissionDialog(requireActivity()) { asked ->
-                    if (asked) {
-                        askAllAccessPermission(intent)
-                    }
-                } else askAllAccessPermission(intent)
-                return
-            }
-        }
+
         val code = if (write) Manifest.permission.WRITE_EXTERNAL_STORAGE else Manifest.permission.READ_EXTERNAL_STORAGE
         askedPermission = if (write) Permissions.PERMISSION_WRITE_STORAGE_TAG else Permissions.PERMISSION_STORAGE_TAG
         timeAsked = System.currentTimeMillis()
         activityResultLauncher.launch(code)
     }
 
-    private fun askAllAccessPermission(intent: Intent) {
-        val code = android.provider.Settings.ACTION_MANAGE_APP_ALL_FILES_ACCESS_PERMISSION
-        askedPermission = Permissions.MANAGE_EXTERNAL_STORAGE
-        timeAsked = System.currentTimeMillis()
-        activityResultLauncher.launch(code)
-        startActivity(intent)
-    }
+
+
 
     companion object {
 

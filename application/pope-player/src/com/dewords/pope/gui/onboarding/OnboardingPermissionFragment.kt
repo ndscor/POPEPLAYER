@@ -46,8 +46,6 @@ class OnboardingPermissionFragment : OnboardingFragment(), View.OnClickListener 
     private lateinit var permNone: FrameLayout
     private lateinit var permMedia: FrameLayout
     private lateinit var permAll: FrameLayout
-    private lateinit var permNoneImage: ImageView
-    private lateinit var permMediaImage: ImageView
     private lateinit var permAllImage: ImageView
 
     private lateinit var oldSelected: ImageView
@@ -65,8 +63,6 @@ class OnboardingPermissionFragment : OnboardingFragment(), View.OnClickListener 
         permNone = view.findViewById(R.id.permNone)
         permMedia = view.findViewById(R.id.permMedia)
         permAll = view.findViewById(R.id.permAll)
-        permNoneImage = view.findViewById(R.id.permNoneImage)
-        permMediaImage = view.findViewById(R.id.permMediaImage)
         permAllImage = view.findViewById(R.id.permAllImage)
         permDescription = view.findViewById(R.id.permDescription)
         permNone.setOnClickListener(this)
@@ -74,7 +70,6 @@ class OnboardingPermissionFragment : OnboardingFragment(), View.OnClickListener 
         permAll.setOnClickListener(this)
         currentlySelected = permAllImage
 
-        currentlySelected.setColorFilter(ContextCompat.getColor(requireActivity(), R.color.blue900))
     }
 
     override fun onResume() {
@@ -98,7 +93,6 @@ class OnboardingPermissionFragment : OnboardingFragment(), View.OnClickListener 
                 permMedia.animate().scaleX(0.8F).scaleY(0.8F)
                 permAll.animate().scaleX(0.8F).scaleY(0.8F)
                 permDescription.setText(R.string.permission_onboarding_no_perm)
-                currentlySelected = permNoneImage
                 viewModel.permissionType = PermissionType.NONE
             }
             permMedia -> {
@@ -107,7 +101,6 @@ class OnboardingPermissionFragment : OnboardingFragment(), View.OnClickListener 
                 permAll.background = null
                 permNone.animate().scaleX(0.8F).scaleY(0.8F)
                 permAll.animate().scaleX(0.8F).scaleY(0.8F)
-                currentlySelected = permMediaImage
                 viewModel.permissionType = PermissionType.MEDIA
             }
             permAll -> {
@@ -120,7 +113,6 @@ class OnboardingPermissionFragment : OnboardingFragment(), View.OnClickListener 
                 viewModel.permissionType = PermissionType.ALL
             }
         }
-        animateColor()
     }
 
     private fun animateColor() {

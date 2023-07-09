@@ -65,10 +65,10 @@ import org.videolan.libvlc.interfaces.IVLCVout
 import org.videolan.libvlc.util.AndroidUtil
 import org.videolan.medialibrary.interfaces.Medialibrary
 import org.videolan.medialibrary.interfaces.media.MediaWrapper
-import com.dewords.poperesources.*
-import com.dewords.poperesources.util.VLCCrashHandler
-import com.dewords.poperesources.util.getFromMl
-import com.dewords.poperesources.util.launchForeground
+import org.videolan.resources.*
+import org.videolan.resources.util.VLCCrashHandler
+import org.videolan.resources.util.getFromMl
+import org.videolan.resources.util.launchForeground
 import org.videolan.tools.*
 import com.dewords.pope.gui.dialogs.VideoTracksDialog
 import com.dewords.pope.gui.dialogs.adapters.VlcTrack
@@ -83,7 +83,8 @@ import com.dewords.pope.widget.MiniPlayerAppWidgetProvider
 import com.dewords.pope.widget.VLCAppWidgetProvider
 import com.dewords.pope.widget.VLCAppWidgetProviderBlack
 import com.dewords.pope.widget.VLCAppWidgetProviderWhite
-import com.dewords.poperesources.VLCOptions
+import org.videolan.resources.VLCOptions
+import org.videolan.vlc.getAudioTracks
 import videolan.org.commontools.LiveEvent
 import java.util.*
 import kotlin.math.abs

@@ -77,8 +77,8 @@ import org.videolan.medialibrary.Tools
 import org.videolan.medialibrary.interfaces.Medialibrary
 import org.videolan.medialibrary.interfaces.media.*
 import org.videolan.medialibrary.media.MediaLibraryItem
-import com.dewords.poperesources.*
-import com.dewords.poperesources.util.launchForeground
+import org.videolan.resources.*
+import org.videolan.resources.util.launchForeground
 import org.videolan.tools.*
 import com.dewords.pope.BuildConfig.VLC_VERSION_NAME
 import com.dewords.pope.MediaParsingService
@@ -781,7 +781,6 @@ object UiTools {
         AlertDialog.Builder(context)
                 .setTitle(context.resources.getString(R.string.delete_sub_title))
                 .setMessage(context.resources.getString(R.string.delete_sub_message))
-                .setPositiveButton(R.string.delete, positiveListener)
                 .setNegativeButton(R.string.cancel, negativeListener)
                 .create()
                 .show()

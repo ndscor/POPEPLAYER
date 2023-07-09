@@ -24,6 +24,7 @@
 package com.dewords.pope.gui
 
 import android.annotation.SuppressLint
+import android.app.Activity
 import android.media.AudioManager
 import android.os.Bundle
 import android.os.Handler
@@ -49,9 +50,9 @@ import com.google.android.material.tabs.TabLayout
 import kotlinx.coroutines.delay
 import org.videolan.libvlc.util.AndroidUtil
 import org.videolan.medialibrary.interfaces.Medialibrary
-import com.dewords.poperesources.KEY_CURRENT_AUDIO
-import com.dewords.poperesources.util.getFromMl
-import com.dewords.poperesources.util.startMedialibrary
+import org.videolan.resources.KEY_CURRENT_AUDIO
+import org.videolan.resources.util.getFromMl
+import org.videolan.resources.util.startMedialibrary
 import org.videolan.tools.*
 import com.dewords.pope.*
 import com.dewords.pope.gui.audio.AudioPlayer
@@ -118,6 +119,8 @@ open class AudioPlayerContainerActivity : BaseActivity(), KeycodeListener {
 
     val isAudioPlayerReady: Boolean
         get() = ::audioPlayer.isInitialized
+
+
 
     val isAudioPlayerExpanded: Boolean
         get() = isAudioPlayerReady && playerBehavior.state == STATE_EXPANDED
@@ -616,6 +619,7 @@ open class AudioPlayerContainerActivity : BaseActivity(), KeycodeListener {
                 .setAction(R.string.play) { PlaybackService.loadLastAudio(it.context) }
         resumeCard.show()
     }
+
 
     fun lockPlayer(lock: Boolean) {
         if (::playerBehavior.isInitialized) playerBehavior.lock(lock)

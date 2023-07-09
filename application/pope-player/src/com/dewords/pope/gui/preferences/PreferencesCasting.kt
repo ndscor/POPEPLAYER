@@ -27,7 +27,7 @@ import android.os.Bundle
 import androidx.lifecycle.lifecycleScope
 import androidx.preference.Preference
 import kotlinx.coroutines.launch
-import com.dewords.poperesources.VLCInstance
+import org.videolan.resources.VLCInstance
 import com.dewords.pope.R
 import com.dewords.pope.gui.helpers.restartMediaPlayer
 

@@ -42,8 +42,8 @@ import org.videolan.medialibrary.MLServiceLocator
 import org.videolan.medialibrary.interfaces.Medialibrary
 import org.videolan.medialibrary.interfaces.media.MediaWrapper
 import org.videolan.medialibrary.media.MediaLibraryItem
-import com.dewords.poperesources.VLCInstance
-import com.dewords.poperesources.util.getFromMl
+import org.videolan.resources.VLCInstance
+import org.videolan.resources.util.getFromMl
 import org.videolan.tools.removeFileScheme
 import com.dewords.pope.gui.helpers.AudioUtil
 import com.dewords.pope.gui.helpers.getBitmapFromDrawable

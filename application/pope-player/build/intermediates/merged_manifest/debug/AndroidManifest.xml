@@ -1,23 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.dewords.pope"
-    android:installLocation="auto"
-    android:versionCode="1001"
-    android:versionName="1.0.0" >
+    android:installLocation="auto" >
 
     <uses-sdk
         android:minSdkVersion="23"
-        android:targetSdkVersion="33" />
+        android:targetSdkVersion="33"
+        tools:overrideLibrary="com.jraska.livedata.ktx, com.jraska.livedata, tools.fastlane.screengrab, android_libs.ub_uiautomator" />
 
     <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
+
+    <!--
+     Required only if your app needs to access videos
+     that other apps created.
+    -->
+    <uses-permission android:name="android.permission.READ_MEDIA_VIDEO" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+
+    <!--
+         Required only if your app needs to access audio files
+         that other apps created.
+    -->
+    <uses-permission android:name="android.permission.READ_MEDIA_AUDIO" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission
-        android:name="android.permission.READ_LOGS"
-        android:maxSdkVersion="18" /> <!-- android:maxSdkVersion="15" -->
-    <!-- vibration on audioplayer buttons long press -->
-    <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE" />
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="29" />
     <uses-permission android:name="android.permission.VIBRATE" /> <!-- used for setting ringtone -->
-    <uses-permission android:name="android.permission.WRITE_SETTINGS" /> <!-- STORAGE -->
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /> <!-- Internet -->
     <uses-permission android:name="android.permission.INTERNET" /> <!-- Launch recommendations service once device is booted -->
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" /> <!-- Audio search on TV -->
     <uses-permission android:name="android.permission.RECORD_AUDIO" /> <!-- USe foreground services -->
@@ -34,11 +45,11 @@
 
     <!-- Custom permissions for our content provider -->
     <permission
-        android:name="com.dewords.pope.MEDIA"
+        android:name="${applicationId}.MEDIA"
         android:protectionLevel="signature" />
 
     <!-- Declare permissions used by our com.dewords.pope.app -->
-    <uses-permission android:name="com.dewords.pope.MEDIA" />
+    <uses-permission android:name="${applicationId}.MEDIA" />
 
     <uses-feature
         android:name="android.software.leanback"
@@ -53,51 +64,33 @@
         android:name="android.hardware.bluetooth"
         android:required="false" />
 
-    <!-- Enable VLC in Samsung multiwindow mode -->
-    <meta-data
-        android:name="com.samsung.android.sdk.multiwindow.enable"
-        android:value="true" />
-    <!-- Enable VLC in LG split window mode -->
-    <meta-data
-        android:name="com.lge.support.SPLIT_WINDOW"
-        android:value="true" />
-    <!-- Android auto -->
-    <meta-data
-        android:name="com.google.android.gms.car.application"
-        android:resource="@xml/automotive_app_desc" />
-    <meta-data
-        android:name="androidx.car.app.TintableAttributionIcon"
-        android:resource="@drawable/ic_auto_notif_audio" />
-    <meta-data
-        android:name="com.google.android.gms.car.notification.SmallIcon"
-        android:resource="@mipmap/pope_launcher" />
-    <meta-data
-        android:name="android.max_aspect"
-        android:value="3.0" />
-    <meta-data
-        android:name="android.allow_multiple_resumed_activities"
-        android:value="true" />
+    <application>
 
-    <application
-        android:name="com.dewords.pope.VLCApplication"
-        android:allowBackup="true"
-        android:appCategory="audio"
-        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-        android:banner="@mipmap/pope_banner"
-        android:debuggable="true"
-        android:extractNativeLibs="false"
-        android:fullBackupContent="@xml/backup_rules"
-        android:hardwareAccelerated="true"
-        android:icon="@mipmap/pope_launcher"
-        android:label="@string/app_name"
-        android:largeHeap="true"
-        android:logo="@mipmap/pope_launcher"
-        android:requestLegacyExternalStorage="true"
-        android:roundIcon="@mipmap/pope_launcher"
-        android:supportsRtl="true"
-        android:testOnly="true"
-        android:theme="@style/Theme.VLC.Transparent"
-        android:usesCleartextTraffic="true" >
+        <!-- Enable VLC in Samsung multiwindow mode -->
+        <meta-data
+            android:name="com.samsung.android.sdk.multiwindow.enable"
+            android:value="true" />
+        <!-- Enable VLC in LG split window mode -->
+        <meta-data
+            android:name="com.lge.support.SPLIT_WINDOW"
+            android:value="true" />
+        <!-- Android auto -->
+        <meta-data
+            android:name="com.google.android.gms.car.application"
+            android:resource="@xml/automotive_app_desc" />
+        <meta-data
+            android:name="androidx.car.app.TintableAttributionIcon"
+            android:resource="@drawable/ic_auto_notif_audio" />
+        <meta-data
+            android:name="com.google.android.gms.car.notification.SmallIcon"
+            android:resource="@mipmap/pope_launcher" />
+        <meta-data
+            android:name="android.max_aspect"
+            android:value="3.0" />
+        <meta-data
+            android:name="android.allow_multiple_resumed_activities"
+            android:value="true" />
+
         <activity
             android:name="com.dewords.pope.StartActivity"
             android:exported="true"
@@ -120,7 +113,7 @@
                 <category android:name="android.intent.category.DEFAULT" />
 
                 <data
-                    android:host="com.dewords.pope"
+                    android:host="${applicationId}"
                     android:scheme="vlclauncher" />
             </intent-filter>
 
@@ -1000,21 +993,6 @@
             android:name="com.dewords.pope.gui.SearchActivity"
             android:theme="@style/Theme.VLC" />
         <activity
-            android:name="com.dewords.pope.gui.SendCrashActivity"
-            android:enabled="false"
-            android:excludeFromRecents="true"
-            android:exported="true"
-            android:icon="@mipmap/pope_launcher"
-            android:label="@string/vlc_reporter"
-            android:launchMode="singleTask"
-            android:theme="@style/Theme.VLC.SendCrashDialog" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-        <activity
             android:name="com.dewords.pope.gui.BetaWelcomeActivity"
             android:theme="@style/Theme.VLC.SendCrashDialog" />
         <activity
@@ -1027,7 +1005,7 @@
             android:name="com.dewords.pope.gui.preferences.search.PreferenceSearchActivity"
             android:theme="@style/Theme.VLC" />
         <activity
-            android:name="com.dewords.moviepedia.ui.MediaScrapingActivity"
+            android:name="org.videolan.moviepedia.ui.MediaScrapingActivity"
             android:theme="@style/Theme.VLC" />
         <activity
             android:name="com.dewords.pope.gui.video.VideoPlayerActivity"
@@ -1051,6 +1029,7 @@
             android:configChanges="orientation|screenSize"
             android:label=""
             android:theme="@style/VLCTransparentTheme" />
+        <activity android:name="com.dewords.pope.gui.GrantPermission" />
         <activity
             android:name="com.dewords.pope.widget.MiniPlayerConfigureActivity"
             android:excludeFromRecents="true"
@@ -1082,10 +1061,10 @@
             android:label="@string/widget_name_w" >
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
-                <action android:name="com.dewords.pope.widget.INIT" />
-                <action android:name="com.dewords.pope.widget.UPDATE" />
-                <action android:name="com.dewords.pope.widget.UPDATE_COVER" />
-                <action android:name="com.dewords.pope.widget.UPDATE_POSITION" />
+                <action android:name="${applicationId}.widget.INIT" />
+                <action android:name="${applicationId}.widget.UPDATE" />
+                <action android:name="${applicationId}.widget.UPDATE_COVER" />
+                <action android:name="${applicationId}.widget.UPDATE_POSITION" />
             </intent-filter>
 
             <meta-data
@@ -1098,10 +1077,10 @@
             android:label="@string/widget_name_b" >
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
-                <action android:name="com.dewords.pope.widget.INIT" />
-                <action android:name="com.dewords.pope.widget.UPDATE" />
-                <action android:name="com.dewords.pope.widget.UPDATE_COVER" />
-                <action android:name="com.dewords.pope.widget.UPDATE_POSITION" />
+                <action android:name="${applicationId}.widget.INIT" />
+                <action android:name="${applicationId}.widget.UPDATE" />
+                <action android:name="${applicationId}.widget.UPDATE_COVER" />
+                <action android:name="${applicationId}.widget.UPDATE_POSITION" />
             </intent-filter>
 
             <meta-data
@@ -1114,10 +1093,10 @@
             android:label="@string/widget_name_mini_player" >
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
-                <action android:name="com.dewords.pope.widget.mini.INIT" />
-                <action android:name="com.dewords.pope.widget.mini.UPDATE" />
-                <action android:name="com.dewords.pope.widget.mini.UPDATE_COVER" />
-                <action android:name="com.dewords.pope.widget.mini.UPDATE_POSITION" />
+                <action android:name="${applicationId}.widget.mini.INIT" />
+                <action android:name="${applicationId}.widget.mini.UPDATE" />
+                <action android:name="${applicationId}.widget.mini.UPDATE_COVER" />
+                <action android:name="${applicationId}.widget.mini.UPDATE_POSITION" />
             </intent-filter>
 
             <meta-data
@@ -1138,7 +1117,8 @@
             android:exported="true"
             android:launchMode="singleInstance"
             android:screenOrientation="landscape"
-            android:theme="@style/Theme.VLC.Player" /> <!-- TV components -->
+            android:theme="@style/Theme.VLC.Player"
+            tools:ignore="LockedOrientationActivity" /> <!-- TV components -->
 
         <service
             android:name="com.dewords.pope.RecommendationsService"
@@ -1174,15 +1154,15 @@
 
         <provider
             android:name="com.dewords.pope.FileProvider"
-            android:authorities="com.dewords.pope.thumbprovider"
+            android:authorities="${applicationId}.thumbprovider"
             android:exported="true" />
         <provider
             android:name="com.dewords.pope.ArtworkProvider"
-            android:authorities="com.dewords.pope.artwork"
+            android:authorities="${applicationId}.artwork"
             android:exported="true" />
         <provider
             android:name="androidx.core.content.FileProvider"
-            android:authorities="com.dewords.pope.provider"
+            android:authorities="${applicationId}.provider"
             android:exported="false"
             android:grantUriPermissions="true" >
             <meta-data
@@ -1211,30 +1191,6 @@
         <service
             android:name="com.dewords.pope.DebugLogService"
             android:process=":logger" />
-
-        <provider
-            android:name="androidx.startup.InitializationProvider"
-            android:authorities="com.dewords.pope.androidx-startup"
-            android:exported="false" >
-            <meta-data
-                android:name="androidx.emoji2.text.EmojiCompatInitializer"
-                android:value="androidx.startup" />
-            <meta-data
-                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
-                android:value="androidx.startup" />
-        </provider>
-
-        <uses-library
-            android:name="androidx.window.extensions"
-            android:required="false" />
-        <uses-library
-            android:name="androidx.window.sidecar"
-            android:required="false" />
-
-        <service
-            android:name="androidx.room.MultiInstanceInvalidationService"
-            android:directBootAware="true"
-            android:exported="false" />
     </application>
 
 </manifest>

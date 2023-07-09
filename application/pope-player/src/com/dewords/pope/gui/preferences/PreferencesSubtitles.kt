@@ -33,7 +33,7 @@ import androidx.preference.SeekBarPreference
 import com.dewords.pope.BuildConfig
 import com.jaredrummler.android.colorpicker.ColorPreferenceCompat
 import kotlinx.coroutines.launch
-import com.dewords.poperesources.VLCInstance
+import org.videolan.resources.VLCInstance
 import org.videolan.tools.LocaleUtils
 import org.videolan.tools.Settings
 import com.dewords.pope.R

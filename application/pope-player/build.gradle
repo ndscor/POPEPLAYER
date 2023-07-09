@@ -1,4 +1,4 @@
-apply plugin: 'com.android.application'
+apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-kapt'
 apply plugin: 'kotlin-parcelize'
@@ -16,104 +16,8 @@ android {
         }
     }
 
-    packagingOptions {
-        jniLibs {
-            pickFirsts += ['lib/armeabi-v7a/libc++_shared.so', 'lib/armeabi/libc++_shared.so', 'lib/arm64-v8a/libc++_shared.so', 'lib/x86/libc++_shared.so', 'lib/x86_64/libc++_shared.so']
-        }
-        resources {
-            excludes += ['META-INF/main.kotlin_module', 'META-INF/donations_debug.kotlin_module', 'META-INF/mediadb_debug.kotlin_module', 'META-INF/resources_debug.kotlin_module', 'META-INF/television_debug.kotlin_module']
-        }
-    }
-
-    dataBinding {
-        enabled = true
-    }
-
-    flavorDimensions "abi"
-
-    signingConfigs {
-        release {
-            /*
-            To set this properties, create file gradle.properties with these 3 props.
-            e.g.
-            keyStoreFile=/home/<username>/.android/debug.keystore
-            storealias=androiddebugkey
-            storepwd=android
-             */
-            if (project.hasProperty('keyStoreFile')) {
-                storeFile file(project.findProperty('keyStoreFile'))
-                keyAlias project.findProperty('storealias')
-                if (System.getenv('PASSWORD_KEYSTORE') != null && !System.getenv('PASSWORD_KEYSTORE').isEmpty()) {
-                    storePassword = System.getenv('PASSWORD_KEYSTORE')
-                    keyPassword = System.getenv('PASSWORD_KEYSTORE')
-                } else {
-                    storePassword project.findProperty('storepwd')
-                    keyPassword project.findProperty('storepwd')
-                }
-            }
-        }
-    }
-
-    buildTypes {
-        release {
-            minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
-            kotlinOptions.freeCompilerArgs = ['-Xno-param-assertions']
-        }
-        signedRelease {
-            initWith release
-            signingConfig = signingConfigs.release
-            matchingFallbacks = ['release']
-        }
-        debug {
-            jniDebuggable true
-        }
-        dev {
-            initWith debug
-            matchingFallbacks = ['debug']
-        }
-    }
-
-    sourceSets.release {
-        manifest.srcFile 'flavors/release/AndroidManifest.xml'
-    }
-    sourceSets.signedRelease {
-        manifest.srcFile 'flavors/release/AndroidManifest.xml'
-    }
-
-    splits {
-        abi {
-            def isReleaseBuild = false
-            gradle.startParameter.taskNames.find {
-                // Enable split for release builds in different build flavors
-                // (assemblePaidRelease, assembleFreeRelease, etc.).
-                if (it.toLowerCase() ==~ /assemble.*Release/.toLowerCase()) {
-                    isReleaseBuild = true
-                    return true // break
-                }
-                return false // continue
-            }
-            enable isReleaseBuild
-            reset()
-            include "x86", "x86_64", "armeabi-v7a", "arm64-v8a"
-//            universalApk !isReleaseBuild
-        }
-    }
-
-    def abiCodes = ['x86': 5, 'x86_64': 8, 'armeabi-v7a': 4, 'arm64-v8a': 7]
-    lint {
-        abortOnError false
-        disable 'MissingTranslation', 'ExtraTranslation'
-    }
-    namespace 'com.dewords.pope.app'
-    // make per-variant version code
-
 
     defaultConfig {
-        applicationId "com.dewords.pope"
-
-        buildConfigField "String", "MOVIEPEDIA_API_URL", "\"${getMoviepediaUrl(project)}\""
-
 
         resValue "string", "build_time", buildTime()
         resValue "string", "build_host", hostName()
@@ -136,21 +40,6 @@ android {
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         vectorDrawables.useSupportLibrary = true
-
-        minSdkVersion rootProject.ext.minSdkVersion
-        targetSdkVersion rootProject.ext.targetSdkVersion
-        versionCode rootProject.ext.versionCode
-        versionName rootProject.ext.versionName
-        vectorDrawables.useSupportLibrary = true
-        multiDexEnabled true
-
-        testInstrumentationRunner "org.videolan.vlc.MultidexTestRunner"
-        // The following argument makes the Android Test Orchestrator run its
-        // "pm clear" command after each test invocation. This command ensures
-        // that the app's state is completely cleared between tests.
-        testInstrumentationRunnerArguments clearPackageData: 'true'
-
-
     }
 
     testOptions {
@@ -174,6 +63,7 @@ android {
         release {
             proguardFile 'proguard.cfg'
             buildConfigField "boolean", "BETA", isBeta()
+            buildConfigField "String", "BASE64_PUBLIC_KEY", "\"MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAzl1rSKhd0+/MM0CnVoooPhsQU3jAGA0MSnZzOP98A/CQvegJUngq6JDSzAiXhDtOM3Bf//ZVi3RUY6/e8wsAsfBlqqKddu1l8PIpmj+BFeSRv/K9/sJ0OorbqyPFuaIwhmm5AfTXN/98adnRcd1UgR49J8OGr+28nDfsFa2ZoaNB56cUs/IuoDPGRygN/aGCEfEo+JUaPkpW35c9ykNiFcnXaT7V39fR+hT1hrilWvhf3S4g6s/lLp/bwCSajsg/CkrJhL9tXJv+L43RpuXjbFwPgBALZxVKEuRrFcv00Gyo2pnfc11RNl32soFGuwg1XZ/LmB802jKTCoV+33p7lQIDAQAB\""
             resValue 'string', 'benchmark_package_name', 'org.videolan.vlcbenchmark'
         }
         debug {
@@ -181,11 +71,14 @@ android {
             resValue 'string', 'benchmark_package_name', 'org.videolan.vlcbenchmark.debug'
             buildConfigField "String", "APP_ID", "\"${rootProject.ext.appId}.debug\""
             resValue 'string', 'tv_provider_authority', "${rootProject.ext.appId}.debug.tv"
-            multiDexEnabled true
+            buildConfigField "String", "BASE64_PUBLIC_KEY", "\"MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAzl1rSKhd0+/MM0CnVoooPhsQU3jAGA0MSnZzOP98A/CQvegJUngq6JDSzAiXhDtOM3Bf//ZVi3RUY6/e8wsAsfBlqqKddu1l8PIpmj+BFeSRv/K9/sJ0OorbqyPFuaIwhmm5AfTXN/98adnRcd1UgR49J8OGr+28nDfsFa2ZoaNB56cUs/IuoDPGRygN/aGCEfEo+JUaPkpW35c9ykNiFcnXaT7V39fR+hT1hrilWvhf3S4g6s/lLp/bwCSajsg/CkrJhL9tXJv+L43RpuXjbFwPgBALZxVKEuRrFcv00Gyo2pnfc11RNl32soFGuwg1XZ/LmB802jKTCoV+33p7lQIDAQAB\""
+
         }
         signedRelease {
             initWith release
             matchingFallbacks = ['release']
+            buildConfigField "String", "BASE64_PUBLIC_KEY", "\"MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAzl1rSKhd0+/MM0CnVoooPhsQU3jAGA0MSnZzOP98A/CQvegJUngq6JDSzAiXhDtOM3Bf//ZVi3RUY6/e8wsAsfBlqqKddu1l8PIpmj+BFeSRv/K9/sJ0OorbqyPFuaIwhmm5AfTXN/98adnRcd1UgR49J8OGr+28nDfsFa2ZoaNB56cUs/IuoDPGRygN/aGCEfEo+JUaPkpW35c9ykNiFcnXaT7V39fR+hT1hrilWvhf3S4g6s/lLp/bwCSajsg/CkrJhL9tXJv+L43RpuXjbFwPgBALZxVKEuRrFcv00Gyo2pnfc11RNl32soFGuwg1XZ/LmB802jKTCoV+33p7lQIDAQAB\""
+
         }
         dev {
             initWith debug
@@ -195,7 +88,7 @@ android {
 
     sourceSets.main {
         manifest.srcFile 'AndroidManifest.xml'
-        java.srcDirs = rootProject.ext.vlcMajorVersion == 4 ? ['src', 'pope4/src'] : ['src', 'pope3/src']
+        java.srcDirs = rootProject.ext.vlcMajorVersion == 4 ? ['src', 'vlc4/src'] : ['src', 'vlc3/src']
         resources.srcDirs = ['src']
         aidl.srcDirs = ['src']
         renderscript.srcDirs = ['src']
@@ -247,40 +140,21 @@ task generateSources(type: Jar) {
 }
 
 dependencies {
+    implementation project(path: ':lvl_library')
     devApi project(':libvlcjni:libvlc')
-    api project(':medialibrary')
+    devApi project(':medialibrary')
+    debugApi "org.videolan.android:libvlc-all:$rootProject.ext.libvlcVersion"
+    debugApi "org.videolan.android:medialibrary-all:$rootProject.ext.medialibraryVersion"
+    releaseApi "org.videolan.android:libvlc-all:$rootProject.ext.libvlcVersion"
+    releaseApi "org.videolan.android:medialibrary-all:$rootProject.ext.medialibraryVersion"
+    signedReleaseApi "org.videolan.android:libvlc-all:$rootProject.ext.libvlcVersion"
+    signedReleaseApi "org.videolan.android:medialibrary-all:$rootProject.ext.medialibraryVersion"
     api project(':application:tools')
     api project(':application:resources')
     api project(':application:mediadb')
     api project(':application:live-plot-graph')
-
-    debugApi "org.videolan.android:libvlc-all:$rootProject.ext.libvlcVersion"
-    releaseApi "org.videolan.android:libvlc-all:$rootProject.ext.libvlcVersion"
-
-
-    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
-    implementation "org.jetbrains.kotlin:kotlin-reflect:$kotlin_version"
-    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:$rootProject.ext.kotlinx_version"
-    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:$rootProject.ext.kotlinx_version"
-    implementation "androidx.paging:paging-runtime-ktx:$rootProject.ext.pagingVersion"
-    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$rootProject.ext.lifecycleVersion"
-
-
-
-
-    //Room
-    implementation "androidx.room:room-runtime:$rootProject.ext.roomVersion"
-    // Provide proper JDBC version, see https://issuetracker.google.com/issues/174695268
-    kapt "androidx.room:room-compiler:$rootProject.ext.roomVersion"
-
-
-    // Retrofit
-    implementation "com.squareup.retrofit2:retrofit:$rootProject.ext.retrofit"
-    implementation "com.squareup.retrofit2:converter-moshi:$rootProject.ext.retrofit"
-    implementation "com.squareup.moshi:moshi-adapters:$rootProject.ext.moshi"
     implementation("com.squareup.okhttp3:logging-interceptor:4.2.1")
 
-    testImplementation "junit:junit:$rootProject.ext.junitVersion"
 
     // AppCompat
     api "androidx.activity:activity-ktx:$rootProject.ext.androidxActivityVersion"
@@ -300,12 +174,6 @@ dependencies {
     api "androidx.room:room-runtime:$rootProject.ext.roomVersion"
     api "androidx.window:window:1.0.0"
     api "androidx.media:media:1.6.0"
-
-
-    debugApi "org.videolan.android:medialibrary-all:$rootProject.ext.medialibraryVersion"
-    releaseApi "org.videolan.android:medialibrary-all:$rootProject.ext.medialibraryVersion"
-    signedReleaseApi "org.videolan.android:medialibrary-all:$rootProject.ext.medialibraryVersion"
-
 
     kapt ('org.xerial:sqlite-jdbc:3.36.0')
     kapt("androidx.room:room-compiler:$rootProject.ext.roomVersion")
@@ -361,12 +229,6 @@ static def hostName() {
     return "${System.getProperty("user.name")}@${InetAddress.localHost.hostName}"
 }
 
-static def getMoviepediaUrl(project) {
-    if (project.hasProperty('moviepedia_api_url')) return project.properties['moviepedia_api_url'] else return  "https://localhost/"
-}
-
-
-
 
 
 /**
@@ -404,3 +266,5 @@ kapt {
         option("-Xmaxerrs", 500)
     }
 }
+
+

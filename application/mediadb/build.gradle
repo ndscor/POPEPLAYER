@@ -55,7 +55,7 @@ android {
             matchingFallbacks = ['debug']
         }
     }
-    namespace 'com.dewords.pope.mediadb'
+    namespace 'org.videolan.vlc.mediadb'
 
 }
 

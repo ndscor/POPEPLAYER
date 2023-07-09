@@ -45,7 +45,7 @@ import androidx.palette.graphics.Palette
 import kotlinx.coroutines.launch
 import org.videolan.medialibrary.MLServiceLocator
 import org.videolan.medialibrary.interfaces.media.MediaWrapper
-import com.dewords.poperesources.*
+import org.videolan.resources.*
 import org.videolan.tools.*
 import com.dewords.pope.PlaybackService
 import com.dewords.pope.R

@@ -8,7 +8,7 @@ import android.widget.TextView
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.activityViewModels
-import com.dewords.poperesources.AndroidDevices
+import org.videolan.resources.AndroidDevices
 import com.dewords.pope.R
 
 class OnboardingThemeFragment : OnboardingFragment(), View.OnClickListener {

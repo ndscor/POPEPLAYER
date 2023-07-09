@@ -36,8 +36,8 @@ import org.videolan.medialibrary.interfaces.Medialibrary
 import org.videolan.medialibrary.interfaces.media.Album
 import org.videolan.medialibrary.interfaces.media.MediaWrapper
 import org.videolan.medialibrary.media.MediaLibraryItem
-import com.dewords.poperesources.CTX_PLAY_ALL
-import com.dewords.poperesources.util.parcelable
+import org.videolan.resources.CTX_PLAY_ALL
+import org.videolan.resources.util.parcelable
 import org.videolan.tools.*
 import com.dewords.pope.R
 import com.dewords.pope.gui.ContentActivity

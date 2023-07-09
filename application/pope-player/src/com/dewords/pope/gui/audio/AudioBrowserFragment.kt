@@ -42,10 +42,10 @@ import kotlinx.coroutines.launch
 import org.videolan.medialibrary.interfaces.Medialibrary
 import org.videolan.medialibrary.interfaces.media.MediaWrapper
 import org.videolan.medialibrary.media.MediaLibraryItem
-import com.dewords.poperesources.CTX_PLAY_ALL
-import com.dewords.poperesources.KEY_AUDIO_CURRENT_TAB
-import com.dewords.poperesources.KEY_AUDIO_LAST_PLAYLIST
-import com.dewords.poperesources.util.waitForML
+import org.videolan.resources.CTX_PLAY_ALL
+import org.videolan.resources.KEY_AUDIO_CURRENT_TAB
+import org.videolan.resources.KEY_AUDIO_LAST_PLAYLIST
+import org.videolan.resources.util.waitForML
 import org.videolan.tools.*
 import com.dewords.pope.R
 import com.dewords.pope.gui.AudioPlayerContainerActivity

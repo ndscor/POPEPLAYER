@@ -33,7 +33,7 @@ import kotlinx.coroutines.channels.SendChannel
 import kotlinx.coroutines.channels.actor
 import kotlinx.coroutines.launch
 import org.videolan.medialibrary.interfaces.media.MediaWrapper
-import com.dewords.poperesources.*
+import org.videolan.resources.*
 import org.videolan.tools.copy
 import com.dewords.pope.R
 import com.dewords.pope.gui.dialogs.CtxActionReceiver

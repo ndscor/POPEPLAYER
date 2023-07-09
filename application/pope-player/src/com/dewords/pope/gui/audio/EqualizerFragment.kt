@@ -43,9 +43,9 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import org.videolan.libvlc.MediaPlayer
-import com.dewords.poperesources.AppContextProvider
-import com.dewords.poperesources.VLCInstance
-import com.dewords.poperesources.VLCOptions
+import org.videolan.resources.AppContextProvider
+import org.videolan.resources.VLCInstance
+import org.videolan.resources.VLCOptions
 import org.videolan.tools.Settings
 import org.videolan.tools.isStarted
 import com.dewords.pope.PlaybackService
@@ -140,7 +140,6 @@ class EqualizerFragment : VLCBottomSheetDialogFragment(), Slider.OnChangeListene
         binding.equalizerButton.isChecked = VLCOptions.getEqualizerEnabledState(requireActivity())
         binding.equalizerButton.setOnCheckedChangeListener { _, isChecked -> PlaybackService.equalizer.setValue(if (isChecked) equalizer else null) }
         binding.equalizerSave.setOnClickListener { createSaveCustomSetDialog(binding.equalizerPresets.selectedItemPosition, displayedByUser = true, onPause = false) }
-        binding.equalizerDelete.setOnClickListener { createDeleteCustomSetSnacker() }
         binding.equalizerRevert.setOnClickListener { revertCustomSetChanges() }
 
         // presets

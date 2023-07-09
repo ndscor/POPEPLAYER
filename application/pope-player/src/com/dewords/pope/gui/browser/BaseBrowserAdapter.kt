@@ -41,8 +41,8 @@ import org.videolan.medialibrary.media.MediaLibraryItem
 import org.videolan.medialibrary.media.MediaLibraryItem.TYPE_MEDIA
 import org.videolan.medialibrary.media.MediaLibraryItem.TYPE_STORAGE
 import org.videolan.medialibrary.media.Storage
-import com.dewords.poperesources.AndroidDevices
-import com.dewords.poperesources.UPDATE_SELECTION
+import org.videolan.resources.AndroidDevices
+import org.videolan.resources.UPDATE_SELECTION
 import org.videolan.tools.MultiSelectAdapter
 import org.videolan.tools.MultiSelectHelper
 import org.videolan.tools.Settings

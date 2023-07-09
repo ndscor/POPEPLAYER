@@ -41,8 +41,8 @@ import org.videolan.medialibrary.interfaces.Medialibrary
 import org.videolan.medialibrary.interfaces.media.MediaWrapper
 import org.videolan.medialibrary.interfaces.media.Playlist
 import org.videolan.medialibrary.media.MediaLibraryItem
-import com.dewords.poperesources.util.parcelable
-import com.dewords.poperesources.util.parcelableArray
+import org.videolan.resources.util.parcelable
+import org.videolan.resources.util.parcelableArray
 import org.videolan.tools.*
 import com.dewords.pope.R
 import com.dewords.pope.databinding.DialogPlaylistBinding

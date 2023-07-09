@@ -30,7 +30,7 @@
 
         <variable
                 name="item"
-                type="com.dewords.pope.database.models.MediaMetadata" />
+                type="org.videolan.moviepedia.database.models.MediaMetadata" />
 
 
     </data>

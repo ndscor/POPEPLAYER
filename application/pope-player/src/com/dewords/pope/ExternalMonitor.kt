@@ -43,11 +43,11 @@ import kotlinx.coroutines.channels.actor
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.asFlow
 import org.videolan.medialibrary.interfaces.Medialibrary
-import com.dewords.poperesources.ACTION_CHECK_STORAGES
-import com.dewords.poperesources.AppContextProvider
-import com.dewords.poperesources.util.getFromMl
-import com.dewords.poperesources.util.launchForeground
-import com.dewords.poperesources.util.parcelable
+import org.videolan.resources.ACTION_CHECK_STORAGES
+import org.videolan.resources.AppContextProvider
+import org.videolan.resources.util.getFromMl
+import org.videolan.resources.util.launchForeground
+import org.videolan.resources.util.parcelable
 import org.videolan.tools.*
 import org.videolan.tools.livedata.LiveDataset
 import com.dewords.pope.gui.helpers.UiTools

@@ -27,7 +27,7 @@ package com.dewords.pope.widget
 import android.app.Application
 import android.content.Context
 import androidx.lifecycle.*
-import com.dewords.pope.mediadb.models.Widget
+import org.videolan.vlc.mediadb.models.Widget
 import com.dewords.pope.repository.WidgetRepository
 
 class WidgetViewModel(context: Context, id:Int) : AndroidViewModel(context.applicationContext as Application) {

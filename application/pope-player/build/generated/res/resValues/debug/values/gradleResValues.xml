@@ -10,7 +10,7 @@
     <!-- Value from default config. -->
     <string name="build_host" translatable="false">dewords@NITINs-MBP</string>
     <!-- Value from default config. -->
-    <string name="build_time" translatable="false">2023-07-09</string>
+    <string name="build_time" translatable="false">2023-07-14</string>
     <!-- Value from default config. -->
     <string name="changelog" translatable="false">* Fix media controls not working after some time on Android 13\n* Fix audio notification icon transparency\n* Minor interface fixes\n* Crash fixes</string>
 

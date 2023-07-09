@@ -50,8 +50,8 @@ import kotlinx.coroutines.withContext
 import org.videolan.medialibrary.interfaces.Medialibrary
 import org.videolan.medialibrary.interfaces.media.*
 import org.videolan.medialibrary.media.MediaLibraryItem
-import com.dewords.poperesources.*
-import com.dewords.poperesources.util.parcelable
+import org.videolan.resources.*
+import org.videolan.resources.util.parcelable
 import org.videolan.tools.*
 import com.dewords.pope.R
 import com.dewords.pope.databinding.HeaderMediaListActivityBinding
@@ -396,7 +396,6 @@ open class HeaderMediaListActivity : AudioPlayerContainerActivity(), IEventsHand
         menu.findItem(R.id.action_mode_audio_set_song).isVisible = isSong && AndroidDevices.isPhone && !isPlaylist
         menu.findItem(R.id.action_mode_audio_info).isVisible = isSong
         menu.findItem(R.id.action_mode_audio_append).isVisible = PlaylistManager.hasMedia()
-        menu.findItem(R.id.action_mode_audio_delete).isVisible = true
         menu.findItem(R.id.action_mode_audio_share).isVisible = isSong
         menu.findItem(R.id.action_mode_favorite_add).isVisible = audioBrowserAdapter.multiSelectHelper.getSelection().none { it.isFavorite }
         menu.findItem(R.id.action_mode_favorite_remove).isVisible = audioBrowserAdapter.multiSelectHelper.getSelection().none { !it.isFavorite }
@@ -426,7 +425,6 @@ open class HeaderMediaListActivity : AudioPlayerContainerActivity(), IEventsHand
             R.id.action_mode_audio_info -> showInfoDialog(list[0] as MediaWrapper)
             R.id.action_mode_audio_share -> lifecycleScope.launch { share(list.map { it as MediaWrapper }) }
             R.id.action_mode_audio_set_song -> setRingtone(list[0] as MediaWrapper)
-            R.id.action_mode_audio_delete -> if (isPlaylist) removeFromPlaylist(tracks, indexes.toMutableList()) else removeItems(tracks)
             R.id.action_mode_favorite_add -> lifecycleScope.launch { viewModel.changeFavorite(tracks, true) }
             R.id.action_mode_favorite_remove -> lifecycleScope.launch { viewModel.changeFavorite(tracks, false) }
             else -> return false

@@ -47,8 +47,8 @@ import org.videolan.medialibrary.interfaces.media.MediaWrapper.TYPE_VIDEO
 import org.videolan.medialibrary.interfaces.media.Playlist
 import org.videolan.medialibrary.interfaces.media.VideoGroup
 import org.videolan.medialibrary.media.MediaLibraryItem
-import com.dewords.poperesources.AndroidDevices
-import com.dewords.poperesources.util.getFromMl
+import org.videolan.resources.AndroidDevices
+import org.videolan.resources.util.getFromMl
 import org.videolan.tools.AppScope
 import org.videolan.tools.isStarted
 import org.videolan.tools.retrieveParent

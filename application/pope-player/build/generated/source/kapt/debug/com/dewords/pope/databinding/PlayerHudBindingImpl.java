@@ -5,7 +5,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import android.view.View;
 @SuppressWarnings("unchecked")
-public class PlayerHudBindingImpl extends PlayerHudBinding implements com.dewords.pope.generated.callback.OnLongClickListener.Listener, com.dewords.pope.generated.callback.OnClickListener.Listener {
+public class PlayerHudBindingImpl extends PlayerHudBinding implements com.dewords.pope.generated.callback.OnClickListener.Listener, com.dewords.pope.generated.callback.OnLongClickListener.Listener {
 
     @Nullable
     private static final androidx.databinding.ViewDataBinding.IncludedLayouts sIncludes;
@@ -42,11 +42,9 @@ public class PlayerHudBindingImpl extends PlayerHudBinding implements com.deword
     // views
     // variables
     @Nullable
-    private final android.view.View.OnLongClickListener mCallback11;
+    private final android.view.View.OnClickListener mCallback11;
     @Nullable
     private final android.view.View.OnClickListener mCallback6;
-    @Nullable
-    private final android.view.View.OnClickListener mCallback12;
     @Nullable
     private final android.view.View.OnClickListener mCallback9;
     @Nullable
@@ -54,7 +52,9 @@ public class PlayerHudBindingImpl extends PlayerHudBinding implements com.deword
     @Nullable
     private final android.view.View.OnClickListener mCallback8;
     @Nullable
-    private final android.view.View.OnClickListener mCallback10;
+    private final android.view.View.OnClickListener mCallback4;
+    @Nullable
+    private final android.view.View.OnLongClickListener mCallback10;
     @Nullable
     private final android.view.View.OnClickListener mCallback7;
     // values
@@ -94,7 +94,7 @@ public class PlayerHudBindingImpl extends PlayerHudBinding implements com.deword
             , (androidx.legacy.widget.Space) bindings[34]
             , (android.widget.ImageView) bindings[9]
             , (android.widget.ImageView) bindings[7]
-            , (com.dewords.liveplotgraph.PlotView) bindings[19]
+            , (org.videolan.liveplotgraph.PlotView) bindings[19]
             , (androidx.constraintlayout.widget.ConstraintLayout) bindings[0]
             , (android.widget.ImageView) bindings[20]
             , (androidx.constraintlayout.widget.ConstraintLayout) bindings[13]
@@ -119,14 +119,14 @@ public class PlayerHudBindingImpl extends PlayerHudBinding implements com.deword
         this.progressOverlay.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback11 = new com.dewords.pope.generated.callback.OnLongClickListener(this, 7);
-        mCallback6 = new com.dewords.pope.generated.callback.OnClickListener(this, 2);
-        mCallback12 = new com.dewords.pope.generated.callback.OnClickListener(this, 8);
-        mCallback9 = new com.dewords.pope.generated.callback.OnClickListener(this, 5);
-        mCallback5 = new com.dewords.pope.generated.callback.OnClickListener(this, 1);
-        mCallback8 = new com.dewords.pope.generated.callback.OnClickListener(this, 4);
-        mCallback10 = new com.dewords.pope.generated.callback.OnClickListener(this, 6);
-        mCallback7 = new com.dewords.pope.generated.callback.OnClickListener(this, 3);
+        mCallback11 = new com.dewords.pope.generated.callback.OnClickListener(this, 8);
+        mCallback6 = new com.dewords.pope.generated.callback.OnClickListener(this, 3);
+        mCallback9 = new com.dewords.pope.generated.callback.OnClickListener(this, 6);
+        mCallback5 = new com.dewords.pope.generated.callback.OnClickListener(this, 2);
+        mCallback8 = new com.dewords.pope.generated.callback.OnClickListener(this, 5);
+        mCallback4 = new com.dewords.pope.generated.callback.OnClickListener(this, 1);
+        mCallback10 = new com.dewords.pope.generated.callback.OnLongClickListener(this, 7);
+        mCallback7 = new com.dewords.pope.generated.callback.OnClickListener(this, 4);
         invalidateAll();
     }
 
@@ -319,14 +319,14 @@ public class PlayerHudBindingImpl extends PlayerHudBinding implements com.deword
         if ((dirtyFlags & 0x10L) != 0) {
             // api target 1
 
-            this.playerOverlayAdvFunction.setOnClickListener(mCallback12);
-            this.playerOverlayLength.setOnClickListener(mCallback6);
-            this.playerOverlayPlay.setOnClickListener(mCallback8);
-            this.playerOverlayTime.setOnClickListener(mCallback5);
-            this.playerResize.setOnClickListener(mCallback10);
-            this.playerResize.setOnLongClickListener(mCallback11);
-            this.playlistNext.setOnClickListener(mCallback9);
-            this.playlistPrevious.setOnClickListener(mCallback7);
+            this.playerOverlayAdvFunction.setOnClickListener(mCallback11);
+            this.playerOverlayLength.setOnClickListener(mCallback5);
+            this.playerOverlayPlay.setOnClickListener(mCallback7);
+            this.playerOverlayTime.setOnClickListener(mCallback4);
+            this.playerResize.setOnClickListener(mCallback9);
+            this.playerResize.setOnLongClickListener(mCallback10);
+            this.playlistNext.setOnClickListener(mCallback8);
+            this.playlistPrevious.setOnClickListener(mCallback6);
         }
         if ((dirtyFlags & 0x11L) != 0) {
             // api target 1
@@ -362,44 +362,8 @@ public class PlayerHudBindingImpl extends PlayerHudBinding implements com.deword
         }
     }
     // callback impls
-    public final boolean _internalCallbackOnLongClick(int sourceId , android.view.View callbackArg_0) {
-        // localize variables for thread safety
-        // player != null
-        boolean playerJavaLangObjectNull = false;
-        // player.displayResize()
-        boolean playerDisplayResize = false;
-        // player
-        com.dewords.pope.gui.video.VideoPlayerActivity player = mPlayer;
-
-
-
-        playerJavaLangObjectNull = (player) != (null);
-        if (playerJavaLangObjectNull) {
-
-
-            playerDisplayResize = player.displayResize();
-        }
-        return playerDisplayResize;
-    }
     public final void _internalCallbackOnClick(int sourceId , android.view.View callbackArg_0) {
         switch(sourceId) {
-            case 2: {
-                // localize variables for thread safety
-                // player != null
-                boolean playerJavaLangObjectNull = false;
-                // player
-                com.dewords.pope.gui.video.VideoPlayerActivity player = mPlayer;
-
-
-
-                playerJavaLangObjectNull = (player) != (null);
-                if (playerJavaLangObjectNull) {
-
-
-                    player.toggleTimeDisplay();
-                }
-                break;
-            }
             case 8: {
                 // localize variables for thread safety
                 // player != null
@@ -414,6 +378,59 @@ public class PlayerHudBindingImpl extends PlayerHudBinding implements com.deword
 
 
                     player.showAdvancedOptions();
+                }
+                break;
+            }
+            case 3: {
+                // localize variables for thread safety
+                // player != null
+                boolean playerJavaLangObjectNull = false;
+                // player
+                com.dewords.pope.gui.video.VideoPlayerActivity player = mPlayer;
+
+
+
+                playerJavaLangObjectNull = (player) != (null);
+                if (playerJavaLangObjectNull) {
+
+
+                    player.previous();
+                }
+                break;
+            }
+            case 6: {
+                // localize variables for thread safety
+                // player.resizeVideo()
+                java.lang.Boolean playerResizeVideo = null;
+                // player != null
+                boolean playerJavaLangObjectNull = false;
+                // player
+                com.dewords.pope.gui.video.VideoPlayerActivity player = mPlayer;
+
+
+
+                playerJavaLangObjectNull = (player) != (null);
+                if (playerJavaLangObjectNull) {
+
+
+                    playerResizeVideo = player.resizeVideo();
+                }
+                break;
+            }
+            case 2: {
+                // localize variables for thread safety
+                // player != null
+                boolean playerJavaLangObjectNull = false;
+                // player
+                com.dewords.pope.gui.video.VideoPlayerActivity player = mPlayer;
+
+
+
+                playerJavaLangObjectNull = (player) != (null);
+                if (playerJavaLangObjectNull) {
+
+
+                    player.toggleTimeDisplay();
                 }
                 break;
             }
@@ -468,43 +485,26 @@ public class PlayerHudBindingImpl extends PlayerHudBinding implements com.deword
                 }
                 break;
             }
-            case 6: {
-                // localize variables for thread safety
-                // player.resizeVideo()
-                java.lang.Boolean playerResizeVideo = null;
-                // player != null
-                boolean playerJavaLangObjectNull = false;
-                // player
-                com.dewords.pope.gui.video.VideoPlayerActivity player = mPlayer;
-
-
-
-                playerJavaLangObjectNull = (player) != (null);
-                if (playerJavaLangObjectNull) {
-
-
-                    playerResizeVideo = player.resizeVideo();
-                }
-                break;
-            }
-            case 3: {
-                // localize variables for thread safety
-                // player != null
-                boolean playerJavaLangObjectNull = false;
-                // player
-                com.dewords.pope.gui.video.VideoPlayerActivity player = mPlayer;
-
-
-
-                playerJavaLangObjectNull = (player) != (null);
-                if (playerJavaLangObjectNull) {
-
-
-                    player.previous();
-                }
-                break;
-            }
         }
+    }
+    public final boolean _internalCallbackOnLongClick(int sourceId , android.view.View callbackArg_0) {
+        // localize variables for thread safety
+        // player != null
+        boolean playerJavaLangObjectNull = false;
+        // player.displayResize()
+        boolean playerDisplayResize = false;
+        // player
+        com.dewords.pope.gui.video.VideoPlayerActivity player = mPlayer;
+
+
+
+        playerJavaLangObjectNull = (player) != (null);
+        if (playerJavaLangObjectNull) {
+
+
+            playerDisplayResize = player.displayResize();
+        }
+        return playerDisplayResize;
     }
     // dirty flag
     private  long mDirtyFlags = 0xffffffffffffffffL;

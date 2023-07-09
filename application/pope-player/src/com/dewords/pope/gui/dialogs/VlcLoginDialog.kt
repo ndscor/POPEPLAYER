@@ -33,7 +33,7 @@ import org.videolan.libvlc.Dialog
 import com.dewords.pope.R
 import com.dewords.pope.databinding.VlcLoginDialogBinding
 import com.dewords.pope.gui.helpers.UiTools
-import com.dewords.poperesources.AndroidDevices
+import org.videolan.resources.AndroidDevices
 import org.videolan.tools.LOGIN_STORE
 import org.videolan.tools.Settings
 import org.videolan.tools.putSingle

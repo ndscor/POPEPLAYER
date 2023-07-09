@@ -27,129 +27,111 @@
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
+        android:paddingEnd="5dp"
+       android:paddingStart="5dp"
         tools:background="@color/onboarding_grey">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="match_parent" >
 
     <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guideline"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            app:layout_constraintGuide_percent="0.25" />
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            />
+
+
+    <TextView
+        android:id="@+id/permission_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="24dp"
+        android:text="@string/permission"
+        android:textAlignment="textStart"
+        android:textAppearance="@style/VLC.Onboarding.Title" />
+
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:text="@string/permission_media"
+        android:textAlignment="textStart"
+        android:textAppearance="@style/VLC.Onboarding.Text"/>
+
 
     <FrameLayout
-            android:id="@+id/permNone"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:padding="16dp"
-            android:scaleX="0.8"
-            android:scaleY="0.8"
-            app:layout_constraintBottom_toBottomOf="@+id/permMedia"
-            app:layout_constraintEnd_toStartOf="@+id/permMedia"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintHorizontal_chainStyle="packed"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/permMedia">
+        android:id="@+id/permNone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:padding="16dp"
+        android:scaleX="0.8"
+        android:scaleY="0.8"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="packed"
+       />
 
-        <ImageView
-                android:id="@+id/permNoneImage"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:contentDescription="@string/permission_onboarding_no_perm"
-                app:srcCompat="@drawable/ic_perm_none" />
-    </FrameLayout>
 
     <FrameLayout
-            android:id="@+id/permMedia"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="32dp"
-            android:layout_marginBottom="24dp"
-            android:padding="16dp"
-            android:scaleX="0.8"
-            android:scaleY="0.8"
-            app:layout_constraintBottom_toTopOf="@+id/textView5"
-            app:layout_constraintEnd_toStartOf="@+id/permAll"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/permNone"
-            app:layout_constraintTop_toBottomOf="@+id/textView">
+        android:id="@+id/permMedia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="24dp"
+        android:padding="16dp"
+        android:scaleX="0.8"
+        android:scaleY="0.8"
+        app:layout_constraintHorizontal_bias="0.5"
+       />
 
-        <ImageView
-                android:id="@+id/permMediaImage"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:contentDescription="@string/permission_onboarding_perm_media"
-                app:srcCompat="@drawable/ic_perm_media" />
-    </FrameLayout>
+
 
     <FrameLayout
-            android:id="@+id/permAll"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="16dp"
-            android:background="@drawable/theme_selection_rounded"
-            android:padding="16dp"
-            app:layout_constraintBottom_toBottomOf="@+id/permMedia"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/permMedia"
-            app:layout_constraintTop_toTopOf="@+id/permMedia">
+        android:id="@+id/permAll"
+        android:layout_width="match_parent"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:backgroundTint="?background_actionbar"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/permMedia"
+        app:layout_constraintStart_toEndOf="@+id/permMedia"
+        app:layout_constraintTop_toTopOf="@+id/permMedia">
 
         <ImageView
                 android:id="@+id/permAllImage"
+                android:layout_gravity="center"
                 android:layout_width="wrap_content"
+                android:src="@mipmap/pope_launcher"
                 android:layout_height="wrap_content"
-                android:contentDescription="@string/permission_onboarding_perm_all"
-                app:srcCompat="@drawable/ic_perm_all" />
+               />
     </FrameLayout>
 
 
-    <TextView
-            android:id="@+id/permission_title"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginEnd="16dp"
-            android:layout_marginBottom="8dp"
-            android:text="@string/permission"
-            android:textAlignment="center"
-            android:textAppearance="@style/VLC.Onboarding.Title"
-            app:layout_constraintBottom_toTopOf="@+id/textView"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent" />
-
-    <TextView
-            android:id="@+id/textView"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="24dp"
-            android:layout_marginEnd="24dp"
-            android:text="@string/permission_media"
-            android:textAlignment="center"
-            android:textAppearance="@style/VLC.Onboarding.Text"
-            app:layout_constraintBottom_toTopOf="@+id/guideline"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/guideline" />
 
     <TextView
             android:id="@+id/permDescription"
             android:layout_width="wrap_content"
+            android:layout_gravity="bottom"
             android:layout_height="wrap_content"
-            android:layout_marginStart="24dp"
+            android:gravity="bottom"
+            android:layout_marginBottom="20dp"
+            android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
-            android:layout_marginEnd="24dp"
+            android:layout_marginEnd="16dp"
             android:importantForAccessibility="no"
             android:padding="8dp"
             android:text="@string/permission_onboarding_perm_all"
-            android:textAlignment="center"
             android:textAppearance="@style/VLC.Onboarding.Text"
-            android:textColor="@color/blue900"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/permMedia" />
+        />
 
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

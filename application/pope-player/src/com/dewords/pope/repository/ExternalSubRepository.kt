@@ -28,8 +28,8 @@ import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.launch
 import org.videolan.tools.SingletonHolder
-import com.dewords.pope.database.ExternalSubDao
-import com.dewords.pope.database.MediaDatabase
+import org.videolan.vlc.database.ExternalSubDao
+import org.videolan.vlc.database.MediaDatabase
 import com.dewords.pope.gui.dialogs.State
 import com.dewords.pope.gui.dialogs.SubtitleItem
 import org.videolan.tools.CoroutineContextProvider
@@ -45,13 +45,13 @@ class ExternalSubRepository(private val externalSubDao: ExternalSubDao, private 
         get() = _downloadingSubtitles as LiveData<Map<Long, SubtitleItem>>
 
     fun saveDownloadedSubtitle(idSubtitle: String, subtitlePath: String, mediaPath: String, language: String, movieReleaseName: String): Job {
-        return GlobalScope.launch(coroutineContextProvider.IO) { externalSubDao.insert(com.dewords.pope.mediadb.models.ExternalSub(idSubtitle, subtitlePath, mediaPath, language, movieReleaseName)) }
+        return GlobalScope.launch(coroutineContextProvider.IO) { externalSubDao.insert(org.videolan.vlc.mediadb.models.ExternalSub(idSubtitle, subtitlePath, mediaPath, language, movieReleaseName)) }
     }
 
-    fun getDownloadedSubtitles(mediaUri: Uri): LiveData<List<com.dewords.pope.mediadb.models.ExternalSub>> {
+    fun getDownloadedSubtitles(mediaUri: Uri): LiveData<List<org.videolan.vlc.mediadb.models.ExternalSub>> {
         val externalSubs = externalSubDao.get(mediaUri.path!!)
         return Transformations.map(externalSubs) { list ->
-            val existExternalSubs: MutableList<com.dewords.pope.mediadb.models.ExternalSub> = mutableListOf()
+            val existExternalSubs: MutableList<org.videolan.vlc.mediadb.models.ExternalSub> = mutableListOf()
             list.forEach {
                 if (File(Uri.decode(it.subtitlePath)).exists())
                     existExternalSubs.add(it)
@@ -76,5 +76,6 @@ class ExternalSubRepository(private val externalSubDao: ExternalSubDao, private 
 
     fun getDownloadingSubtitle(key: Long) = _downloadingSubtitles.get(key)
 
-    companion object : SingletonHolder<ExternalSubRepository, Context>({ ExternalSubRepository(MediaDatabase.getInstance(it).externalSubDao()) })
+    companion object : SingletonHolder<ExternalSubRepository, Context>({ ExternalSubRepository(
+        MediaDatabase.getInstance(it).externalSubDao()) })
 }

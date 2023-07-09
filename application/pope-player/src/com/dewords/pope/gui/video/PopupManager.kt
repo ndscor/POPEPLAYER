@@ -37,10 +37,10 @@ import org.videolan.libvlc.MediaPlayer
 import org.videolan.libvlc.interfaces.IMedia
 import org.videolan.libvlc.interfaces.IVLCVout
 import org.videolan.medialibrary.interfaces.media.MediaWrapper
-import com.dewords.poperesources.ACTION_REMOTE_PLAYPAUSE
-import com.dewords.poperesources.ACTION_REMOTE_STOP
-import com.dewords.poperesources.ACTION_REMOTE_SWITCH_VIDEO
-import com.dewords.poperesources.util.stopForegroundCompat
+import org.videolan.resources.ACTION_REMOTE_PLAYPAUSE
+import org.videolan.resources.ACTION_REMOTE_STOP
+import org.videolan.resources.ACTION_REMOTE_SWITCH_VIDEO
+import org.videolan.resources.util.stopForegroundCompat
 import org.videolan.tools.*
 import com.dewords.pope.PlaybackService
 import com.dewords.pope.R

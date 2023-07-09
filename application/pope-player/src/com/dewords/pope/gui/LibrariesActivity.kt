@@ -13,14 +13,14 @@ import com.squareup.moshi.*
 import kotlinx.parcelize.Parcelize
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
-import com.dewords.poperesources.AndroidDevices
-import com.dewords.poperesources.AppContextProvider
+import org.videolan.resources.AndroidDevices
+import org.videolan.resources.AppContextProvider
 import com.dewords.pope.R
 import com.dewords.pope.databinding.LibraryItemBinding
 import com.dewords.pope.databinding.LicenseActivityBinding
 import com.dewords.pope.gui.dialogs.LicenseDialog
 import com.dewords.pope.gui.helpers.SelectorViewHolder
-import com.dewords.poperesources.util.applyOverscanMargin
+import org.videolan.resources.util.applyOverscanMargin
 
 /**
  * Activity showing the different libraries used by VLC for Android and their licenses

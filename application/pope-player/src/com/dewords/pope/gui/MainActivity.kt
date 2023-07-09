@@ -20,6 +20,7 @@
 
 package com.dewords.pope.gui
 
+import android.Manifest
 import android.annotation.SuppressLint
 import android.annotation.TargetApi
 import android.app.Activity
@@ -28,21 +29,19 @@ import android.content.Intent
 import android.content.SharedPreferences
 import android.os.Build
 import android.os.Bundle
-import android.view.KeyEvent
-import android.view.Menu
-import android.view.MenuItem
-import android.view.View
+import android.view.*
 import android.widget.ImageView
+import android.widget.Toast
 import androidx.appcompat.view.ActionMode
 import androidx.appcompat.widget.Toolbar
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.preference.PreferenceManager
+import com.dewords.pope.*
+import com.dewords.pope.BuildConfig
 import com.dewords.pope.R
-import com.dewords.pope.StartActivity
 import com.dewords.pope.gui.audio.AudioBrowserFragment
 import com.dewords.pope.gui.browser.BaseBrowserFragment
-import com.dewords.pope.gui.dialogs.AllAccessPermissionDialog
 import com.dewords.pope.gui.dialogs.NotificationPermissionManager
 import com.dewords.pope.gui.helpers.INavigator
 import com.dewords.pope.gui.helpers.Navigator
@@ -53,46 +52,68 @@ import com.dewords.pope.gui.video.VideoGridFragment
 import com.dewords.pope.interfaces.Filterable
 import com.dewords.pope.interfaces.IRefreshable
 import com.dewords.pope.media.MediaUtils
-import com.dewords.pope.reloadLibrary
 import com.dewords.pope.util.Permissions
 import com.dewords.pope.util.Util
 import com.dewords.pope.util.WidgetMigration
 import com.dewords.pope.util.getScreenWidth
-import com.dewords.poperesources.*
 import com.google.android.material.appbar.AppBarLayout
 import com.google.android.material.bottomnavigation.BottomNavigationView
+import com.google.android.vending.licensing.*
 import org.videolan.libvlc.util.AndroidUtil
 import org.videolan.medialibrary.interfaces.Medialibrary
+import org.videolan.resources.*
 import org.videolan.tools.*
-import java.util.concurrent.TimeUnit
+import kotlin.system.exitProcess
 
 private const val TAG = "VLC/MainActivity"
 
-class MainActivity : ContentActivity(),
+open class MainActivity : ContentActivity(),
         INavigator by Navigator()
 {
     var refreshing: Boolean = false
         set(value) {
             field = value
         }
+    private val SALT = byteArrayOf( 22, 90, 21, 45, 11, 56, 38, 78, 77, 98, 10, 11, 68
+        ,87 , 43, 93, 99 , 20 ,33, 38)
 
+
+
+    private lateinit var licenseCheckerCallback: LicenseCheckerCallback
 
     private lateinit var mediaLibrary: Medialibrary
     private var scanNeeded = false
     private lateinit var toolbarIcon: ImageView
+    private lateinit var checker: LicenseChecker
+
 
     override fun getSnackAnchorView(overAudioPlayer:Boolean): View? {
         val view = super.getSnackAnchorView(overAudioPlayer)
         return if (view?.id == android.R.id.content && !isTablet()) {if(overAudioPlayer) findViewById(android.R.id.content) else findViewById(R.id.appbar)} else view
     }
 
-        @SuppressLint("SetTextI18n")
+
+
+
+    @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         Util.checkCpuCompatibility(this)
+        licenseCheckerCallback = MyLicenseCheckerCallback()
 
-        /*** Start initializing the UI  */
+
+         checker = LicenseChecker(
+            this,
+            ServerManagedPolicy(this, AESObfuscator(SALT, packageName, deviceId)),
+            BuildConfig.BASE64_PUBLIC_KEY // Your public licensing key.
+        )
+        doCheck()
+
         setContentView(R.layout.main)
+
+
+            sInstance = this;
+
             val uiModeManager = this.getSystemService(UI_MODE_SERVICE)
 
             if (uiModeManager == UiModeManager.MODE_NIGHT_YES) {
@@ -118,17 +139,31 @@ class MainActivity : ContentActivity(),
         NotificationPermissionManager.launchIfNeeded(this)
     }
 
+
+
+
+
+    override fun getPermissionsToRequest(): Array<String> {
+        return mutableListOf<String>().apply {
+            if (VersionUtils.hasT()) {
+                add(Manifest.permission.READ_MEDIA_AUDIO)
+                add(Manifest.permission.POST_NOTIFICATIONS)
+            } else {
+                add(Manifest.permission.READ_EXTERNAL_STORAGE)
+            }
+            if (!VersionUtils.hasR()) {
+                add(Manifest.permission.WRITE_EXTERNAL_STORAGE)
+            }
+        }.toTypedArray()
+    }
+
+
     override fun onResume() {
         super.onResume()
         prepareActionBar()
         prepareBottomBar()
         //Only the partial permission is granted for Android 11+
-        if (!settings.getBoolean(PERMISSION_NEVER_ASK, false) && settings.getLong(PERMISSION_NEXT_ASK, 0L) < System.currentTimeMillis() && Permissions.canReadStorage(this) && !Permissions.hasAllAccess(this)) {
-            UiTools.snackerMessageInfinite(this, getString(R.string.partial_content))?.setAction(R.string.more) {
-                AllAccessPermissionDialog.newInstance().show(supportFragmentManager, AllAccessPermissionDialog::class.simpleName)
-            }?.show()
-            settings.putSingle(PERMISSION_NEXT_ASK, System.currentTimeMillis() + TimeUnit.DAYS.toMillis(2))
-        }
+
         configurationChanged(getScreenWidth())
     }
 
@@ -211,6 +246,85 @@ class MainActivity : ContentActivity(),
         outState.putInt(EXTRA_TARGET, currentFragmentId)
         super.onSaveInstanceState(outState)
     }
+
+
+    private fun doCheck()
+    {
+        checker.checkAccess(licenseCheckerCallback)
+    }
+
+
+    private val deviceId: String by lazy {
+        android.provider.Settings.Secure.getString(contentResolver, android.provider.Settings.Secure.ANDROID_ID);
+    }
+
+
+    private fun displayResult(result: String)
+    {
+        // TODO you can change this how the info is displayed
+        Toast.makeText(this, result, Toast.LENGTH_SHORT).show()
+    }
+
+    private inner class MyLicenseCheckerCallback : LicenseCheckerCallback
+    {
+        override fun allow(reason: Int)
+        {
+            if (isFinishing)
+            {
+                // Don't update UI if Activity is finishing.
+                return
+            }
+            // Should allow user access.
+        }
+
+        override fun applicationError(errorCode: Int)
+        {
+            // TODO handle the error your own way. Calling `dontAllow` is common.
+            dontAllow(Policy.NOT_LICENSED)
+        }
+
+        override fun dontAllow(reason: Int)
+        {
+            if (isFinishing)
+            {
+                // Don't update UI if Activity is finishing.
+                return
+            }
+
+
+            if (reason == Policy.RETRY)
+            {
+                // If the reason received from the policy is RETRY, it was probably
+                // due to a loss of connection with the service, so we should give the
+                // user a chance to retry. So show a dialog to retry.
+
+                // TODO handle Policy.RETRY
+            }
+            else
+            {
+                // Otherwise, the user isn't licensed to use this app.
+                // Your response should always inform the user that the application
+                // isn't licensed, but your behavior at that point can vary. You might
+                // provide the user a limited access version of your app or you can
+                // take them to Google Play to purchase the app.
+
+                // TODO implement goto market
+            }
+            displayResult("Not Licensed")
+
+            // TODO you may not abort if you have some other way to handle the fail case
+            abort()
+        }
+    }
+
+
+    private fun abort()
+    {
+        finishAffinity()
+        exitProcess(0)
+    }
+
+
 
     override fun onRestart() {
         super.onRestart()
@@ -299,6 +413,22 @@ class MainActivity : ContentActivity(),
                 reloadLibrary()
         }
     }
+
+    companion object {
+        lateinit var sInstance: BaseActivity
+            private set
+
+        const val PERMISSION_REQUEST = 100
+
+
+    }
+
+    @Synchronized
+    fun getInstance(): BaseActivity {
+        return sInstance
+    }
+
+
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)

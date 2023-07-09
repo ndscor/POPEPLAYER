@@ -16,13 +16,14 @@ import org.videolan.libvlc.interfaces.IMedia
 import org.videolan.libvlc.interfaces.IMediaList
 import org.videolan.libvlc.interfaces.IVLCVout
 import org.videolan.medialibrary.interfaces.media.MediaWrapper
-import com.dewords.poperesources.VLCInstance
-import com.dewords.poperesources.VLCOptions
+import org.videolan.resources.VLCInstance
+import org.videolan.resources.VLCOptions
 import org.videolan.tools.*
 import com.dewords.pope.*
 import com.dewords.pope.gui.dialogs.VideoTracksDialog
 import com.dewords.pope.gui.dialogs.adapters.VlcTrack
 import com.dewords.pope.repository.SlaveRepository
+import org.videolan.vlc.*
 import kotlin.math.abs
 
 class PlayerController(val context: Context) : IVLCVout.Callback, MediaPlayer.EventListener, CoroutineScope {
@@ -131,7 +132,7 @@ class PlayerController(val context: Context) : IVLCVout.Callback, MediaPlayer.Ev
 
     fun getCurrentVideoTrack(): VlcTrack? = if (!mediaplayer.isReleased && mediaplayer.hasMedia()) mediaplayer.getSelectedVideoTrack() else null
 
-    fun getAudioTracksCount() = if (!mediaplayer.isReleased && mediaplayer.hasMedia()) mediaplayer.getAudioTracksCount() else 0
+    fun getAudioTracksCount() = if (!mediaplayer.isReleased && mediaplayer.hasMedia()) mediaplayer.audioTracksCount else 0
 
     fun getAudioTracks(): Array<out VlcTrack>? = if (!mediaplayer.isReleased && mediaplayer.hasMedia()) mediaplayer.getAllAudioTracks() else emptyArray()
 

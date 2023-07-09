@@ -36,7 +36,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.bottomsheet.BottomSheetBehavior.STATE_EXPANDED
 import org.videolan.medialibrary.interfaces.media.MediaWrapper
 import org.videolan.medialibrary.media.MediaLibraryItem
-import com.dewords.poperesources.*
+import org.videolan.resources.*
 import org.videolan.tools.isStarted
 import com.dewords.pope.R
 import com.dewords.pope.databinding.ContextItemBinding
@@ -130,7 +130,6 @@ class ContextSheet : VLCBottomSheetDialogFragment() {
         if (flags and CTX_STOP_AFTER_THIS != 0L) add(Simple(CTX_STOP_AFTER_THIS, getString(R.string.stop_after_this), R.drawable.ic_ctx_stop_after_this))
         if (flags and CTX_RENAME != 0L) add(Simple(CTX_RENAME, getString(R.string.rename), R.drawable.ic_ctx_edit))
         if (flags and CTX_COPY != 0L) add(Simple(CTX_COPY, getString(R.string.copy_to_clipboard), R.drawable.ic_ctx_link))
-        if (flags and CTX_DELETE != 0L) add(Simple(CTX_DELETE, getString(R.string.delete), R.drawable.ic_ctx_delete))
         if (flags and CTX_SHARE != 0L) add(Simple(CTX_SHARE, getString(R.string.share), R.drawable.ic_ctx_share))
         if (flags and CTX_ADD_SHORTCUT != 0L && ShortcutManagerCompat.isRequestPinShortcutSupported(requireActivity())) add(Simple(CTX_ADD_SHORTCUT, getString(R.string.create_shortcut), R.drawable.ic_ctx_app_shortcut))
         if (flags and CTX_FIND_METADATA != 0L) add(Simple(CTX_FIND_METADATA, getString(R.string.find_metadata), R.drawable.ic_ctx_delete))

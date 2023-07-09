@@ -25,10 +25,10 @@ import org.videolan.medialibrary.Tools
 import org.videolan.medialibrary.interfaces.Medialibrary
 import org.videolan.medialibrary.interfaces.media.*
 import org.videolan.medialibrary.media.MediaLibraryItem
-import com.dewords.poperesources.*
-import com.dewords.poperesources.interfaces.IMediaContentResolver
-import com.dewords.poperesources.interfaces.ResumableList
-import com.dewords.poperesources.util.getFromMl
+import org.videolan.resources.*
+import org.videolan.resources.interfaces.IMediaContentResolver
+import org.videolan.resources.interfaces.ResumableList
+import org.videolan.resources.util.getFromMl
 import org.videolan.tools.AppScope
 import org.videolan.tools.Settings
 import org.videolan.tools.localBroadcastManager
@@ -41,7 +41,7 @@ import com.dewords.pope.providers.medialibrary.FoldersProvider
 import com.dewords.pope.providers.medialibrary.MedialibraryProvider
 import com.dewords.pope.providers.medialibrary.VideoGroupsProvider
 import com.dewords.pope.util.*
-import com.dewords.poperesources.VLCOptions
+import org.videolan.resources.VLCOptions
 import java.io.File
 import java.security.SecureRandom
 import java.util.*

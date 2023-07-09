@@ -49,12 +49,11 @@ import org.videolan.medialibrary.MLServiceLocator
 import org.videolan.medialibrary.interfaces.DevicesDiscoveryCb
 import org.videolan.medialibrary.interfaces.Medialibrary
 import org.videolan.medialibrary.stubs.StubMedialibrary
-import com.dewords.poperesources.*
-import com.dewords.poperesources.util.dbExists
-import com.dewords.poperesources.util.launchForeground
-import com.dewords.poperesources.util.stopForegroundCompat
+import org.videolan.resources.*
+import org.videolan.resources.util.dbExists
+import org.videolan.resources.util.launchForeground
+import org.videolan.resources.util.stopForegroundCompat
 import org.videolan.tools.*
-import com.dewords.pope.gui.SendCrashActivity
 import com.dewords.pope.gui.helpers.NotificationHelper
 import com.dewords.pope.repository.DirectoryRepository
 import com.dewords.pope.util.*
@@ -90,21 +89,11 @@ class MediaParsingService : LifecycleService(), DevicesDiscoveryCb {
 
     private val exceptionHandler = when {
         BuildConfig.BETA -> Medialibrary.MedialibraryExceptionHandler { context, errMsg, _ ->
-            val intent = Intent(applicationContext, SendCrashActivity::class.java).apply {
-                putExtra(CRASH_ML_CTX, context)
-                putExtra(CRASH_ML_MSG, errMsg)
-                addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
-            }
+
             Log.wtf(TAG, "medialibrary reported unhandled exception: -----------------")
             // Lock the Medialibrary thread during DB extraction.
             runBlocking {
-                SendCrashActivity.job = Job()
-                try {
-                    startActivity(intent)
-                    SendCrashActivity.job?.join()
-                } catch (e: Exception) {
-                    SendCrashActivity.job = null
-                }
+
             }
         }
         BuildConfig.DEBUG -> Medialibrary.MedialibraryExceptionHandler { context, errMsg, _ -> throw IllegalStateException("$context:\n$errMsg") }

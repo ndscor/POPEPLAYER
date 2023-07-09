@@ -59,7 +59,7 @@ import kotlinx.coroutines.flow.conflate
 import kotlinx.coroutines.flow.onEach
 import org.videolan.medialibrary.Tools
 import org.videolan.medialibrary.interfaces.media.MediaWrapper
-import com.dewords.poperesources.*
+import org.videolan.resources.*
 import org.videolan.tools.*
 import com.dewords.pope.PlaybackService
 import com.dewords.pope.R

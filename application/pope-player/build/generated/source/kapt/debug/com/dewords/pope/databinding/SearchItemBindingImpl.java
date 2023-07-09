@@ -20,7 +20,7 @@ public class SearchItemBindingImpl extends SearchItemBinding implements com.dewo
     private final androidx.constraintlayout.widget.ConstraintLayout mboundView0;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback4;
+    private final android.view.View.OnClickListener mCallback3;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -41,7 +41,7 @@ public class SearchItemBindingImpl extends SearchItemBinding implements com.dewo
         this.mboundView0.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback4 = new com.dewords.pope.generated.callback.OnClickListener(this, 1);
+        mCallback3 = new com.dewords.pope.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -227,7 +227,7 @@ public class SearchItemBindingImpl extends SearchItemBinding implements com.dewo
         if ((dirtyFlags & 0x80L) != 0) {
             // api target 1
 
-            this.mboundView0.setOnClickListener(mCallback4);
+            this.mboundView0.setOnClickListener(mCallback3);
         }
     }
     // Listener Stub Implementations

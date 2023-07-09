@@ -35,7 +35,7 @@ import androidx.lifecycle.LifecycleOwner
 import com.google.android.material.appbar.AppBarLayout
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.navigation.NavigationBarView
-import com.dewords.poperesources.*
+import org.videolan.resources.*
 import org.videolan.tools.*
 import com.dewords.pope.R
 import com.dewords.pope.gui.*

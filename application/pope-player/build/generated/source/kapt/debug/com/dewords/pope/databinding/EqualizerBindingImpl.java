@@ -14,15 +14,15 @@ public class EqualizerBindingImpl extends EqualizerBinding  {
     static {
         sIncludes = null;
         sViewsWithIds = new android.util.SparseIntArray();
-        sViewsWithIds.put(R.id.equalizer_container, 4);
-        sViewsWithIds.put(R.id.eq_title, 5);
-        sViewsWithIds.put(R.id.equalizer_button, 6);
-        sViewsWithIds.put(R.id.equalizer_presets, 7);
-        sViewsWithIds.put(R.id.textView10, 8);
-        sViewsWithIds.put(R.id.textView11, 9);
-        sViewsWithIds.put(R.id.equalizer_preamp, 10);
-        sViewsWithIds.put(R.id.equalizer_bands, 11);
-        sViewsWithIds.put(R.id.snapBands, 12);
+        sViewsWithIds.put(R.id.equalizer_container, 3);
+        sViewsWithIds.put(R.id.eq_title, 4);
+        sViewsWithIds.put(R.id.equalizer_button, 5);
+        sViewsWithIds.put(R.id.equalizer_presets, 6);
+        sViewsWithIds.put(R.id.textView10, 7);
+        sViewsWithIds.put(R.id.textView11, 8);
+        sViewsWithIds.put(R.id.equalizer_preamp, 9);
+        sViewsWithIds.put(R.id.equalizer_bands, 10);
+        sViewsWithIds.put(R.id.snapBands, 11);
     }
     // views
     @NonNull
@@ -33,24 +33,22 @@ public class EqualizerBindingImpl extends EqualizerBinding  {
     // Inverse Binding Event Handlers
 
     public EqualizerBindingImpl(@Nullable androidx.databinding.DataBindingComponent bindingComponent, @NonNull View root) {
-        this(bindingComponent, root, mapBindings(bindingComponent, root, 13, sIncludes, sViewsWithIds));
+        this(bindingComponent, root, mapBindings(bindingComponent, root, 12, sIncludes, sViewsWithIds));
     }
     private EqualizerBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
-        super(bindingComponent, root, 3
-            , (android.widget.TextView) bindings[5]
-            , (android.widget.LinearLayout) bindings[11]
-            , (androidx.appcompat.widget.SwitchCompat) bindings[6]
-            , (androidx.constraintlayout.widget.ConstraintLayout) bindings[4]
+        super(bindingComponent, root, 2
+            , (android.widget.TextView) bindings[4]
+            , (android.widget.LinearLayout) bindings[10]
+            , (androidx.appcompat.widget.SwitchCompat) bindings[5]
+            , (androidx.constraintlayout.widget.ConstraintLayout) bindings[3]
+            , (com.google.android.material.slider.Slider) bindings[9]
+            , (androidx.appcompat.widget.AppCompatSpinner) bindings[6]
             , (android.widget.Button) bindings[1]
-            , (com.google.android.material.slider.Slider) bindings[10]
-            , (androidx.appcompat.widget.AppCompatSpinner) bindings[7]
             , (android.widget.Button) bindings[2]
-            , (android.widget.Button) bindings[3]
-            , (androidx.appcompat.widget.SwitchCompat) bindings[12]
+            , (androidx.appcompat.widget.SwitchCompat) bindings[11]
+            , (android.widget.TextView) bindings[7]
             , (android.widget.TextView) bindings[8]
-            , (android.widget.TextView) bindings[9]
             );
-        this.equalizerDelete.setTag(null);
         this.equalizerRevert.setTag(null);
         this.equalizerSave.setTag(null);
         this.mboundView0 = (androidx.core.widget.NestedScrollView) bindings[0];
@@ -63,7 +61,7 @@ public class EqualizerBindingImpl extends EqualizerBinding  {
     @Override
     public void invalidateAll() {
         synchronized(this) {
-                mDirtyFlags = 0x10L;
+                mDirtyFlags = 0x8L;
         }
         requestRebind();
     }
@@ -93,7 +91,7 @@ public class EqualizerBindingImpl extends EqualizerBinding  {
     public void setState(@Nullable com.dewords.pope.gui.audio.EqualizerFragment.EqualizerState State) {
         this.mState = State;
         synchronized(this) {
-            mDirtyFlags |= 0x8L;
+            mDirtyFlags |= 0x4L;
         }
         notifyPropertyChanged(BR.state);
         super.requestRebind();
@@ -105,8 +103,6 @@ public class EqualizerBindingImpl extends EqualizerBinding  {
             case 0 :
                 return onChangeStateSaveButtonVisibility((androidx.databinding.ObservableBoolean) object, fieldId);
             case 1 :
-                return onChangeStateDeleteButtonVisibility((androidx.databinding.ObservableBoolean) object, fieldId);
-            case 2 :
                 return onChangeStateRevertButtonVisibility((androidx.databinding.ObservableBoolean) object, fieldId);
         }
         return false;
@@ -120,19 +116,10 @@ public class EqualizerBindingImpl extends EqualizerBinding  {
         }
         return false;
     }
-    private boolean onChangeStateDeleteButtonVisibility(androidx.databinding.ObservableBoolean StateDeleteButtonVisibility, int fieldId) {
-        if (fieldId == BR._all) {
-            synchronized(this) {
-                    mDirtyFlags |= 0x2L;
-            }
-            return true;
-        }
-        return false;
-    }
     private boolean onChangeStateRevertButtonVisibility(androidx.databinding.ObservableBoolean StateRevertButtonVisibility, int fieldId) {
         if (fieldId == BR._all) {
             synchronized(this) {
-                    mDirtyFlags |= 0x4L;
+                    mDirtyFlags |= 0x2L;
             }
             return true;
         }
@@ -150,14 +137,12 @@ public class EqualizerBindingImpl extends EqualizerBinding  {
         androidx.databinding.ObservableBoolean stateSaveButtonVisibility = null;
         com.dewords.pope.gui.audio.EqualizerFragment.EqualizerState state = mState;
         boolean stateSaveButtonVisibilityGet = false;
-        androidx.databinding.ObservableBoolean stateDeleteButtonVisibility = null;
         androidx.databinding.ObservableBoolean stateRevertButtonVisibility = null;
-        boolean stateDeleteButtonVisibilityGet = false;
 
-        if ((dirtyFlags & 0x1fL) != 0) {
+        if ((dirtyFlags & 0xfL) != 0) {
 
 
-            if ((dirtyFlags & 0x19L) != 0) {
+            if ((dirtyFlags & 0xdL) != 0) {
 
                     if (state != null) {
                         // read state.saveButtonVisibility
@@ -171,27 +156,13 @@ public class EqualizerBindingImpl extends EqualizerBinding  {
                         stateSaveButtonVisibilityGet = stateSaveButtonVisibility.get();
                     }
             }
-            if ((dirtyFlags & 0x1aL) != 0) {
-
-                    if (state != null) {
-                        // read state.deleteButtonVisibility
-                        stateDeleteButtonVisibility = state.getDeleteButtonVisibility();
-                    }
-                    updateRegistration(1, stateDeleteButtonVisibility);
-
-
-                    if (stateDeleteButtonVisibility != null) {
-                        // read state.deleteButtonVisibility.get()
-                        stateDeleteButtonVisibilityGet = stateDeleteButtonVisibility.get();
-                    }
-            }
-            if ((dirtyFlags & 0x1cL) != 0) {
+            if ((dirtyFlags & 0xeL) != 0) {
 
                     if (state != null) {
                         // read state.revertButtonVisibility
                         stateRevertButtonVisibility = state.getRevertButtonVisibility();
                     }
-                    updateRegistration(2, stateRevertButtonVisibility);
+                    updateRegistration(1, stateRevertButtonVisibility);
 
 
                     if (stateRevertButtonVisibility != null) {
@@ -201,17 +172,12 @@ public class EqualizerBindingImpl extends EqualizerBinding  {
             }
         }
         // batch finished
-        if ((dirtyFlags & 0x1aL) != 0) {
-            // api target 1
-
-            this.equalizerDelete.setEnabled(stateDeleteButtonVisibilityGet);
-        }
-        if ((dirtyFlags & 0x1cL) != 0) {
+        if ((dirtyFlags & 0xeL) != 0) {
             // api target 1
 
             this.equalizerRevert.setEnabled(stateRevertButtonVisibilityGet);
         }
-        if ((dirtyFlags & 0x19L) != 0) {
+        if ((dirtyFlags & 0xdL) != 0) {
             // api target 1
 
             this.equalizerSave.setEnabled(stateSaveButtonVisibilityGet);
@@ -223,10 +189,9 @@ public class EqualizerBindingImpl extends EqualizerBinding  {
     private  long mDirtyFlags = 0xffffffffffffffffL;
     /* flag mapping
         flag 0 (0x1L): state.saveButtonVisibility
-        flag 1 (0x2L): state.deleteButtonVisibility
-        flag 2 (0x3L): state.revertButtonVisibility
-        flag 3 (0x4L): state
-        flag 4 (0x5L): null
+        flag 1 (0x2L): state.revertButtonVisibility
+        flag 2 (0x3L): state
+        flag 3 (0x4L): null
     flag mapping end*/
     //end
 }

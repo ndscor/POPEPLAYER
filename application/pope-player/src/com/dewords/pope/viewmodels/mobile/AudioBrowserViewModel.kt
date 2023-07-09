@@ -26,7 +26,7 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.viewModelScope
 import kotlinx.coroutines.launch
 import org.videolan.medialibrary.interfaces.media.Playlist
-import com.dewords.poperesources.KEY_AUDIO_CURRENT_TAB
+import org.videolan.resources.KEY_AUDIO_CURRENT_TAB
 import org.videolan.tools.KEY_ARTISTS_SHOW_ALL
 import org.videolan.tools.Settings
 import com.dewords.pope.gui.audio.AudioBrowserFragment

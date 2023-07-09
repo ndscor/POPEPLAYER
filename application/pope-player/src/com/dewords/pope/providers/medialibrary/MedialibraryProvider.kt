@@ -33,8 +33,8 @@ import kotlinx.coroutines.withContext
 import org.videolan.medialibrary.interfaces.Medialibrary
 import org.videolan.medialibrary.interfaces.media.MediaWrapper
 import org.videolan.medialibrary.media.MediaLibraryItem
-import com.dewords.poperesources.MEDIALIBRARY_PAGE_SIZE
-import com.dewords.poperesources.util.HeaderProvider
+import org.videolan.resources.MEDIALIBRARY_PAGE_SIZE
+import org.videolan.resources.util.HeaderProvider
 import org.videolan.tools.Settings
 import com.dewords.pope.PlaybackService
 import com.dewords.pope.media.MediaUtils

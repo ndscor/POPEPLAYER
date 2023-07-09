@@ -8,7 +8,7 @@ import org.videolan.medialibrary.interfaces.media.Genre
 import org.videolan.medialibrary.interfaces.media.MediaWrapper
 import org.videolan.medialibrary.interfaces.media.Playlist
 import org.videolan.medialibrary.media.MediaLibraryItem
-import com.dewords.poperesources.AppContextProvider
+import org.videolan.resources.AppContextProvider
 import org.videolan.tools.dp
 import com.dewords.pope.R
 import com.dewords.pope.databinding.SearchItemBinding

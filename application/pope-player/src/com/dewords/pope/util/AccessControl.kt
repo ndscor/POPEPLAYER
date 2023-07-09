@@ -29,8 +29,8 @@ import kotlinx.coroutines.runBlocking
 import kotlinx.coroutines.withContext
 import org.json.JSONArray
 import org.json.JSONObject
-import com.dewords.poperesources.AppContextProvider
-import com.dewords.poperesources.util.getPackageInfoCompat
+import org.videolan.resources.AppContextProvider
+import org.videolan.resources.util.getPackageInfoCompat
 import com.dewords.pope.R
 import java.security.MessageDigest
 import java.security.NoSuchAlgorithmException

@@ -34,8 +34,8 @@ import kotlinx.coroutines.flow.onEach
 import kotlinx.coroutines.launch
 import org.videolan.medialibrary.interfaces.media.MediaWrapper
 import org.videolan.medialibrary.media.MediaLibraryItem
-import com.dewords.poperesources.KEY_AUDIO_LAST_PLAYLIST
-import com.dewords.poperesources.KEY_MEDIA_LAST_PLAYLIST
+import org.videolan.resources.KEY_AUDIO_LAST_PLAYLIST
+import org.videolan.resources.KEY_MEDIA_LAST_PLAYLIST
 import org.videolan.tools.*
 import com.dewords.pope.R
 import com.dewords.pope.gui.browser.MediaBrowserFragment

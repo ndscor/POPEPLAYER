@@ -28,7 +28,7 @@ import androidx.lifecycle.lifecycleScope
 import androidx.preference.Preference
 import kotlinx.coroutines.launch
 import org.videolan.libvlc.util.AndroidUtil
-import com.dewords.poperesources.VLCInstance
+import org.videolan.resources.VLCInstance
 import org.videolan.tools.POPUP_FORCE_LEGACY
 import com.dewords.pope.R
 import com.dewords.pope.gui.helpers.restartMediaPlayer

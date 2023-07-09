@@ -36,7 +36,7 @@ import androidx.core.app.NotificationCompat
 import androidx.core.content.getSystemService
 import androidx.media.session.MediaButtonReceiver
 import org.videolan.libvlc.util.AndroidUtil
-import com.dewords.poperesources.*
+import org.videolan.resources.*
 import org.videolan.tools.DrawableCache
 import org.videolan.tools.Settings
 import org.videolan.tools.getContextWithLocale

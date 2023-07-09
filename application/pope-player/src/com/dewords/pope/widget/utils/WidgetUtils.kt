@@ -35,7 +35,7 @@ import androidx.palette.graphics.Palette
 import com.google.android.material.color.DynamicColors
 import org.videolan.tools.dp
 import com.dewords.pope.R
-import com.dewords.pope.mediadb.models.Widget
+import org.videolan.vlc.mediadb.models.Widget
 
 
 /**

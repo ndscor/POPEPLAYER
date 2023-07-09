@@ -33,7 +33,7 @@
 
         <import type="android.text.TextUtils" />
 
-        <import type="com.dewords.pope.database.models.MediaMetadataWithImages" />
+        <import type="org.videolan.moviepedia.database.models.MediaMetadataWithImages" />
 
 
         <variable
@@ -78,11 +78,11 @@
 
         <variable
                 name="holder"
-                type="com.dewords.television.ui.MediaScrapingTvItemAdapter.MovieItemTVViewHolder" />
+                type="org.videolan.television.ui.MediaScrapingTvItemAdapter.MovieItemTVViewHolder" />
 
     </data>
 
-    <com.dewords.television.ui.FocusableConstraintLayout
+    <org.videolan.television.ui.FocusableConstraintLayout
             android:id="@+id/container"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -215,5 +215,5 @@
                 vlc:layout_constraintHorizontal_bias="0.5" />
 
 
-    </com.dewords.television.ui.FocusableConstraintLayout>
+    </org.videolan.television.ui.FocusableConstraintLayout>
 </layout>

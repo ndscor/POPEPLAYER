@@ -27,8 +27,8 @@ import android.content.Context
 import android.graphics.Rect
 import android.os.Build
 import android.os.Bundle
-import com.dewords.poperesources.AppContextProvider
-import com.dewords.poperesources.VLCInstance
+import org.videolan.resources.AppContextProvider
+import org.videolan.resources.VLCInstance
 import org.videolan.tools.CloseableUtils
 import org.videolan.tools.runBackground
 import org.videolan.tools.runOnMainThread

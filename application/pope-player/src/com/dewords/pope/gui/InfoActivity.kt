@@ -36,13 +36,12 @@ import org.videolan.medialibrary.interfaces.Medialibrary
 import org.videolan.medialibrary.interfaces.media.Artist
 import org.videolan.medialibrary.interfaces.media.MediaWrapper
 import org.videolan.medialibrary.media.MediaLibraryItem
-import com.dewords.poperesources.TAG_ITEM
-import com.dewords.poperesources.VLCInstance
-import com.dewords.poperesources.util.parcelable
+import org.videolan.resources.TAG_ITEM
+import org.videolan.resources.VLCInstance
+import org.videolan.resources.util.parcelable
 import org.videolan.tools.dp
 import com.dewords.pope.R
 import com.dewords.pope.databinding.InfoActivityBinding
-import com.dewords.pope.getAllTracks
 import com.dewords.pope.gui.browser.PathAdapter
 import com.dewords.pope.gui.browser.PathAdapterListener
 import com.dewords.pope.gui.helpers.AudioUtil
@@ -54,6 +53,7 @@ import com.dewords.pope.media.MediaUtils
 import com.dewords.pope.util.*
 import com.dewords.pope.viewmodels.browser.IPathOperationDelegate
 import com.dewords.pope.viewmodels.browser.PathOperationDelegate
+import org.videolan.vlc.getAllTracks
 import java.io.File
 import java.util.*
 

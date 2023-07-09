@@ -16,7 +16,7 @@ import kotlinx.coroutines.CompletableDeferred
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import org.videolan.libvlc.util.Extensions
-import com.dewords.poperesources.AppContextProvider
+import org.videolan.resources.AppContextProvider
 import org.videolan.tools.isStarted
 import com.dewords.pope.R
 import com.dewords.pope.gui.dialogs.SubtitleItem

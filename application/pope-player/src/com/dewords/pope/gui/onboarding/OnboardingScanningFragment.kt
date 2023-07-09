@@ -9,7 +9,7 @@ import android.widget.Button
 import android.widget.TextView
 import androidx.fragment.app.activityViewModels
 import com.google.android.material.switchmaterial.SwitchMaterial
-import com.dewords.poperesources.KEY_ANIMATED
+import org.videolan.resources.KEY_ANIMATED
 import org.videolan.tools.*
 import com.dewords.pope.R
 import com.dewords.pope.gui.SecondaryActivity

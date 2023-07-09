@@ -36,8 +36,8 @@ import kotlinx.coroutines.runBlocking
 import org.videolan.medialibrary.MLServiceLocator
 import org.videolan.medialibrary.interfaces.media.MediaWrapper
 import org.videolan.medialibrary.media.MediaLibraryItem
-import com.dewords.poperesources.AndroidDevices
-import com.dewords.poperesources.util.parcelable
+import org.videolan.resources.AndroidDevices
+import org.videolan.resources.util.parcelable
 import org.videolan.tools.removeFileScheme
 import com.dewords.pope.R
 import com.dewords.pope.gui.ContentActivity

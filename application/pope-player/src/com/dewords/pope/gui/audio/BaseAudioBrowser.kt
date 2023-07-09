@@ -46,7 +46,7 @@ import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import org.videolan.medialibrary.interfaces.media.*
 import org.videolan.medialibrary.media.MediaLibraryItem
-import com.dewords.poperesources.*
+import org.videolan.resources.*
 import org.videolan.tools.*
 import com.dewords.pope.R
 import com.dewords.pope.gui.ContentActivity
@@ -284,7 +284,6 @@ abstract class BaseAudioBrowser<T : MedialibraryViewModel> : MediaBrowserFragmen
         menu.findItem(R.id.action_mode_audio_set_song).isVisible = isSong && AndroidDevices.isPhone
         menu.findItem(R.id.action_mode_audio_info).isVisible = count == 1
         menu.findItem(R.id.action_mode_audio_append).isVisible = PlaylistManager.hasMedia()
-        menu.findItem(R.id.action_mode_audio_delete).isVisible = isMedia
         menu.findItem(R.id.action_mode_audio_share).isVisible = isMedia
         menu.findItem(R.id.action_mode_audio_share).isVisible = isMedia
         menu.findItem(R.id.action_mode_favorite_add).isVisible = getCurrentAdapter()?.multiSelectHelper?.getSelection()?.none { it.isFavorite } ?: false
@@ -319,7 +318,6 @@ abstract class BaseAudioBrowser<T : MedialibraryViewModel> : MediaBrowserFragmen
                 R.id.action_mode_audio_info -> showInfoDialog(list.first())
                 R.id.action_mode_audio_share -> requireActivity().share(list as List<MediaWrapper>)
                 R.id.action_mode_audio_set_song -> activity?.setRingtone(list.first() as MediaWrapper)
-                R.id.action_mode_audio_delete -> removeItems(list)
                 R.id.action_mode_go_to_folder -> (list.first() as? MediaWrapper)?.let { showParentFolder(it) }
                 R.id.action_mode_favorite_add -> lifecycleScope.launch { viewModel.changeFavorite(list, true) }
                 R.id.action_mode_favorite_remove -> lifecycleScope.launch { viewModel.changeFavorite(list, false) }

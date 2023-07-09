@@ -12,7 +12,7 @@ import kotlinx.coroutines.channels.Channel
 import kotlinx.coroutines.channels.actor
 import kotlinx.coroutines.delay
 import org.videolan.medialibrary.interfaces.Medialibrary
-import com.dewords.poperesources.util.getFromMl
+import org.videolan.resources.util.getFromMl
 import org.videolan.tools.AppScope
 import org.videolan.tools.isAppStarted
 import com.dewords.pope.gui.DialogActivity

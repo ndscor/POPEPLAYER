@@ -31,7 +31,7 @@ import android.os.Build
 import android.util.Log
 import androidx.core.content.getSystemService
 import org.videolan.libvlc.util.AndroidUtil
-import com.dewords.poperesources.AndroidDevices
+import org.videolan.resources.AndroidDevices
 import com.dewords.pope.util.launchChannelUpdate
 import com.dewords.pope.util.setChannel
 

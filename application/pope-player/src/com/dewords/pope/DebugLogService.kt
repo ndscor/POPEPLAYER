@@ -32,11 +32,11 @@ import android.text.format.DateFormat
 import android.util.Log
 import androidx.core.app.NotificationCompat
 import org.videolan.libvlc.util.AndroidUtil
-import com.dewords.poperesources.AndroidDevices
-import com.dewords.poperesources.AppContextProvider
-import com.dewords.poperesources.VLCOptions
-import com.dewords.poperesources.util.launchForeground
-import com.dewords.poperesources.util.stopForegroundCompat
+import org.videolan.resources.AndroidDevices
+import org.videolan.resources.AppContextProvider
+import org.videolan.resources.VLCOptions
+import org.videolan.resources.util.launchForeground
+import org.videolan.resources.util.stopForegroundCompat
 import org.videolan.tools.CloseableUtils
 import org.videolan.tools.Logcat
 import org.videolan.tools.getContextWithLocale

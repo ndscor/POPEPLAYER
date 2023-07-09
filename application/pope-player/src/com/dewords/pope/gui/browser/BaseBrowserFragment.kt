@@ -51,9 +51,9 @@ import org.videolan.libvlc.interfaces.IMedia
 import org.videolan.medialibrary.MLServiceLocator
 import org.videolan.medialibrary.interfaces.media.MediaWrapper
 import org.videolan.medialibrary.media.MediaLibraryItem
-import com.dewords.poperesources.*
-import com.dewords.poperesources.util.getFromMl
-import com.dewords.poperesources.util.parcelable
+import org.videolan.resources.*
+import org.videolan.resources.util.getFromMl
+import org.videolan.resources.util.parcelable
 import org.videolan.tools.*
 import com.dewords.pope.PlaybackService
 import com.dewords.pope.R
@@ -431,7 +431,6 @@ abstract class BaseBrowserFragment : MediaBrowserFragment<BrowserModel>(), IRefr
         val type = if (!selection.isNullOrEmpty()) (selection[0] as MediaWrapper).type else -1
         menu.findItem(R.id.action_mode_file_info).isVisible = single && (type == MediaWrapper.TYPE_AUDIO || type == MediaWrapper.TYPE_VIDEO)
         menu.findItem(R.id.action_mode_file_append).isVisible = PlaylistManager.hasMedia()
-        menu.findItem(R.id.action_mode_file_delete).isVisible = fileBrowser
         return true
     }
 
@@ -445,7 +444,6 @@ abstract class BaseBrowserFragment : MediaBrowserFragment<BrowserModel>(), IRefr
                 R.id.action_mode_file_append -> lifecycleScope.launch { MediaUtils.appendMedia(activity, list.map { getMediaWithMeta(it) }) }
                 R.id.action_mode_file_add_playlist -> requireActivity().addToPlaylist(list)
                 R.id.action_mode_file_info -> requireActivity().showMediaInfo(list[0])
-                R.id.action_mode_file_delete -> removeItems(list)
                 else -> {
                     stopActionMode()
                     return false

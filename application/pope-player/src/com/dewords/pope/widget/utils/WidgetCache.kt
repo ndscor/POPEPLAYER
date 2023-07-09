@@ -27,7 +27,7 @@ package com.dewords.pope.widget.utils
 import androidx.annotation.ColorInt
 import androidx.palette.graphics.Palette
 import org.videolan.medialibrary.interfaces.media.MediaWrapper
-import com.dewords.pope.mediadb.models.Widget
+import org.videolan.vlc.mediadb.models.Widget
 
 object WidgetCache {
     private val entries = mutableListOf<WidgetCacheEntry>()

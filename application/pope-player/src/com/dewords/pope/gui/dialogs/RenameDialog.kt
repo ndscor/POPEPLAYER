@@ -57,7 +57,7 @@ import androidx.core.os.bundleOf
 import com.google.android.material.bottomsheet.BottomSheetBehavior.STATE_EXPANDED
 import com.google.android.material.textfield.TextInputEditText
 import org.videolan.medialibrary.media.MediaLibraryItem
-import com.dewords.poperesources.util.parcelable
+import org.videolan.resources.util.parcelable
 import com.dewords.pope.R
 
 const val RENAME_DIALOG_MEDIA = "RENAME_DIALOG_MEDIA"

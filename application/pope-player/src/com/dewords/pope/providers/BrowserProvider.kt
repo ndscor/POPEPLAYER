@@ -45,8 +45,8 @@ import org.videolan.medialibrary.interfaces.Medialibrary
 import org.videolan.medialibrary.interfaces.media.MediaWrapper
 import org.videolan.medialibrary.media.MediaLibraryItem
 import org.videolan.medialibrary.media.Storage
-import com.dewords.poperesources.VLCInstance
-import com.dewords.poperesources.util.HeaderProvider
+import org.videolan.resources.VLCInstance
+import org.videolan.resources.util.HeaderProvider
 import org.videolan.tools.AppScope
 import org.videolan.tools.CoroutineContextProvider
 import org.videolan.tools.DependencyProvider

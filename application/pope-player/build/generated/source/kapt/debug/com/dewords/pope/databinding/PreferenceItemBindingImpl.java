@@ -21,7 +21,7 @@ public class PreferenceItemBindingImpl extends PreferenceItemBinding implements 
     private final androidx.constraintlayout.widget.ConstraintLayout mboundView0;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback14;
+    private final android.view.View.OnClickListener mCallback13;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -43,7 +43,7 @@ public class PreferenceItemBindingImpl extends PreferenceItemBinding implements 
         this.textView16.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback14 = new com.dewords.pope.generated.callback.OnClickListener(this, 1);
+        mCallback13 = new com.dewords.pope.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -183,7 +183,7 @@ public class PreferenceItemBindingImpl extends PreferenceItemBinding implements 
         if ((dirtyFlags & 0x40L) != 0) {
             // api target 1
 
-            this.mboundView0.setOnClickListener(mCallback14);
+            this.mboundView0.setOnClickListener(mCallback13);
         }
         if ((dirtyFlags & 0x70L) != 0) {
             // api target 1

@@ -45,12 +45,12 @@ import org.videolan.tools.setVisible
 import com.dewords.pope.PlaybackService
 import com.dewords.pope.R
 import com.dewords.pope.databinding.PlayerOverlayTracksBinding
-import com.dewords.pope.getDisableTrack
 import com.dewords.pope.gui.dialogs.adapters.TrackAdapter
 import com.dewords.pope.gui.dialogs.adapters.VlcTrack
 import com.dewords.pope.gui.helpers.getBitmapFromDrawable
 import com.dewords.pope.util.isTalkbackIsEnabled
-import com.dewords.pope.isVLC4
+import org.videolan.vlc.getDisableTrack
+import org.videolan.vlc.isVLC4
 
 class VideoTracksDialog : VLCBottomSheetDialogFragment() {
     override fun getDefaultState(): Int = STATE_EXPANDED

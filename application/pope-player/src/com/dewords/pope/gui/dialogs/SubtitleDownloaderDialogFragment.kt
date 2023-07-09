@@ -17,7 +17,7 @@ import com.google.android.material.bottomsheet.BottomSheetBehavior
 import kotlinx.coroutines.ObsoleteCoroutinesApi
 import kotlinx.coroutines.channels.actor
 import kotlinx.coroutines.isActive
-import com.dewords.poperesources.util.parcelableList
+import org.videolan.resources.util.parcelableList
 import com.dewords.pope.R
 import com.dewords.pope.databinding.SubtitleDownloaderDialogBinding
 import com.dewords.pope.gui.helpers.UiTools

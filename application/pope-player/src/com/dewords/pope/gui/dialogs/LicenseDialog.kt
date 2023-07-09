@@ -27,7 +27,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.core.os.bundleOf
 import com.google.android.material.bottomsheet.BottomSheetBehavior.STATE_EXPANDED
-import com.dewords.poperesources.util.parcelable
+import org.videolan.resources.util.parcelable
 import com.dewords.pope.databinding.DialogLicenseBinding
 import com.dewords.pope.gui.LibraryWithLicense
 import com.dewords.pope.util.openLinkIfPossible

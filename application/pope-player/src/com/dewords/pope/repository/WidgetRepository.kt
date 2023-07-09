@@ -31,9 +31,9 @@ import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.withContext
 import org.videolan.tools.SingletonHolder
 import com.dewords.pope.R
-import com.dewords.pope.database.MediaDatabase
-import com.dewords.pope.database.WidgetDao
-import com.dewords.pope.mediadb.models.Widget
+import org.videolan.vlc.database.MediaDatabase
+import org.videolan.vlc.database.WidgetDao
+import org.videolan.vlc.mediadb.models.Widget
 import com.dewords.pope.widget.utils.WidgetCache
 
 

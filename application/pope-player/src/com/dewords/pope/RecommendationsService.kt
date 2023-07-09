@@ -34,7 +34,7 @@ import androidx.core.content.ContextCompat
 import kotlinx.coroutines.*
 import org.videolan.medialibrary.interfaces.Medialibrary
 import org.videolan.medialibrary.interfaces.media.MediaWrapper
-import com.dewords.poperesources.*
+import org.videolan.resources.*
 import org.videolan.tools.getContextWithLocale
 import com.dewords.pope.gui.helpers.BitmapUtil
 import com.dewords.pope.gui.video.VideoPlayerActivity

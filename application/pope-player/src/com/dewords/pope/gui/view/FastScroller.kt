@@ -49,8 +49,8 @@ import kotlinx.coroutines.ObsoleteCoroutinesApi
 import kotlinx.coroutines.channels.Channel
 import kotlinx.coroutines.channels.actor
 import kotlinx.coroutines.delay
-import com.dewords.poperesources.util.HeaderProvider
-import com.dewords.poperesources.util.HeadersIndex
+import org.videolan.resources.util.HeaderProvider
+import org.videolan.resources.util.HeadersIndex
 import org.videolan.tools.WeakHandler
 import org.videolan.tools.dp
 import com.dewords.pope.R

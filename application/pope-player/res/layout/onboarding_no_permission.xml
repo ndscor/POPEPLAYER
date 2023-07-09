@@ -7,12 +7,14 @@
         android:orientation="vertical"
         tools:background="@color/onboarding_grey">
 
+
     <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guideline"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             app:layout_constraintGuide_percent="0.25" />
+
 
     <ImageView
             android:id="@+id/imageView15"
@@ -25,7 +27,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@+id/guideline"
             app:layout_constraintVertical_chainStyle="packed"
-            app:srcCompat="@drawable/ic_onboarding_no_permission" />
+            app:srcCompat="@mipmap/pope_launcher" />
 
     <TextView
             android:id="@+id/no_permission_title"

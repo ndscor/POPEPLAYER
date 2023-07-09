@@ -13,7 +13,7 @@ import com.dewords.pope.R
 import com.dewords.pope.StartActivity
 import com.dewords.pope.databinding.DialogExtDeviceBinding
 import com.dewords.pope.gui.helpers.MedialibraryUtils
-import com.dewords.poperesources.EXTRA_PATH
+import org.videolan.resources.EXTRA_PATH
 
 private const val TAG = "VLC/DeviceDialog"
 

@@ -1,10 +1,12 @@
 package com.dewords.pope.gui
 
+import android.Manifest
 import android.app.Activity
 import android.app.UiModeManager
 import android.content.Context
 import android.content.Intent
 import android.content.SharedPreferences
+import android.content.pm.PackageManager
 import android.content.res.Configuration
 import android.net.Uri
 import android.os.Build
@@ -13,11 +15,13 @@ import android.provider.DocumentsContract
 import android.util.TypedValue
 import android.view.KeyEvent
 import android.view.View
+import android.view.ViewGroup
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.appcompat.app.BaseContextWrappingDelegate
+import androidx.core.app.ActivityCompat
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
@@ -31,7 +35,8 @@ import com.dewords.pope.interfaces.SystemBarTintManager
 import com.dewords.pope.interfaces.Utils
 import com.dewords.pope.media.MediaUtils
 import com.dewords.pope.util.FileUtils
-import com.dewords.poperesources.AppContextProvider
+import com.google.android.material.snackbar.Snackbar
+import org.videolan.resources.AppContextProvider
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import org.videolan.tools.KeyHelper
@@ -42,11 +47,22 @@ import org.videolan.tools.setGone
 
 abstract class BaseActivity : AppCompatActivity() {
 
+    open fun getPermissionsToRequest(): Array<String> {
+        return arrayOf()
+    }
+
+
+    private var hadPermissions: Boolean = false
+    private lateinit var permissions: Array<String>
+    private var permissionDeniedMessage: String? = null
+
+
+
+
     private var currentNightMode: Int = 0
     private var startColor: Int = 0
     lateinit var settings: SharedPreferences
     var windowLayoutInfo: WindowLayoutInfo? = null
-
     open val displayTitle = false
     open fun forcedTheme():Int? = null
     abstract fun getSnackAnchorView(overAudioPlayer:Boolean = false): View?
@@ -61,7 +77,9 @@ abstract class BaseActivity : AppCompatActivity() {
         settings = Settings.getInstance(this)
         /* Theme must be applied before super.onCreate */
         applyTheme()
-
+        permissions = getPermissionsToRequest()
+        hadPermissions = hasPermissions()
+        permissionDeniedMessage = null
         val uiModeManager = this.getSystemService(UI_MODE_SERVICE)
 
 
@@ -76,13 +94,12 @@ abstract class BaseActivity : AppCompatActivity() {
 
 
 
-
-
         super.onCreate(savedInstanceState)
         if (UiTools.currentNightMode != resources.configuration.uiMode and Configuration.UI_MODE_NIGHT_MASK) {
             UiTools.invalidateBitmaps()
             UiTools.currentNightMode = resources.configuration.uiMode and Configuration.UI_MODE_NIGHT_MASK
         }
+
         lifecycleScope.launch(Dispatchers.Main) {
             lifecycle.repeatOnLifecycle(Lifecycle.State.RESUMED) {
                 WindowInfoTracker.getOrCreate(this@BaseActivity)
@@ -93,6 +110,93 @@ abstract class BaseActivity : AppCompatActivity() {
             }
         }
     }
+
+
+    override fun onResume() {
+        super.onResume()
+        val hasPermissions = hasPermissions()
+        if (hasPermissions != hadPermissions) {
+            hadPermissions = hasPermissions
+            if (VersionUtils.hasMarshmallow()) {
+                onHasPermissionsChanged(hasPermissions)
+            }
+        }
+    }
+
+
+    protected fun hasPermissions(): Boolean {
+        for (permission in permissions) {
+            if (ActivityCompat.checkSelfPermission(this,
+                    permission) != PackageManager.PERMISSION_GRANTED
+            ) {
+                return false
+            }
+        }
+        return true
+    }
+
+
+    override fun onRequestPermissionsResult(
+        requestCode: Int,
+        permissions: Array<String>,
+        grantResults: IntArray,
+    ) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults)
+        if (requestCode == PERMISSION_REQUEST) {
+            for (grantResult in grantResults) {
+                if (grantResult != PackageManager.PERMISSION_GRANTED) {
+                    if (ActivityCompat.shouldShowRequestPermissionRationale(
+                            this@BaseActivity, Manifest.permission.READ_EXTERNAL_STORAGE,
+                        ) || ActivityCompat.shouldShowRequestPermissionRationale(
+                            this@BaseActivity, Manifest.permission.WRITE_EXTERNAL_STORAGE,
+                        )
+                    ) {
+                        // User has deny from permission dialog
+                        snackBarContainer?.let {
+                            Snackbar.make(
+                                it,
+                                permissionDeniedMessage!!,
+                                Snackbar.LENGTH_SHORT
+                            )
+                                .setAction(R.string.action_grant) { requestPermissions() }
+                                .show()
+                        }
+                    } else {
+                        // User has deny permission and checked never show permission dialog so you can redirect to Application settings page
+                        snackBarContainer?.let {
+                            Snackbar.make(
+                                it,
+                                permissionDeniedMessage!!,
+                                Snackbar.LENGTH_INDEFINITE
+                            )
+                                .setAction(R.string.action_settings) {
+                                    val intent = Intent()
+                                    intent.action = android.provider.Settings.ACTION_APPLICATION_DETAILS_SETTINGS
+                                    val uri = Uri.fromParts(
+                                        "package",
+                                        this@BaseActivity.packageName,
+                                        null
+                                    )
+                                    intent.data = uri
+                                    startActivity(intent)
+                                }.show()
+                        }
+                    }
+                    return
+                }
+            }
+            hadPermissions = true
+            onHasPermissionsChanged(true)
+
+
+        }
+    }
+
+    protected open fun onHasPermissionsChanged(hasPermissions: Boolean) {
+        // implemented by sub classes
+    }
+
+
 
 
     open fun setstatusbar() {
@@ -106,6 +210,21 @@ abstract class BaseActivity : AppCompatActivity() {
         }
     }
 
+
+    private val snackBarContainer: View?
+        get() = getSnackAnchorView()
+
+
+
+
+    protected open fun requestPermissions() {
+        ActivityCompat.requestPermissions(this, permissions, PERMISSION_REQUEST)
+    }
+
+
+    companion object {
+        const val PERMISSION_REQUEST = 100
+    }
 
 
     @RequiresApi(Build.VERSION_CODES.O)

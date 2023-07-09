@@ -11,7 +11,7 @@ import org.videolan.medialibrary.interfaces.media.MediaWrapper
 import org.videolan.medialibrary.media.DummyItem
 import org.videolan.medialibrary.media.MediaLibraryItem
 import org.videolan.medialibrary.media.Storage
-import com.dewords.poperesources.util.*
+import org.videolan.resources.util.*
 import com.dewords.pope.PlaybackService
 import java.util.*
 import kotlin.math.floor

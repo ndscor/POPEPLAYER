@@ -25,7 +25,7 @@
 
 <layout>
 
-    <com.dewords.television.ui.views.ColorPickerItem xmlns:android="http://schemas.android.com/apk/res/android"
+    <org.videolan.television.ui.views.ColorPickerItem xmlns:android="http://schemas.android.com/apk/res/android"
             android:id="@+id/color_picker"
             android:focusable="true"
             android:background="?attr/selectableItemBackgroundBorderless"

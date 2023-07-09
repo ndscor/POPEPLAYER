@@ -48,11 +48,11 @@ import org.videolan.medialibrary.interfaces.media.Genre
 import org.videolan.medialibrary.interfaces.media.MediaWrapper
 import org.videolan.medialibrary.media.MediaLibraryItem
 import org.videolan.medialibrary.media.MediaLibraryItem.FLAG_SELECTED
-import com.dewords.poperesources.AppContextProvider
-import com.dewords.poperesources.UPDATE_FAVORITE_STATE
-import com.dewords.poperesources.UPDATE_REORDER
-import com.dewords.poperesources.UPDATE_SELECTION
-import com.dewords.poperesources.interfaces.FocusListener
+import org.videolan.resources.AppContextProvider
+import org.videolan.resources.UPDATE_FAVORITE_STATE
+import org.videolan.resources.UPDATE_REORDER
+import org.videolan.resources.UPDATE_SELECTION
+import org.videolan.resources.interfaces.FocusListener
 import org.videolan.tools.MultiSelectAdapter
 import org.videolan.tools.MultiSelectHelper
 import org.videolan.tools.Settings

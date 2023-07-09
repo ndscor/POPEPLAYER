@@ -39,7 +39,7 @@ import org.videolan.medialibrary.interfaces.media.Album
 import org.videolan.medialibrary.interfaces.media.MediaWrapper
 import org.videolan.medialibrary.interfaces.media.Playlist
 import org.videolan.medialibrary.media.MediaLibraryItem
-import com.dewords.poperesources.*
+import org.videolan.resources.*
 import org.videolan.tools.*
 import com.dewords.pope.ArtworkProvider
 import com.dewords.pope.R

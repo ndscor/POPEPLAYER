@@ -17,7 +17,7 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import com.dewords.pope.PlaybackService
-import com.dewords.pope.getSelectedVideoTrack
+import org.videolan.vlc.getSelectedVideoTrack
 import java.math.BigDecimal
 import java.math.RoundingMode
 

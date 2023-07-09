@@ -23,8 +23,8 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
-import com.dewords.poperesources.AndroidDevices
-import com.dewords.poperesources.VLCOptions
+import org.videolan.resources.AndroidDevices
+import org.videolan.resources.VLCOptions
 import org.videolan.tools.AppScope
 import org.videolan.tools.Settings
 import com.dewords.pope.PlaybackService

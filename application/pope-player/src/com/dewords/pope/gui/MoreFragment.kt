@@ -37,7 +37,7 @@ import kotlinx.coroutines.flow.onEach
 import org.videolan.libvlc.Dialog
 import org.videolan.medialibrary.interfaces.Medialibrary
 import org.videolan.medialibrary.interfaces.media.MediaWrapper
-import com.dewords.poperesources.ACTIVITY_RESULT_PREFERENCES
+import org.videolan.resources.ACTIVITY_RESULT_PREFERENCES
 import org.videolan.tools.*
 import com.dewords.pope.R
 import com.dewords.pope.gui.helpers.Click

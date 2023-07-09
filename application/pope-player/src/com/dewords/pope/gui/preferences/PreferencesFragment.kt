@@ -34,8 +34,8 @@ import androidx.preference.ListPreference
 import androidx.preference.Preference
 import org.videolan.libvlc.util.AndroidUtil
 import org.videolan.medialibrary.interfaces.Medialibrary
-import com.dewords.poperesources.*
-import com.dewords.poperesources.util.parcelable
+import org.videolan.resources.*
+import org.videolan.resources.util.parcelable
 import org.videolan.tools.*
 import com.dewords.pope.R
 import com.dewords.pope.gui.SecondaryActivity

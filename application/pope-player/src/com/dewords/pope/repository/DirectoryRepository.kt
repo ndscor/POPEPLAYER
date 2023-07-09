@@ -5,20 +5,20 @@ import kotlinx.coroutines.*
 import org.videolan.libvlc.util.AndroidUtil
 import org.videolan.medialibrary.MLServiceLocator
 import org.videolan.medialibrary.interfaces.media.MediaWrapper
-import com.dewords.poperesources.AndroidDevices
-import com.dewords.poperesources.AndroidDevices.EXTERNAL_PUBLIC_DIRECTORY
+import org.videolan.resources.AndroidDevices
+import org.videolan.resources.AndroidDevices.EXTERNAL_PUBLIC_DIRECTORY
 import org.videolan.tools.IOScopedObject
 import org.videolan.tools.SingletonHolder
 import com.dewords.pope.R
-import com.dewords.pope.database.CustomDirectoryDao
-import com.dewords.pope.database.MediaDatabase
+import org.videolan.vlc.database.CustomDirectoryDao
+import org.videolan.vlc.database.MediaDatabase
 import com.dewords.pope.util.FileUtils
 import java.io.File
 
 class DirectoryRepository (private val customDirectoryDao: CustomDirectoryDao) : IOScopedObject() {
 
     fun addCustomDirectory(path: String): Job = launch {
-        customDirectoryDao.insert(com.dewords.pope.mediadb.models.CustomDirectory(path))
+        customDirectoryDao.insert(org.videolan.vlc.mediadb.models.CustomDirectory(path))
     }
 
     suspend fun getCustomDirectories() = withContext(coroutineContext) {
@@ -29,7 +29,7 @@ class DirectoryRepository (private val customDirectoryDao: CustomDirectoryDao) :
         }
     }
 
-    fun deleteCustomDirectory(path: String) = launch { customDirectoryDao.delete(com.dewords.pope.mediadb.models.CustomDirectory(path)) }
+    fun deleteCustomDirectory(path: String) = launch { customDirectoryDao.delete(org.videolan.vlc.mediadb.models.CustomDirectory(path)) }
 
     suspend fun customDirectoryExists(path: String) = withContext(coroutineContext) { customDirectoryDao.get(path).isNotEmpty() }
 
@@ -43,7 +43,8 @@ class DirectoryRepository (private val customDirectoryDao: CustomDirectoryDao) :
         addAll(getCustomDirectories().map { it.path })
     }
 
-    companion object : SingletonHolder<DirectoryRepository, Context>({ DirectoryRepository(MediaDatabase.getInstance(it).customDirectoryDao()) })
+    companion object : SingletonHolder<DirectoryRepository, Context>({ DirectoryRepository(
+        MediaDatabase.getInstance(it).customDirectoryDao()) })
 }
 
 fun createDirectory(it: String, context: Context): MediaWrapper {

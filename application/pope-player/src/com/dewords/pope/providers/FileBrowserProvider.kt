@@ -32,7 +32,7 @@ import org.videolan.medialibrary.MLServiceLocator
 import org.videolan.medialibrary.interfaces.media.MediaWrapper
 import org.videolan.medialibrary.media.DummyItem
 import org.videolan.medialibrary.media.MediaLibraryItem
-import com.dewords.poperesources.AndroidDevices
+import org.videolan.resources.AndroidDevices
 import org.videolan.tools.livedata.LiveDataset
 import com.dewords.pope.ExternalMonitor
 import com.dewords.pope.R

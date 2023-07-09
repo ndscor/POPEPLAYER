@@ -43,24 +43,24 @@ import androidx.lifecycle.DefaultLifecycleObserver
 import androidx.lifecycle.LifecycleOwner
 import org.videolan.libvlc.util.AndroidUtil
 import org.videolan.medialibrary.interfaces.media.MediaWrapper
-import com.dewords.poperesources.AndroidDevices
-import com.dewords.poperesources.AppContextProvider
-import com.dewords.poperesources.SCHEME_PACKAGE
-import com.dewords.poperesources.util.isExternalStorageManager
+import org.videolan.resources.AndroidDevices
+import org.videolan.resources.AppContextProvider
+import org.videolan.resources.SCHEME_PACKAGE
+import org.videolan.resources.util.isExternalStorageManager
 import org.videolan.tools.Settings
 import org.videolan.tools.isCallable
 import org.videolan.tools.putSingle
 import com.dewords.pope.R
 import com.dewords.pope.gui.helpers.hf.StoragePermissionsDelegate.Companion.askStoragePermission
 import com.dewords.pope.gui.helpers.hf.WriteExternalDelegate
-import com.dewords.poperesources.BuildConfig
+import org.videolan.resources.BuildConfig
 
 object Permissions {
 
     const val PERMISSION_STORAGE_TAG = 255
     const val PERMISSION_SETTINGS_TAG = 254
     const val PERMISSION_WRITE_STORAGE_TAG = 253
-    const val MANAGE_EXTERNAL_STORAGE = 256
+    const val READ_EXTERNAL_STORAGE = 256
 
 
     const val PERMISSION_SYSTEM_RINGTONE = 42
@@ -104,12 +104,7 @@ object Permissions {
 
     fun canSendNotifications(context: Context) = Build.VERSION.SDK_INT <= Build.VERSION_CODES.S_V2 || ContextCompat.checkSelfPermission(context, "android.permission.POST_NOTIFICATIONS") == PackageManager.PERMISSION_GRANTED
 
-    /**
-     * Check if the com.dewords.pope.app has a complete access to the files especially on Android 11
-     *
-     * @param context: the context to check with
-     * @return true if the com.dewords.pope.app has been granted the whole permissions including [Manifest.permission.MANAGE_EXTERNAL_STORAGE]
-     */
+
     fun hasAllAccess(context: Context) = !Intent(android.provider.Settings.ACTION_MANAGE_APP_ALL_FILES_ACCESS_PERMISSION, Uri.fromParts(SCHEME_PACKAGE, context.packageName, null)).isCallable(context) || isExternalStorageManager()
 
     @JvmOverloads
@@ -169,12 +164,7 @@ object Permissions {
             createDialog(activity, exit)
     }
 
-    /**
-     * Display a dialog asking for the [Manifest.permission.MANAGE_EXTERNAL_STORAGE] permission if needed
-     *
-     * @param activity: the activity used to trigger the dialog
-     * @param listener: the listener for the permission result
-     */
+
     fun showExternalPermissionDialog(activity: FragmentActivity, listener: (boolean: Boolean) -> Unit) {
         if (activity.isFinishing || sAlertDialog != null && sAlertDialog!!.isShowing) return
         sAlertDialog = createExternalManagerDialog(activity, listener)
@@ -197,12 +187,7 @@ object Permissions {
         return dialogBuilder.show()
     }
 
-    /**
-     * Display a dialog asking for the [Manifest.permission.MANAGE_EXTERNAL_STORAGE] permission
-     *
-     * @param activity: the activity used to trigger the dialog
-     * @param listener: the listener for the permission result
-     */
+
     private fun createExternalManagerDialog(activity: FragmentActivity, listener: (boolean: Boolean) -> Unit): Dialog {
         val dialogBuilder = android.app.AlertDialog.Builder(activity)
                 .setTitle(activity.getString(R.string.allow_storage_manager_title))

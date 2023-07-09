@@ -35,8 +35,8 @@ import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import org.videolan.medialibrary.interfaces.media.MediaWrapper
 import org.videolan.medialibrary.media.MediaLibraryItem
-import com.dewords.poperesources.AndroidDevices
-import com.dewords.poperesources.CTX_FAV_ADD
+import org.videolan.resources.AndroidDevices
+import org.videolan.resources.CTX_FAV_ADD
 import org.videolan.tools.removeFileScheme
 import com.dewords.pope.R
 import com.dewords.pope.gui.SecondaryActivity

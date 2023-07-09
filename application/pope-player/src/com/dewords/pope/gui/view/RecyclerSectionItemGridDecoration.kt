@@ -8,7 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.dewords.poperesources.util.HeaderProvider
+import org.videolan.resources.util.HeaderProvider
 import org.videolan.tools.Settings
 import com.dewords.pope.R
 

@@ -28,7 +28,7 @@ import kotlinx.coroutines.channels.Channel
 import kotlinx.coroutines.channels.SendChannel
 import kotlinx.coroutines.channels.actor
 import org.videolan.medialibrary.interfaces.Medialibrary
-import com.dewords.poperesources.AppContextProvider
+import org.videolan.resources.AppContextProvider
 import org.videolan.tools.conflatedActor
 import com.dewords.pope.media.PlaylistManager
 import com.dewords.pope.util.FileUtils

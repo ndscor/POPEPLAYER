@@ -60,7 +60,7 @@ import com.google.android.material.textfield.TextInputLayout
 import org.videolan.libvlc.util.AndroidUtil
 import org.videolan.medialibrary.interfaces.media.MediaWrapper
 import org.videolan.medialibrary.media.MediaWrapperImpl
-import com.dewords.poperesources.AndroidDevices
+import org.videolan.resources.AndroidDevices
 import org.videolan.tools.*
 import com.dewords.pope.*
 import com.dewords.pope.databinding.PlayerHudBinding
@@ -76,6 +76,7 @@ import com.dewords.pope.media.MediaUtils
 import com.dewords.pope.util.*
 import com.dewords.pope.util.FileUtils
 import com.dewords.pope.viewmodels.PlaylistModel
+import org.videolan.vlc.isVLC4
 import java.text.DateFormat
 import java.util.*
 

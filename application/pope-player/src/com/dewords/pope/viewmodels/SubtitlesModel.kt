@@ -16,14 +16,14 @@ import kotlinx.coroutines.isActive
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import org.videolan.tools.FileUtils
-import com.dewords.poperesources.util.NoConnectivityException
+import org.videolan.resources.util.NoConnectivityException
 import org.videolan.tools.Settings
 import com.dewords.pope.R
-import com.dewords.poperesources.opensubtitles.OpenSubtitle
+import org.videolan.resources.opensubtitles.OpenSubtitle
 import com.dewords.pope.gui.dialogs.State
 import com.dewords.pope.gui.dialogs.SubtitleItem
 import com.dewords.pope.repository.ExternalSubRepository
-import com.dewords.poperesources.opensubtitles.OpenSubtitleRepository
+import org.videolan.resources.opensubtitles.OpenSubtitleRepository
 import org.videolan.tools.CoroutineContextProvider
 import org.videolan.tools.putSingle
 import java.io.File

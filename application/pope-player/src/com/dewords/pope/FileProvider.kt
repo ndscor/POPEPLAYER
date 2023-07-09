@@ -6,8 +6,8 @@ import android.database.Cursor
 import android.net.Uri
 import android.os.ParcelFileDescriptor
 import org.videolan.medialibrary.interfaces.Medialibrary
-import com.dewords.poperesources.AndroidDevices
-import com.dewords.poperesources.AppContextProvider
+import org.videolan.resources.AndroidDevices
+import org.videolan.resources.AppContextProvider
 import java.io.File
 import java.io.FileNotFoundException
 

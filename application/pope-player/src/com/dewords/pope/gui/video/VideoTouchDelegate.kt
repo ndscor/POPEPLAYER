@@ -23,8 +23,8 @@ import com.google.android.material.circularreveal.CircularRevealCompat
 import com.google.android.material.circularreveal.CircularRevealFrameLayout
 import org.videolan.libvlc.MediaPlayer
 import org.videolan.medialibrary.Tools
-import com.dewords.poperesources.AndroidDevices
-import com.dewords.poperesources.AndroidDevices.isTv
+import org.videolan.resources.AndroidDevices
+import org.videolan.resources.AndroidDevices.isTv
 import org.videolan.tools.setVisible
 import com.dewords.pope.R
 import com.dewords.pope.gui.view.HalfCircleView

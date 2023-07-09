@@ -4,7 +4,7 @@ import android.content.Context;
 import android.content.SharedPreferences;
 import android.preference.PreferenceManager;
 
-import com.dewords.pope.VLCApplication;
+import com.dewords.pope.gui.MainActivity;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -20,15 +20,15 @@ public class PreferenceUtils {
 	}
 
 	public static Boolean getBooleanPrefs(String key) {
-		return PreferenceManager.getDefaultSharedPreferences(VLCApplication.Companion.getSInstance().getBaseContext()).getBoolean(key, false);
+		return PreferenceManager.getDefaultSharedPreferences(MainActivity.Companion.getSInstance().getBaseContext()).getBoolean(key, false);
 	}
 
 	public static Boolean getBooleanPrefs(String key, boolean defaultValue) {
-		return PreferenceManager.getDefaultSharedPreferences(VLCApplication.Companion.getSInstance().getBaseContext()).getBoolean(key, defaultValue);
+		return PreferenceManager.getDefaultSharedPreferences(MainActivity.Companion.getSInstance().getBaseContext()).getBoolean(key, defaultValue);
 	}
 
 	public static String getStringPrefs(String key) {
-			return PreferenceManager.getDefaultSharedPreferences(VLCApplication.Companion.getSInstance().getBaseContext()).getString(key, "");
+			return PreferenceManager.getDefaultSharedPreferences(MainActivity.Companion.getSInstance().getBaseContext()).getString(key, "");
 	}
 
 	public static String getStringPrefs(Context ctx, String key) {
@@ -44,7 +44,7 @@ public class PreferenceUtils {
 	}
 
 	public static int getIntegerPrefs(String key) {
-		return PreferenceManager.getDefaultSharedPreferences(VLCApplication.Companion.getSInstance().getBaseContext()).getInt(key, 0);
+		return PreferenceManager.getDefaultSharedPreferences(MainActivity.Companion.getSInstance().getBaseContext()).getInt(key, 0);
 	}
 
 	public static int getIntegerPrefs(Context ctx, String key, int defaultValue) {
@@ -60,19 +60,19 @@ public class PreferenceUtils {
 	}
 
 	public static Long getLongPrefs(String key) {
-		return PreferenceManager.getDefaultSharedPreferences(VLCApplication.Companion.getSInstance().getBaseContext()).getLong(key, 0);
+		return PreferenceManager.getDefaultSharedPreferences(MainActivity.Companion.getSInstance().getBaseContext()).getLong(key, 0);
 	}
 
 	public static long getLongPrefs(String key, int defaultValue) {
-		return PreferenceManager.getDefaultSharedPreferences(VLCApplication.Companion.getSInstance().getBaseContext()).getLong(key, defaultValue);
+		return PreferenceManager.getDefaultSharedPreferences(MainActivity.Companion.getSInstance().getBaseContext()).getLong(key, defaultValue);
 	}
 
 	public static Set<String> getStrinSetPrefs(String key) {
-		return PreferenceManager.getDefaultSharedPreferences(VLCApplication.Companion.getSInstance().getBaseContext()).getStringSet(key, new HashSet<String>());
+		return PreferenceManager.getDefaultSharedPreferences(MainActivity.Companion.getSInstance().getBaseContext()).getStringSet(key, new HashSet<String>());
 	}
 
 	public static void set(final String key, final Object value) {
-		set(PreferenceManager.getDefaultSharedPreferences(VLCApplication.Companion.getSInstance().getBaseContext()), key, value);
+		set(PreferenceManager.getDefaultSharedPreferences(MainActivity.Companion.getSInstance().getBaseContext()), key, value);
 	}
 
 	public static void set(final Context context, final String key, final Object value) {

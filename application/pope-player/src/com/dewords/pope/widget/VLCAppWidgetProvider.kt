@@ -30,7 +30,7 @@ import android.content.Intent
 import android.os.Build
 import android.widget.RemoteViews
 import com.dewords.pope.BuildConfig
-import com.dewords.poperesources.buildPkgString
+import org.videolan.resources.buildPkgString
 import com.dewords.pope.PlaybackService
 import com.dewords.pope.R
 import com.dewords.pope.StartActivity

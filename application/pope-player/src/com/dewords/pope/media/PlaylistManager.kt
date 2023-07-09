@@ -29,8 +29,8 @@ import com.dewords.pope.R
 import com.dewords.pope.gui.video.VideoPlayerActivity
 import com.dewords.pope.util.*
 import com.dewords.pope.util.FileUtils
-import com.dewords.poperesources.*
-import com.dewords.poperesources.util.VLCCrashHandler
+import org.videolan.resources.*
+import org.videolan.resources.util.VLCCrashHandler
 import java.security.SecureRandom
 import java.util.*
 import kotlin.math.max

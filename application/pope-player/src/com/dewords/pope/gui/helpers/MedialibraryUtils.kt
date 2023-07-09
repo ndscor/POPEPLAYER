@@ -7,11 +7,11 @@ import android.net.Uri
 import androidx.core.net.toUri
 import org.videolan.medialibrary.Tools
 import org.videolan.medialibrary.interfaces.Medialibrary
-import com.dewords.poperesources.ACTION_DISCOVER
-import com.dewords.poperesources.ACTION_DISCOVER_DEVICE
-import com.dewords.poperesources.AppContextProvider
-import com.dewords.poperesources.EXTRA_PATH
-import com.dewords.poperesources.util.launchForeground
+import org.videolan.resources.ACTION_DISCOVER
+import org.videolan.resources.ACTION_DISCOVER_DEVICE
+import org.videolan.resources.AppContextProvider
+import org.videolan.resources.EXTRA_PATH
+import org.videolan.resources.util.launchForeground
 import org.videolan.tools.runIO
 import org.videolan.tools.stripTrailingSlash
 import com.dewords.pope.MediaParsingService

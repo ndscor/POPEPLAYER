@@ -13,9 +13,9 @@ import com.squareup.moshi.Moshi
 import com.squareup.moshi.Types
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
-import com.dewords.poperesources.AndroidDevices
-import com.dewords.poperesources.AppContextProvider
-import com.dewords.poperesources.util.applyOverscanMargin
+import org.videolan.resources.AndroidDevices
+import org.videolan.resources.AppContextProvider
+import org.videolan.resources.util.applyOverscanMargin
 import com.dewords.pope.R
 import com.dewords.pope.databinding.AboutAuthorsActivityBinding
 import com.dewords.pope.databinding.AboutAuthorsItemBinding

@@ -43,7 +43,7 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.RecyclerView
 import org.videolan.libvlc.util.AndroidUtil
 import org.videolan.medialibrary.interfaces.media.MediaWrapper
-import com.dewords.poperesources.AppContextProvider
+import org.videolan.resources.AppContextProvider
 import org.videolan.tools.Settings
 import org.videolan.tools.WeakHandler
 import org.videolan.tools.setGone

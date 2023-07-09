@@ -14,12 +14,12 @@ import kotlinx.coroutines.*
 import org.videolan.libvlc.FactoryManager
 import org.videolan.libvlc.MediaPlayer
 import org.videolan.libvlc.interfaces.IMediaFactory
-import com.dewords.poperesources.AppContextProvider
-import com.dewords.poperesources.util.getFromMl
+import org.videolan.resources.AppContextProvider
+import org.videolan.resources.util.getFromMl
 import org.videolan.tools.getContextWithLocale
 import com.dewords.pope.media.MediaPlayerEventListener
 import com.dewords.pope.media.PlayerController
-import com.dewords.poperesources.VLCInstance
+import org.videolan.resources.VLCInstance
 import com.dewords.pope.util.random
 import java.io.IOException
 

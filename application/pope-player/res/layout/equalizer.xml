@@ -140,17 +140,6 @@
                     android:layout_marginStart="16dp"
                     app:layout_constraintStart_toStartOf="parent" />
 
-            <Button
-                    android:id="@+id/equalizer_delete"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:enabled="@{state.deleteButtonVisibility}"
-                    android:text="@string/delete"
-                    android:nextFocusRight="@+id/equalizer_revert"
-                    app:layout_constraintBottom_toBottomOf="@+id/equalizer_revert"
-                    app:layout_constraintEnd_toStartOf="@+id/equalizer_revert"
-                    app:layout_constraintTop_toTopOf="@+id/equalizer_revert" />
-
 
             <Button
                     android:id="@+id/equalizer_revert"

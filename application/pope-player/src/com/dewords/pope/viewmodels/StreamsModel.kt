@@ -32,7 +32,7 @@ import kotlinx.coroutines.flow.onEach
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import org.videolan.medialibrary.interfaces.media.MediaWrapper
-import com.dewords.poperesources.util.getFromMl
+import org.videolan.resources.util.getFromMl
 import org.videolan.tools.CoroutineContextProvider
 import com.dewords.pope.PlaybackService
 import com.dewords.pope.util.DummyMediaWrapperProvider

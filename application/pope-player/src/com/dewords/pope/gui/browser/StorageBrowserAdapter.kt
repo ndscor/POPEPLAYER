@@ -36,7 +36,7 @@ import org.videolan.medialibrary.interfaces.Medialibrary
 import org.videolan.medialibrary.interfaces.media.MediaWrapper
 import org.videolan.medialibrary.media.MediaLibraryItem
 import org.videolan.medialibrary.media.Storage
-import com.dewords.poperesources.AndroidDevices
+import org.videolan.resources.AndroidDevices
 import org.videolan.tools.containsPath
 import org.videolan.tools.removeFileScheme
 import org.videolan.tools.stripTrailingSlash

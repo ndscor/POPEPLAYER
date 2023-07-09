@@ -72,7 +72,7 @@
     <string name="resume_playback_short_title">Resume playback</string>
     <string name="resume_playback_long_title"> Resume playback of last playlist</string>
     <string name="resume_playback_error">Nothing to resume</string>
-    <string name="delete">Delete</string>
+
     <string name="remove">Remove</string>
     <string name="set_song">Set as ringtone</string>
     <string name="set_song_question">Set \'%1$s\' as ringtone?</string>
@@ -631,7 +631,7 @@
     <string name="permission_expanation_allow">You will be able to only play streams or network media</string>
     <string name="permission_onboarding_no_perm">You won\'t be able to auto-discover your media.\nYou will be able to only play streams or network media</string>
     <string name="permission_onboarding_perm_media">You will only be able to auto-discover standard media files</string>
-    <string name="permission_onboarding_perm_all">You will be able to auto-discover all your files to play all types of media even weird ones, or compressed files</string>
+    <string name="permission_onboarding_perm_all">This permission is required to auto-discover all your files to play all types of media even weird ones, or compressed files</string>
     <string name="exit_app">Close Pope Player</string>
     <string name="exit_app_msg">Are you sure you want to quit Pope Player?</string>
     <string name="widget_explanation_title">Pope Player widgets</string>
@@ -770,7 +770,7 @@
     <string name="video_remote_disable">Duplicate screen</string>
     <string name="removed_from_playlist_anonymous">Item(s) removed from playlist</string>
     <string name="welcome_title">Welcome to Pope Player!</string>
-    <string name="permission_media">Pope Player needs your permission to access media on your device</string>
+    <string name="permission_media">Pope Player requires your permission to access media on your device</string>
     <string name="medialibrary_scan_explanation">Pope Player can automatically scan your device to organize your media collection.</string>
     <string name="onboarding_theme_title">Make yourself at home</string>
     <string name="done">Done</string>
@@ -1011,7 +1011,7 @@
     <string name="start">Start</string>
     <string name="notification_permission">Notification permission</string>
     <string name="notification_permission_explanation">Pope Player needs your permission to send notifications.\nThe app will only notify you when scanning your media or using the custom video Picture in Picture.\nRefusing it won\'t prevent Pope Player to work, however the notifications will be hidden.</string>
-    <string name="permission">Permission</string>
+    <string name="permission">Grant Permission</string>
     <string name="customize">Customize</string>
     <string name="selection_count">%d selected</string>
     <string name="control_setting">Control settings</string>

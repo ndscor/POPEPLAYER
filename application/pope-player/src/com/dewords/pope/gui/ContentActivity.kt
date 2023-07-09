@@ -30,7 +30,7 @@ import android.view.Menu
 import android.view.MenuItem
 import android.view.View
 import androidx.appcompat.widget.SearchView
-import com.dewords.poperesources.AndroidDevices
+import org.videolan.resources.AndroidDevices
 import org.videolan.tools.Settings
 import com.dewords.pope.PlaybackService
 import com.dewords.pope.R

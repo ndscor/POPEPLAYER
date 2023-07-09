@@ -30,7 +30,7 @@ import android.view.View
 import androidx.activity.OnBackPressedCallback
 import androidx.core.os.bundleOf
 import org.videolan.medialibrary.interfaces.media.MediaWrapper
-import com.dewords.poperesources.util.parcelable
+import org.videolan.resources.util.parcelable
 import com.dewords.pope.R
 import com.dewords.pope.gui.BaseActivity
 import com.dewords.pope.gui.video.VideoPlayerActivity

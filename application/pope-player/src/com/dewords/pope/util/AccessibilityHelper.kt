@@ -32,7 +32,7 @@ import androidx.databinding.BindingAdapter
 import org.videolan.medialibrary.interfaces.media.*
 import org.videolan.medialibrary.media.HistoryItem
 import org.videolan.medialibrary.media.MediaLibraryItem
-import com.dewords.poperesources.R
+import org.videolan.resources.R
 import com.dewords.pope.gui.helpers.TalkbackUtil
 
 fun Activity.isTalkbackIsEnabled() = (getSystemService(ACCESSIBILITY_SERVICE) as AccessibilityManager?)?.isTouchExplorationEnabled

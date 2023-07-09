@@ -38,7 +38,7 @@ import org.videolan.libvlc.util.MediaBrowser
 import org.videolan.medialibrary.interfaces.Medialibrary
 import org.videolan.medialibrary.media.MediaLibraryItem
 import org.videolan.tools.livedata.LiveDataset
-import com.dewords.pope.mediadb.models.BrowserFav
+import org.videolan.vlc.mediadb.models.BrowserFav
 import com.dewords.pope.providers.BrowserProvider
 import com.dewords.pope.repository.BrowserFavRepository
 import com.dewords.pope.util.convertFavorites

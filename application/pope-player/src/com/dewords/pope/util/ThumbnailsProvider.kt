@@ -17,13 +17,13 @@ import org.videolan.medialibrary.interfaces.media.Folder
 import org.videolan.medialibrary.interfaces.media.MediaWrapper
 import org.videolan.medialibrary.interfaces.media.VideoGroup
 import org.videolan.medialibrary.media.MediaLibraryItem
-import com.dewords.poperesources.AppContextProvider
+import org.videolan.resources.AppContextProvider
 import org.videolan.tools.BitmapCache
 import org.videolan.tools.sanitizePath
 import com.dewords.pope.gui.helpers.AudioUtil.readCoverBitmap
 import com.dewords.pope.gui.helpers.BitmapUtil
 import com.dewords.pope.gui.helpers.UiTools
-import com.dewords.poperesources.BuildConfig
+import org.videolan.resources.BuildConfig
 import java.io.File
 import kotlin.math.min
 

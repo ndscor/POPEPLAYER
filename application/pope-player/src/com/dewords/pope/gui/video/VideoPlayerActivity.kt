@@ -89,9 +89,9 @@ import org.videolan.medialibrary.MLServiceLocator
 import org.videolan.medialibrary.Tools
 import org.videolan.medialibrary.interfaces.Medialibrary
 import org.videolan.medialibrary.interfaces.media.MediaWrapper
-import com.dewords.poperesources.*
-import com.dewords.poperesources.util.parcelable
-import com.dewords.poperesources.util.parcelableList
+import org.videolan.resources.*
+import org.videolan.resources.util.parcelable
+import org.videolan.resources.util.parcelableList
 import org.videolan.tools.*
 import com.dewords.pope.*
 import com.dewords.pope.BuildConfig
@@ -117,6 +117,8 @@ import com.dewords.pope.util.FileUtils
 import com.dewords.pope.util.FileUtils.getUri
 import com.dewords.pope.viewmodels.BookmarkModel
 import com.dewords.pope.viewmodels.PlaylistModel
+import org.videolan.vlc.getAllTracks
+import org.videolan.vlc.getSelectedVideoTrack
 import java.io.File
 import java.lang.Runnable
 import java.text.SimpleDateFormat
@@ -219,8 +221,8 @@ open class VideoPlayerActivity : AppCompatActivity(), PlaybackService.Callback, 
 
     var isBenchmark = false
 
-    private val addedExternalSubs = ArrayList<com.dewords.pope.mediadb.models.ExternalSub>()
-    private var downloadedSubtitleLiveData: LiveData<List<com.dewords.pope.mediadb.models.ExternalSub>>? = null
+    private val addedExternalSubs = ArrayList<org.videolan.vlc.mediadb.models.ExternalSub>()
+    private var downloadedSubtitleLiveData: LiveData<List<org.videolan.vlc.mediadb.models.ExternalSub>>? = null
     private var previousMediaPath: String? = null
 
     private val isInteractive: Boolean
@@ -338,7 +340,7 @@ open class VideoPlayerActivity : AppCompatActivity(), PlaybackService.Callback, 
             return if (forcedTime == -1L) time else forcedTime
         }
 
-    private val downloadedSubtitleObserver = Observer<List<com.dewords.pope.mediadb.models.ExternalSub>> { externalSubs ->
+    private val downloadedSubtitleObserver = Observer<List<org.videolan.vlc.mediadb.models.ExternalSub>> { externalSubs ->
         for (externalSub in externalSubs) {
             if (!addedExternalSubs.contains(externalSub)) {
                 service?.addSubtitleTrack(externalSub.subtitlePath, currentSpuTrack == "-2")

@@ -36,10 +36,16 @@ android {
     }
 
     sourceSets.main {
-        java.srcDirs = rootProject.ext.vlcMajorVersion == 4 ? ['src', 'pope4/src'] : ['src', 'pope3/src']
+        java.srcDirs = rootProject.ext.vlcMajorVersion == 4 ? ['src', 'vlc4/src'] : ['src', 'vlc3/src']
     }
 
-    namespace 'com.dewords.poperesources'
+    sourceSets.debug {
+        res.srcDirs = ['flavors/debug/res']
+    }
+    sourceSets.dev {
+        res.srcDirs = ['flavors/debug/res']
+    }
+    namespace 'org.videolan.resources'
 
 }
 dependencies {
@@ -51,18 +57,12 @@ dependencies {
     api "org.jetbrains.kotlinx:kotlinx-coroutines-android:$rootProject.ext.kotlinx_version"
 
     api project(':application:tools')
-    implementation project(path: ':medialibrary')
     devApi project(':libvlcjni:libvlc')
     devApi project(':medialibrary')
-
-    debugApi "org.videolan.android:medialibrary-all:$rootProject.ext.medialibraryVersion"
-    releaseApi "org.videolan.android:medialibrary-all:$rootProject.ext.medialibraryVersion"
-
-
-
-
     debugApi "org.videolan.android:libvlc-all:$rootProject.ext.libvlcVersion"
+    debugApi "org.videolan.android:medialibrary-all:$rootProject.ext.medialibraryVersion"
     releaseApi "org.videolan.android:libvlc-all:$rootProject.ext.libvlcVersion"
+    releaseApi "org.videolan.android:medialibrary-all:$rootProject.ext.medialibraryVersion"
 
     api "com.google.android.material:material:$rootProject.ext.androidxMaterialVersion"
 

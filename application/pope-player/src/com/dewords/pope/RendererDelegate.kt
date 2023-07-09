@@ -24,8 +24,8 @@ import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
 import org.videolan.libvlc.RendererDiscoverer
 import org.videolan.libvlc.RendererItem
-import com.dewords.poperesources.AppContextProvider
-import com.dewords.poperesources.VLCInstance
+import org.videolan.resources.AppContextProvider
+import org.videolan.resources.VLCInstance
 import org.videolan.tools.AppScope
 import org.videolan.tools.NetworkMonitor
 import org.videolan.tools.isAppStarted

@@ -34,11 +34,11 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import org.videolan.medialibrary.interfaces.Medialibrary
 import org.videolan.medialibrary.interfaces.media.Playlist
-import com.dewords.poperesources.AndroidDevices
-import com.dewords.poperesources.util.getFromMl
+import org.videolan.resources.AndroidDevices
+import org.videolan.resources.util.getFromMl
 import org.videolan.tools.*
 import com.dewords.pope.gui.onboarding.ONBOARDING_DONE_KEY
-import com.dewords.pope.isVLC4
+import org.videolan.vlc.isVLC4
 import java.io.File
 import java.io.IOException
 

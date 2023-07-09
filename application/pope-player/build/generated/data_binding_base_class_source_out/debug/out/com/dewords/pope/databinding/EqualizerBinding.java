@@ -35,9 +35,6 @@ public abstract class EqualizerBinding extends ViewDataBinding {
   public final ConstraintLayout equalizerContainer;
 
   @NonNull
-  public final Button equalizerDelete;
-
-  @NonNull
   public final Slider equalizerPreamp;
 
   @NonNull
@@ -63,7 +60,7 @@ public abstract class EqualizerBinding extends ViewDataBinding {
 
   protected EqualizerBinding(Object _bindingComponent, View _root, int _localFieldCount,
       TextView eqTitle, LinearLayout equalizerBands, SwitchCompat equalizerButton,
-      ConstraintLayout equalizerContainer, Button equalizerDelete, Slider equalizerPreamp,
+      ConstraintLayout equalizerContainer, Slider equalizerPreamp,
       AppCompatSpinner equalizerPresets, Button equalizerRevert, Button equalizerSave,
       SwitchCompat snapBands, TextView textView10, TextView textView11) {
     super(_bindingComponent, _root, _localFieldCount);
@@ -71,7 +68,6 @@ public abstract class EqualizerBinding extends ViewDataBinding {
     this.equalizerBands = equalizerBands;
     this.equalizerButton = equalizerButton;
     this.equalizerContainer = equalizerContainer;
-    this.equalizerDelete = equalizerDelete;
     this.equalizerPreamp = equalizerPreamp;
     this.equalizerPresets = equalizerPresets;
     this.equalizerRevert = equalizerRevert;

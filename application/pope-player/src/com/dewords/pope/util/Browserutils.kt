@@ -24,8 +24,8 @@ import android.net.Uri
 import org.videolan.medialibrary.MLServiceLocator
 import org.videolan.medialibrary.interfaces.media.MediaWrapper
 import org.videolan.medialibrary.media.MediaLibraryItem
-import com.dewords.poperesources.AndroidDevices
-import com.dewords.pope.mediadb.models.BrowserFav
+import org.videolan.resources.AndroidDevices
+import org.videolan.vlc.mediadb.models.BrowserFav
 import java.io.File
 
 fun isSchemeStreaming(scheme: String?): Boolean = when {

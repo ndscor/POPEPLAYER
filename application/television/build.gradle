@@ -35,12 +35,13 @@ android {
             matchingFallbacks = ['debug']
         }
     }
-    namespace 'com.dewords.television'
+    namespace 'org.videolan.television'
 
 }
 
 dependencies {
     implementation project(':application:pope-player')
+    api project(':application:moviepedia')
     testImplementation "androidx.test:core:$rootProject.ext.testCore"
     androidTestImplementation "androidx.test.ext:junit:$rootProject.ext.junitExtVersion"
     implementation 'com.jaredrummler:colorpicker:1.1.0'

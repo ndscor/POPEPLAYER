@@ -35,7 +35,7 @@ import androidx.tvprovider.media.tv.WatchNextProgram
 import kotlinx.coroutines.*
 import org.videolan.medialibrary.interfaces.Medialibrary
 import org.videolan.medialibrary.interfaces.media.MediaWrapper
-import com.dewords.poperesources.util.getFromMl
+import org.videolan.resources.util.getFromMl
 import org.videolan.tools.AppScope
 import org.videolan.tools.Settings
 import com.dewords.pope.BuildConfig

@@ -91,7 +91,7 @@
                                 vlc:layout_constraintStart_toStartOf="parent"
                                 vlc:layout_constraintTop_toTopOf="parent" />
 
-                        <com.dewords.liveplotgraph.PlotView
+                        <org.videolan.liveplotgraph.PlotView
                                 android:id="@+id/plotView"
                                 android:layout_width="250dp"
                                 android:layout_height="140dp"
@@ -100,7 +100,7 @@
                                 vlc:layout_constraintTop_toBottomOf="@+id/video_stats_title"
                                 vlc:lpg_color="@color/white" />
 
-                        <com.dewords.liveplotgraph.LegendView
+                        <org.videolan.liveplotgraph.LegendView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="8dp"

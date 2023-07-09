@@ -39,16 +39,16 @@ import com.dewords.pope.databinding.DialogWidgetExplanationBindingImpl;
 import com.dewords.pope.databinding.DialogWidgetMigrationBindingImpl;
 import com.dewords.pope.databinding.DirectoryBrowserBindingImpl;
 import com.dewords.pope.databinding.EqualizerBindingImpl;
+import com.dewords.pope.databinding.GrantAccessBindingImpl;
 import com.dewords.pope.databinding.HeaderMediaListActivityBindingImpl;
 import com.dewords.pope.databinding.HistoryItemBindingImpl;
 import com.dewords.pope.databinding.HistoryItemCardBindingImpl;
 import com.dewords.pope.databinding.InfoActivityBindingImpl;
+import com.dewords.pope.databinding.ItemPermissionBindingImpl;
 import com.dewords.pope.databinding.ItemRendererBindingImpl;
 import com.dewords.pope.databinding.LibraryItemBindingImpl;
 import com.dewords.pope.databinding.LicenseActivityBindingImpl;
 import com.dewords.pope.databinding.MlWizardActivityBindingImpl;
-import com.dewords.pope.databinding.MoviepediaActivityBindingImpl;
-import com.dewords.pope.databinding.MoviepediaItemBindingImpl;
 import com.dewords.pope.databinding.MrlCardItemBindingImpl;
 import com.dewords.pope.databinding.MrlDummyItemBindingImpl;
 import com.dewords.pope.databinding.MrlItemBindingImpl;
@@ -65,7 +65,6 @@ import com.dewords.pope.databinding.PreferenceItemBindingImpl;
 import com.dewords.pope.databinding.PreferencesSearchActivityBindingImpl;
 import com.dewords.pope.databinding.SearchActivityBindingImpl;
 import com.dewords.pope.databinding.SearchItemBindingImpl;
-import com.dewords.pope.databinding.SendCrashActivityBindingImpl;
 import com.dewords.pope.databinding.SimpleItemBindingImpl;
 import com.dewords.pope.databinding.SubtitleDownloadItemBindingImpl;
 import com.dewords.pope.databinding.SubtitleDownloaderDialogBindingImpl;
@@ -154,25 +153,25 @@ public class DataBinderMapperImpl extends DataBinderMapper {
 
   private static final int LAYOUT_EQUALIZER = 31;
 
-  private static final int LAYOUT_HEADERMEDIALISTACTIVITY = 32;
+  private static final int LAYOUT_GRANTACCESS = 32;
 
-  private static final int LAYOUT_HISTORYITEM = 33;
+  private static final int LAYOUT_HEADERMEDIALISTACTIVITY = 33;
 
-  private static final int LAYOUT_HISTORYITEMCARD = 34;
+  private static final int LAYOUT_HISTORYITEM = 34;
 
-  private static final int LAYOUT_INFOACTIVITY = 35;
+  private static final int LAYOUT_HISTORYITEMCARD = 35;
 
-  private static final int LAYOUT_ITEMRENDERER = 36;
+  private static final int LAYOUT_INFOACTIVITY = 36;
 
-  private static final int LAYOUT_LIBRARYITEM = 37;
+  private static final int LAYOUT_ITEMPERMISSION = 37;
 
-  private static final int LAYOUT_LICENSEACTIVITY = 38;
+  private static final int LAYOUT_ITEMRENDERER = 38;
 
-  private static final int LAYOUT_MLWIZARDACTIVITY = 39;
+  private static final int LAYOUT_LIBRARYITEM = 39;
 
-  private static final int LAYOUT_MOVIEPEDIAACTIVITY = 40;
+  private static final int LAYOUT_LICENSEACTIVITY = 40;
 
-  private static final int LAYOUT_MOVIEPEDIAITEM = 41;
+  private static final int LAYOUT_MLWIZARDACTIVITY = 41;
 
   private static final int LAYOUT_MRLCARDITEM = 42;
 
@@ -204,39 +203,37 @@ public class DataBinderMapperImpl extends DataBinderMapper {
 
   private static final int LAYOUT_SEARCHITEM = 56;
 
-  private static final int LAYOUT_SENDCRASHACTIVITY = 57;
+  private static final int LAYOUT_SIMPLEITEM = 57;
 
-  private static final int LAYOUT_SIMPLEITEM = 58;
+  private static final int LAYOUT_SUBTITLEDOWNLOADITEM = 58;
 
-  private static final int LAYOUT_SUBTITLEDOWNLOADITEM = 59;
+  private static final int LAYOUT_SUBTITLEDOWNLOADERDIALOG = 59;
 
-  private static final int LAYOUT_SUBTITLEDOWNLOADERDIALOG = 60;
+  private static final int LAYOUT_VIDEOGRID = 60;
 
-  private static final int LAYOUT_VIDEOGRID = 61;
+  private static final int LAYOUT_VIDEOGRIDCARD = 61;
 
-  private static final int LAYOUT_VIDEOGRIDCARD = 62;
+  private static final int LAYOUT_VIDEOLISTCARD = 62;
 
-  private static final int LAYOUT_VIDEOLISTCARD = 63;
+  private static final int LAYOUT_VIDEOSCALEITEM = 63;
 
-  private static final int LAYOUT_VIDEOSCALEITEM = 64;
+  private static final int LAYOUT_VIDEOTRACKITEM = 64;
 
-  private static final int LAYOUT_VIDEOTRACKITEM = 65;
+  private static final int LAYOUT_VLCLOGINDIALOG = 65;
 
-  private static final int LAYOUT_VLCLOGINDIALOG = 66;
+  private static final int LAYOUT_VLCPROGRESSDIALOG = 66;
 
-  private static final int LAYOUT_VLCPROGRESSDIALOG = 67;
+  private static final int LAYOUT_VLCQUESTIONDIALOG = 67;
 
-  private static final int LAYOUT_VLCQUESTIONDIALOG = 68;
+  private static final int LAYOUT_WIDGETCONTENTFULLPLAYER = 68;
 
-  private static final int LAYOUT_WIDGETCONTENTFULLPLAYER = 69;
+  private static final int LAYOUT_WIDGETMINI = 69;
 
-  private static final int LAYOUT_WIDGETMINI = 70;
+  private static final int LAYOUT_WIDGETMINIINITIAL = 70;
 
-  private static final int LAYOUT_WIDGETMINIINITIAL = 71;
+  private static final int LAYOUT_WIDGETMINIPLAYERCONFIGURE = 71;
 
-  private static final int LAYOUT_WIDGETMINIPLAYERCONFIGURE = 72;
-
-  private static final SparseIntArray INTERNAL_LAYOUT_ID_LOOKUP = new SparseIntArray(72);
+  private static final SparseIntArray INTERNAL_LAYOUT_ID_LOOKUP = new SparseIntArray(71);
 
   static {
     INTERNAL_LAYOUT_ID_LOOKUP.put(com.dewords.pope.R.layout.about_authors_activity, LAYOUT_ABOUTAUTHORSACTIVITY);
@@ -270,16 +267,16 @@ public class DataBinderMapperImpl extends DataBinderMapper {
     INTERNAL_LAYOUT_ID_LOOKUP.put(com.dewords.pope.R.layout.dialog_widget_migration, LAYOUT_DIALOGWIDGETMIGRATION);
     INTERNAL_LAYOUT_ID_LOOKUP.put(com.dewords.pope.R.layout.directory_browser, LAYOUT_DIRECTORYBROWSER);
     INTERNAL_LAYOUT_ID_LOOKUP.put(com.dewords.pope.R.layout.equalizer, LAYOUT_EQUALIZER);
+    INTERNAL_LAYOUT_ID_LOOKUP.put(com.dewords.pope.R.layout.grant_access, LAYOUT_GRANTACCESS);
     INTERNAL_LAYOUT_ID_LOOKUP.put(com.dewords.pope.R.layout.header_media_list_activity, LAYOUT_HEADERMEDIALISTACTIVITY);
     INTERNAL_LAYOUT_ID_LOOKUP.put(com.dewords.pope.R.layout.history_item, LAYOUT_HISTORYITEM);
     INTERNAL_LAYOUT_ID_LOOKUP.put(com.dewords.pope.R.layout.history_item_card, LAYOUT_HISTORYITEMCARD);
     INTERNAL_LAYOUT_ID_LOOKUP.put(com.dewords.pope.R.layout.info_activity, LAYOUT_INFOACTIVITY);
+    INTERNAL_LAYOUT_ID_LOOKUP.put(com.dewords.pope.R.layout.item_permission, LAYOUT_ITEMPERMISSION);
     INTERNAL_LAYOUT_ID_LOOKUP.put(com.dewords.pope.R.layout.item_renderer, LAYOUT_ITEMRENDERER);
     INTERNAL_LAYOUT_ID_LOOKUP.put(com.dewords.pope.R.layout.library_item, LAYOUT_LIBRARYITEM);
     INTERNAL_LAYOUT_ID_LOOKUP.put(com.dewords.pope.R.layout.license_activity, LAYOUT_LICENSEACTIVITY);
     INTERNAL_LAYOUT_ID_LOOKUP.put(com.dewords.pope.R.layout.ml_wizard_activity, LAYOUT_MLWIZARDACTIVITY);
-    INTERNAL_LAYOUT_ID_LOOKUP.put(com.dewords.pope.R.layout.moviepedia_activity, LAYOUT_MOVIEPEDIAACTIVITY);
-    INTERNAL_LAYOUT_ID_LOOKUP.put(com.dewords.pope.R.layout.moviepedia_item, LAYOUT_MOVIEPEDIAITEM);
     INTERNAL_LAYOUT_ID_LOOKUP.put(com.dewords.pope.R.layout.mrl_card_item, LAYOUT_MRLCARDITEM);
     INTERNAL_LAYOUT_ID_LOOKUP.put(com.dewords.pope.R.layout.mrl_dummy_item, LAYOUT_MRLDUMMYITEM);
     INTERNAL_LAYOUT_ID_LOOKUP.put(com.dewords.pope.R.layout.mrl_item, LAYOUT_MRLITEM);
@@ -295,7 +292,6 @@ public class DataBinderMapperImpl extends DataBinderMapper {
     INTERNAL_LAYOUT_ID_LOOKUP.put(com.dewords.pope.R.layout.preferences_search_activity, LAYOUT_PREFERENCESSEARCHACTIVITY);
     INTERNAL_LAYOUT_ID_LOOKUP.put(com.dewords.pope.R.layout.search_activity, LAYOUT_SEARCHACTIVITY);
     INTERNAL_LAYOUT_ID_LOOKUP.put(com.dewords.pope.R.layout.search_item, LAYOUT_SEARCHITEM);
-    INTERNAL_LAYOUT_ID_LOOKUP.put(com.dewords.pope.R.layout.send_crash_activity, LAYOUT_SENDCRASHACTIVITY);
     INTERNAL_LAYOUT_ID_LOOKUP.put(com.dewords.pope.R.layout.simple_item, LAYOUT_SIMPLEITEM);
     INTERNAL_LAYOUT_ID_LOOKUP.put(com.dewords.pope.R.layout.subtitle_download_item, LAYOUT_SUBTITLEDOWNLOADITEM);
     INTERNAL_LAYOUT_ID_LOOKUP.put(com.dewords.pope.R.layout.subtitle_downloader_dialog, LAYOUT_SUBTITLEDOWNLOADERDIALOG);
@@ -359,11 +355,11 @@ public class DataBinderMapperImpl extends DataBinderMapper {
         throw new IllegalArgumentException("The tag for audio_browser_separator is invalid. Received: " + tag);
       }
       case  LAYOUT_AUDIOPLAYER: {
-        if ("layout-land/audio_player_0".equals(tag)) {
-          return new AudioPlayerBindingLandImpl(component, view);
-        }
         if ("layout/audio_player_0".equals(tag)) {
           return new AudioPlayerBindingImpl(component, view);
+        }
+        if ("layout-land/audio_player_0".equals(tag)) {
+          return new AudioPlayerBindingLandImpl(component, view);
         }
         throw new IllegalArgumentException("The tag for audio_player is invalid. Received: " + tag);
       }
@@ -508,6 +504,12 @@ public class DataBinderMapperImpl extends DataBinderMapper {
         }
         throw new IllegalArgumentException("The tag for equalizer is invalid. Received: " + tag);
       }
+      case  LAYOUT_GRANTACCESS: {
+        if ("layout/grant_access_0".equals(tag)) {
+          return new GrantAccessBindingImpl(component, view);
+        }
+        throw new IllegalArgumentException("The tag for grant_access is invalid. Received: " + tag);
+      }
       case  LAYOUT_HEADERMEDIALISTACTIVITY: {
         if ("layout/header_media_list_activity_0".equals(tag)) {
           return new HeaderMediaListActivityBindingImpl(component, view);
@@ -532,6 +534,12 @@ public class DataBinderMapperImpl extends DataBinderMapper {
         }
         throw new IllegalArgumentException("The tag for info_activity is invalid. Received: " + tag);
       }
+      case  LAYOUT_ITEMPERMISSION: {
+        if ("layout/item_permission_0".equals(tag)) {
+          return new ItemPermissionBindingImpl(component, new View[]{view});
+        }
+        throw new IllegalArgumentException("The tag for item_permission is invalid. Received: " + tag);
+      }
       case  LAYOUT_ITEMRENDERER: {
         if ("layout/item_renderer_0".equals(tag)) {
           return new ItemRendererBindingImpl(component, view);
@@ -555,18 +563,6 @@ public class DataBinderMapperImpl extends DataBinderMapper {
           return new MlWizardActivityBindingImpl(component, view);
         }
         throw new IllegalArgumentException("The tag for ml_wizard_activity is invalid. Received: " + tag);
-      }
-      case  LAYOUT_MOVIEPEDIAACTIVITY: {
-        if ("layout/moviepedia_activity_0".equals(tag)) {
-          return new MoviepediaActivityBindingImpl(component, view);
-        }
-        throw new IllegalArgumentException("The tag for moviepedia_activity is invalid. Received: " + tag);
-      }
-      case  LAYOUT_MOVIEPEDIAITEM: {
-        if ("layout/moviepedia_item_0".equals(tag)) {
-          return new MoviepediaItemBindingImpl(component, view);
-        }
-        throw new IllegalArgumentException("The tag for moviepedia_item is invalid. Received: " + tag);
       }
       case  LAYOUT_MRLCARDITEM: {
         if ("layout/mrl_card_item_0".equals(tag)) {
@@ -667,12 +663,6 @@ public class DataBinderMapperImpl extends DataBinderMapper {
           return new SearchItemBindingImpl(component, view);
         }
         throw new IllegalArgumentException("The tag for search_item is invalid. Received: " + tag);
-      }
-      case  LAYOUT_SENDCRASHACTIVITY: {
-        if ("layout/send_crash_activity_0".equals(tag)) {
-          return new SendCrashActivityBindingImpl(component, view);
-        }
-        throw new IllegalArgumentException("The tag for send_crash_activity is invalid. Received: " + tag);
       }
       case  LAYOUT_SIMPLEITEM: {
         if ("layout/simple_item_0".equals(tag)) {
@@ -808,6 +798,12 @@ public class DataBinderMapperImpl extends DataBinderMapper {
           }
           throw new IllegalArgumentException("The tag for about_authors_activity is invalid. Received: " + tag);
         }
+        case LAYOUT_ITEMPERMISSION: {
+          if("layout/item_permission_0".equals(tag)) {
+            return new ItemPermissionBindingImpl(component, views);
+          }
+          throw new IllegalArgumentException("The tag for item_permission is invalid. Received: " + tag);
+        }
         case LAYOUT_LICENSEACTIVITY: {
           if("layout/license_activity_0".equals(tag)) {
             return new LicenseActivityBindingImpl(component, views);
@@ -849,7 +845,7 @@ public class DataBinderMapperImpl extends DataBinderMapper {
   }
 
   private static class InnerBrLookup {
-    static final SparseArray<String> sKeys = new SparseArray<String>(76);
+    static final SparseArray<String> sKeys = new SparseArray<String>(75);
 
     static {
       sKeys.put(0, "_all");
@@ -878,61 +874,60 @@ public class DataBinderMapperImpl extends DataBinderMapper {
       sKeys.put(23, "handler");
       sKeys.put(24, "hasContextMenu");
       sKeys.put(25, "holder");
-      sKeys.put(26, "imageUrl");
-      sKeys.put(27, "imageWidth");
-      sKeys.put(28, "inError");
-      sKeys.put(29, "inSelection");
-      sKeys.put(30, "isBanned");
-      sKeys.put(31, "isBannedParent");
-      sKeys.put(32, "isFavorite");
-      sKeys.put(33, "isLoading");
-      sKeys.put(34, "isNetwork");
-      sKeys.put(35, "isOTG");
-      sKeys.put(36, "isPresent");
-      sKeys.put(37, "isSD");
-      sKeys.put(38, "isSquare");
-      sKeys.put(39, "isTv");
-      sKeys.put(40, "item");
-      sKeys.put(41, "length");
-      sKeys.put(42, "library");
-      sKeys.put(43, "masked");
-      sKeys.put(44, "max");
-      sKeys.put(45, "media");
-      sKeys.put(46, "option");
-      sKeys.put(47, "path");
-      sKeys.put(48, "player");
-      sKeys.put(49, "playlist");
-      sKeys.put(50, "progress");
-      sKeys.put(51, "protocol");
-      sKeys.put(52, "query");
-      sKeys.put(53, "releaseYear");
-      sKeys.put(54, "renderer");
-      sKeys.put(55, "resolution");
-      sKeys.put(56, "scaleName");
-      sKeys.put(57, "scaleType");
-      sKeys.put(58, "scanned");
-      sKeys.put(59, "searchAggregate");
-      sKeys.put(60, "seen");
-      sKeys.put(61, "selected");
-      sKeys.put(62, "showFavorites");
-      sKeys.put(63, "showTranslation");
-      sKeys.put(64, "sizeTitleText");
-      sKeys.put(65, "sizeValueContentDescription");
-      sKeys.put(66, "sizeValueText");
-      sKeys.put(67, "state");
-      sKeys.put(68, "subTitle");
-      sKeys.put(69, "subtitleItem");
-      sKeys.put(70, "time");
-      sKeys.put(71, "title");
-      sKeys.put(72, "topmargin");
-      sKeys.put(73, "totalDuration");
-      sKeys.put(74, "track");
-      sKeys.put(75, "viewmodel");
+      sKeys.put(26, "imageWidth");
+      sKeys.put(27, "inError");
+      sKeys.put(28, "inSelection");
+      sKeys.put(29, "isBanned");
+      sKeys.put(30, "isBannedParent");
+      sKeys.put(31, "isFavorite");
+      sKeys.put(32, "isLoading");
+      sKeys.put(33, "isNetwork");
+      sKeys.put(34, "isOTG");
+      sKeys.put(35, "isPresent");
+      sKeys.put(36, "isSD");
+      sKeys.put(37, "isSquare");
+      sKeys.put(38, "isTv");
+      sKeys.put(39, "item");
+      sKeys.put(40, "length");
+      sKeys.put(41, "library");
+      sKeys.put(42, "masked");
+      sKeys.put(43, "max");
+      sKeys.put(44, "media");
+      sKeys.put(45, "option");
+      sKeys.put(46, "path");
+      sKeys.put(47, "player");
+      sKeys.put(48, "playlist");
+      sKeys.put(49, "progress");
+      sKeys.put(50, "protocol");
+      sKeys.put(51, "query");
+      sKeys.put(52, "releaseYear");
+      sKeys.put(53, "renderer");
+      sKeys.put(54, "resolution");
+      sKeys.put(55, "scaleName");
+      sKeys.put(56, "scaleType");
+      sKeys.put(57, "scanned");
+      sKeys.put(58, "searchAggregate");
+      sKeys.put(59, "seen");
+      sKeys.put(60, "selected");
+      sKeys.put(61, "showFavorites");
+      sKeys.put(62, "showTranslation");
+      sKeys.put(63, "sizeTitleText");
+      sKeys.put(64, "sizeValueContentDescription");
+      sKeys.put(65, "sizeValueText");
+      sKeys.put(66, "state");
+      sKeys.put(67, "subTitle");
+      sKeys.put(68, "subtitleItem");
+      sKeys.put(69, "time");
+      sKeys.put(70, "title");
+      sKeys.put(71, "topmargin");
+      sKeys.put(72, "totalDuration");
+      sKeys.put(73, "track");
+      sKeys.put(74, "viewmodel");
     }
   }
 
   private static class InnerLayoutIdLookup {
-    static final HashMap<String, Integer> sKeys = new HashMap<String, Integer>(75);
+    static final HashMap<String, Integer> sKeys = new HashMap<String, Integer>(74);
 
     static {
       sKeys.put("layout/about_authors_activity_0", com.dewords.pope.R.layout.about_authors_activity);
@@ -942,8 +937,8 @@ public class DataBinderMapperImpl extends DataBinderMapper {
       sKeys.put("layout/audio_browser_card_item_0", com.dewords.pope.R.layout.audio_browser_card_item);
       sKeys.put("layout/audio_browser_item_0", com.dewords.pope.R.layout.audio_browser_item);
       sKeys.put("layout/audio_browser_separator_0", com.dewords.pope.R.layout.audio_browser_separator);
-      sKeys.put("layout-land/audio_player_0", com.dewords.pope.R.layout.audio_player);
       sKeys.put("layout/audio_player_0", com.dewords.pope.R.layout.audio_player);
+      sKeys.put("layout-land/audio_player_0", com.dewords.pope.R.layout.audio_player);
       sKeys.put("layout/bookmark_item_0", com.dewords.pope.R.layout.bookmark_item);
       sKeys.put("layout/browser_item_0", com.dewords.pope.R.layout.browser_item);
       sKeys.put("layout/browser_item_separator_0", com.dewords.pope.R.layout.browser_item_separator);
@@ -968,16 +963,16 @@ public class DataBinderMapperImpl extends DataBinderMapper {
       sKeys.put("layout/dialog_widget_migration_0", com.dewords.pope.R.layout.dialog_widget_migration);
       sKeys.put("layout/directory_browser_0", com.dewords.pope.R.layout.directory_browser);
       sKeys.put("layout/equalizer_0", com.dewords.pope.R.layout.equalizer);
+      sKeys.put("layout/grant_access_0", com.dewords.pope.R.layout.grant_access);
       sKeys.put("layout/header_media_list_activity_0", com.dewords.pope.R.layout.header_media_list_activity);
       sKeys.put("layout/history_item_0", com.dewords.pope.R.layout.history_item);
       sKeys.put("layout/history_item_card_0", com.dewords.pope.R.layout.history_item_card);
       sKeys.put("layout/info_activity_0", com.dewords.pope.R.layout.info_activity);
+      sKeys.put("layout/item_permission_0", com.dewords.pope.R.layout.item_permission);
       sKeys.put("layout/item_renderer_0", com.dewords.pope.R.layout.item_renderer);
       sKeys.put("layout/library_item_0", com.dewords.pope.R.layout.library_item);
       sKeys.put("layout/license_activity_0", com.dewords.pope.R.layout.license_activity);
       sKeys.put("layout/ml_wizard_activity_0", com.dewords.pope.R.layout.ml_wizard_activity);
-      sKeys.put("layout/moviepedia_activity_0", com.dewords.pope.R.layout.moviepedia_activity);
-      sKeys.put("layout/moviepedia_item_0", com.dewords.pope.R.layout.moviepedia_item);
       sKeys.put("layout/mrl_card_item_0", com.dewords.pope.R.layout.mrl_card_item);
       sKeys.put("layout/mrl_dummy_item_0", com.dewords.pope.R.layout.mrl_dummy_item);
       sKeys.put("layout/mrl_item_0", com.dewords.pope.R.layout.mrl_item);
@@ -994,7 +989,6 @@ public class DataBinderMapperImpl extends DataBinderMapper {
       sKeys.put("layout/preferences_search_activity_0", com.dewords.pope.R.layout.preferences_search_activity);
       sKeys.put("layout/search_activity_0", com.dewords.pope.R.layout.search_activity);
       sKeys.put("layout/search_item_0", com.dewords.pope.R.layout.search_item);
-      sKeys.put("layout/send_crash_activity_0", com.dewords.pope.R.layout.send_crash_activity);
       sKeys.put("layout/simple_item_0", com.dewords.pope.R.layout.simple_item);
       sKeys.put("layout/subtitle_download_item_0", com.dewords.pope.R.layout.subtitle_download_item);
       sKeys.put("layout/subtitle_downloader_dialog_0", com.dewords.pope.R.layout.subtitle_downloader_dialog);

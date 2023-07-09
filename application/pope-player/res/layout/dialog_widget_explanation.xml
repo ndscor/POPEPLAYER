@@ -159,12 +159,12 @@
                     android:id="@+id/imageView19"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:tint="?attr/colorPrimary"
-                    android:layout_marginStart="16dp"
+                android:layout_marginStart="16dp"
                     app:layout_constraintBottom_toBottomOf="@+id/widget_explanation_step3_text"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="@+id/widget_explanation_step3_text"
-                    app:srcCompat="@drawable/ic_theme" />
+                    app:srcCompat="@drawable/ic_theme"
+                app:tint="?attr/colorPrimary" />
 
             <TextView
                     android:id="@+id/widget_explanation_step3_text"

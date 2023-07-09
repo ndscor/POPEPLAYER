@@ -40,7 +40,7 @@ import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.constraintlayout.widget.ConstraintSet
 import androidx.fragment.app.FragmentActivity
 import androidx.transition.TransitionManager
-import com.dewords.poperesources.ACTIVITY_RESULT_PREFERENCES
+import org.videolan.resources.ACTIVITY_RESULT_PREFERENCES
 import com.dewords.pope.R
 import com.dewords.pope.gui.BaseActivity
 import com.dewords.pope.gui.SecondaryActivity

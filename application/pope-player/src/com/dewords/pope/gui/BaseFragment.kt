@@ -19,7 +19,7 @@ import kotlinx.coroutines.Job
 import kotlinx.coroutines.delay
 import org.videolan.medialibrary.interfaces.media.MediaWrapper
 import org.videolan.medialibrary.media.MediaLibraryItem
-import com.dewords.poperesources.TAG_ITEM
+import org.videolan.resources.TAG_ITEM
 import org.videolan.tools.setGone
 import com.dewords.pope.R
 import com.dewords.pope.gui.browser.KEY_IN_MEDIALIB

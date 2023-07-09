@@ -41,9 +41,9 @@ import org.videolan.medialibrary.Tools
 import org.videolan.medialibrary.interfaces.Medialibrary
 import org.videolan.medialibrary.interfaces.media.MediaWrapper
 import org.videolan.medialibrary.interfaces.media.Playlist
-import com.dewords.poperesources.*
-import com.dewords.poperesources.util.getFromMl
-import com.dewords.poperesources.util.parcelable
+import org.videolan.resources.*
+import org.videolan.resources.util.getFromMl
+import org.videolan.resources.util.parcelable
 import org.videolan.tools.Settings
 import org.videolan.tools.removeQuery
 import org.videolan.tools.retrieveParent

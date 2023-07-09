@@ -32,8 +32,8 @@ import android.text.TextWatcher
 import android.view.View
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.dewords.poperesources.AppContextProvider
-import com.dewords.poperesources.buildPkgString
+import org.videolan.resources.AppContextProvider
+import org.videolan.resources.buildPkgString
 import org.videolan.tools.LocaleUtils
 import org.videolan.tools.setGone
 import com.dewords.pope.databinding.PreferencesSearchActivityBinding

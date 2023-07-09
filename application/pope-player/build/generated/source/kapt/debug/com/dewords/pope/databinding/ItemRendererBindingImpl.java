@@ -21,7 +21,7 @@ public class ItemRendererBindingImpl extends ItemRendererBinding implements com.
     private final androidx.constraintlayout.widget.ConstraintLayout mboundView0;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback16;
+    private final android.view.View.OnClickListener mCallback15;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -39,7 +39,7 @@ public class ItemRendererBindingImpl extends ItemRendererBinding implements com.
         this.rendererName.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback16 = new com.dewords.pope.generated.callback.OnClickListener(this, 1);
+        mCallback15 = new com.dewords.pope.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -124,7 +124,7 @@ public class ItemRendererBindingImpl extends ItemRendererBinding implements com.
         if ((dirtyFlags & 0x4L) != 0) {
             // api target 1
 
-            this.rendererName.setOnClickListener(mCallback16);
+            this.rendererName.setOnClickListener(mCallback15);
         }
         if ((dirtyFlags & 0x5L) != 0) {
             // api target 1

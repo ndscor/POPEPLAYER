@@ -30,7 +30,7 @@ import androidx.preference.MultiSelectListPreference
 import androidx.preference.Preference
 import androidx.preference.PreferenceFragmentCompat
 import androidx.preference.PreferenceGroup
-import com.dewords.poperesources.util.parcelable
+import org.videolan.resources.util.parcelable
 import com.dewords.pope.R
 import com.dewords.pope.gui.preferences.hack.MultiSelectListPreferenceDialogFragmentCompat
 import com.dewords.pope.gui.preferences.search.PreferenceItem

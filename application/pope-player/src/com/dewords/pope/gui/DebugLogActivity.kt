@@ -31,7 +31,7 @@ import androidx.core.content.getSystemService
 import androidx.fragment.app.FragmentActivity
 import com.google.android.material.snackbar.Snackbar
 import org.videolan.libvlc.util.AndroidUtil
-import com.dewords.poperesources.AndroidDevices
+import org.videolan.resources.AndroidDevices
 import com.dewords.pope.DebugLogService
 import com.dewords.pope.R
 import com.dewords.pope.gui.helpers.UiTools

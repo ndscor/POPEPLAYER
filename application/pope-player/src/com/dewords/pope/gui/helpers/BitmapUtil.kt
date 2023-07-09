@@ -41,7 +41,7 @@ import androidx.vectordrawable.graphics.drawable.VectorDrawableCompat
 import com.dewords.pope.BuildConfig
 import org.videolan.libvlc.util.AndroidUtil
 import org.videolan.medialibrary.interfaces.media.MediaWrapper
-import com.dewords.poperesources.AppContextProvider
+import org.videolan.resources.AppContextProvider
 import org.videolan.tools.BitmapCache
 import org.videolan.tools.dp
 import org.videolan.tools.removeFileScheme

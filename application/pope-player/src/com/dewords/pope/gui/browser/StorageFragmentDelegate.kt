@@ -32,7 +32,7 @@ import androidx.collection.SimpleArrayMap
 import androidx.fragment.app.FragmentActivity
 import org.videolan.medialibrary.interfaces.EntryPointsEventsCb
 import org.videolan.medialibrary.interfaces.Medialibrary
-import com.dewords.poperesources.util.canReadStorage
+import org.videolan.resources.util.canReadStorage
 import org.videolan.tools.*
 import com.dewords.pope.MediaParsingService
 import com.dewords.pope.gui.SecondaryActivity

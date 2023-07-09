@@ -12,6 +12,17 @@
 
     </style>
 
+    <declare-styleable name="PermissionItem">
+        <attr name="permissionTitle" format="string" localization="suggested" />
+        <attr name="permissionTitleSubTitle" format="string" localization="suggested" />
+        <attr name="permissionTitleNumber" format="string" />
+        <attr name="permissionIcon" format="reference" />
+        <attr name="permissionButtonTitle" format="string" localization="suggested" />
+    </declare-styleable>
+
+
+
+
     <style name="Theme.VLC.Apearance" parent="Theme.MaterialComponents.Light.NoActionBar">
         <item name="marginTopContent">50dp</item>
         <item name="toolbar_popup_style">@style/ThemeOverlay.MaterialComponents</item>
@@ -24,6 +35,8 @@
         <item name="preferenceTheme">@style/VLCPreferenceTheme.Light</item>
         <item name="textInputStyle">@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox
         </item>
+
+        <item name="policy_icon">@drawable/outline_info_24</item>
 
         <item name="colorPrimary">@color/black</item>
         <item name="colorPrimaryDark">@color/black</item>
@@ -171,6 +184,7 @@
         <item name="marginTopContent">50dp</item>
         <item name="toolbar_popup_style">@style/ThemeOverlay.MaterialComponents.Dark</item>
         <item name="popeback">@color/pope_theme</item>
+        <item name="policy_icon">@drawable/outline_info_24_w</item>
 
         <item name="android:gridViewStyle">@style/Theme.VLC.List</item>
         <item name="android:expandableListViewStyle">@style/Theme.VLC.List</item>

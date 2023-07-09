@@ -37,8 +37,8 @@ import com.dewords.pope.BuildConfig
 import kotlinx.coroutines.launch
 import org.videolan.libvlc.util.AndroidUtil
 import org.videolan.libvlc.util.HWDecoderUtil
-import com.dewords.poperesources.AndroidDevices
-import com.dewords.poperesources.VLCInstance
+import org.videolan.resources.AndroidDevices
+import org.videolan.resources.VLCInstance
 import org.videolan.tools.AUDIO_DUCKING
 import org.videolan.tools.LocaleUtils
 import org.videolan.tools.RESUME_PLAYBACK
@@ -49,7 +49,7 @@ import com.dewords.pope.gui.browser.FilePickerActivity
 import com.dewords.pope.gui.browser.KEY_PICKER_TYPE
 import com.dewords.pope.gui.helpers.UiTools
 import com.dewords.pope.gui.helpers.restartMediaPlayer
-import com.dewords.pope.isVLC4
+import org.videolan.vlc.isVLC4
 import com.dewords.pope.media.MediaUtils
 import com.dewords.pope.providers.PickerType
 import com.dewords.pope.util.LocaleUtil

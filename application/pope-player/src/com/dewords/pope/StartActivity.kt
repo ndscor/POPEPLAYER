@@ -31,34 +31,36 @@ import android.os.Build
 import android.os.Bundle
 import android.provider.MediaStore
 import android.util.Log
+import android.widget.Toast
 import androidx.core.net.toUri
 import androidx.fragment.app.FragmentActivity
 import androidx.lifecycle.lifecycleScope
+import com.dewords.pope.BuildConfig.BASE64_PUBLIC_KEY
 import kotlinx.coroutines.CoroutineStart
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import org.videolan.libvlc.util.AndroidUtil
 import org.videolan.medialibrary.MLServiceLocator
-import com.dewords.poperesources.ACTION_PLAY_FROM_SEARCH
-import com.dewords.poperesources.ACTION_SEARCH_GMS
-import com.dewords.poperesources.ACTION_VIEW_ARC
-import com.dewords.poperesources.AndroidDevices
-import com.dewords.poperesources.AppContextProvider
-import com.dewords.poperesources.EXTRA_FIRST_RUN
-import com.dewords.poperesources.EXTRA_PATH
-import com.dewords.poperesources.EXTRA_SEARCH_BUNDLE
-import com.dewords.poperesources.EXTRA_TARGET
-import com.dewords.poperesources.EXTRA_UPGRADE
-import com.dewords.poperesources.MOBILE_MAIN_ACTIVITY
-import com.dewords.poperesources.MOBILE_SEARCH_ACTIVITY
-import com.dewords.poperesources.PREF_FIRST_RUN
-import com.dewords.poperesources.TV_MAIN_ACTIVITY
-import com.dewords.poperesources.TV_ONBOARDING_ACTIVITY
-import com.dewords.poperesources.TV_SEARCH_ACTIVITY
-import com.dewords.poperesources.util.getFromMl
-import com.dewords.poperesources.util.launchForeground
-import com.dewords.poperesources.util.startMedialibrary
+import org.videolan.resources.ACTION_PLAY_FROM_SEARCH
+import org.videolan.resources.ACTION_SEARCH_GMS
+import org.videolan.resources.ACTION_VIEW_ARC
+import org.videolan.resources.AndroidDevices
+import org.videolan.resources.AppContextProvider
+import org.videolan.resources.EXTRA_FIRST_RUN
+import org.videolan.resources.EXTRA_PATH
+import org.videolan.resources.EXTRA_SEARCH_BUNDLE
+import org.videolan.resources.EXTRA_TARGET
+import org.videolan.resources.EXTRA_UPGRADE
+import org.videolan.resources.MOBILE_MAIN_ACTIVITY
+import org.videolan.resources.MOBILE_SEARCH_ACTIVITY
+import org.videolan.resources.PREF_FIRST_RUN
+import org.videolan.resources.TV_MAIN_ACTIVITY
+import org.videolan.resources.TV_ONBOARDING_ACTIVITY
+import org.videolan.resources.TV_SEARCH_ACTIVITY
+import org.videolan.resources.util.getFromMl
+import org.videolan.resources.util.launchForeground
+import org.videolan.resources.util.startMedialibrary
 import org.videolan.tools.AppScope
 import org.videolan.tools.BETA_WELCOME
 import org.videolan.tools.KEY_CURRENT_SETTINGS_VERSION
@@ -77,13 +79,25 @@ import com.dewords.pope.util.FileUtils
 import com.dewords.pope.util.Permissions
 import com.dewords.pope.util.Util
 import com.dewords.pope.util.checkWatchNextId
+import com.google.android.vending.licensing.*
 import videolan.org.commontools.TV_CHANNEL_PATH_APP
 import videolan.org.commontools.TV_CHANNEL_PATH_VIDEO
 import videolan.org.commontools.TV_CHANNEL_QUERY_VIDEO_ID
 import videolan.org.commontools.TV_CHANNEL_SCHEME
+import kotlin.system.exitProcess
 
 private const val SEND_CRASH_RESULT = 0
 private const val PROPAGATE_RESULT = 1
+private lateinit var licenseCheckerCallback: LicenseCheckerCallback
+private lateinit var checker: LicenseChecker
+
+private val SALT = byteArrayOf( 22, 90, 21, 45, 11, 56, 38, 78, 77, 98, 10, 11, 68
+    ,87 , 43, 93, 99 , 20 ,33, 38)
+
+
+
+
+
 private const val TAG = "VLC/StartActivity"
 class StartActivity : FragmentActivity() {
 
@@ -114,9 +128,19 @@ class StartActivity : FragmentActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+
+        licenseCheckerCallback = MyLicenseCheckerCallback()
+
+
+        checker = LicenseChecker(
+            this,
+            ServerManagedPolicy(this, AESObfuscator(SALT, packageName, deviceId)),
+            BASE64_PUBLIC_KEY // Your public licensing key.
+        )
+        doCheck()
+
         val uiModeManager = this.getSystemService(UI_MODE_SERVICE)
-
-
         if (uiModeManager == UiModeManager.MODE_NIGHT_YES) {
             this.window.statusBarColor = 0xFFFFFF
 
@@ -136,6 +160,81 @@ class StartActivity : FragmentActivity() {
         } catch (ignored: Exception) {}
         resume()
     }
+
+
+    private fun doCheck()
+    {
+        checker.checkAccess(licenseCheckerCallback)
+    }
+
+
+    private val deviceId: String by lazy {
+        android.provider.Settings.Secure.getString(contentResolver, android.provider.Settings.Secure.ANDROID_ID);
+    }
+
+
+    private fun displayResult(result: String)
+    {
+        // TODO you can change this how the info is displayed
+        Toast.makeText(this, result, Toast.LENGTH_SHORT).show()
+    }
+
+    private inner class MyLicenseCheckerCallback : LicenseCheckerCallback
+    {
+        override fun allow(reason: Int)
+        {
+            if (isFinishing)
+            {
+                // Don't update UI if Activity is finishing.
+                return
+            }
+            // Should allow user access.
+        }
+
+        override fun applicationError(errorCode: Int)
+        {
+            // TODO handle the error your own way. Calling `dontAllow` is common.
+            dontAllow(Policy.NOT_LICENSED)
+        }
+
+        override fun dontAllow(reason: Int)
+        {
+            if (isFinishing)
+            {
+                // Don't update UI if Activity is finishing.
+                return
+            }
+            if (reason == Policy.RETRY)
+            {
+                // If the reason received from the policy is RETRY, it was probably
+                // due to a loss of connection with the service, so we should give the
+                // user a chance to retry. So show a dialog to retry.
+                // TODO handle Policy.RETRY
+            }
+            else
+            {
+                // Otherwise, the user isn't licensed to use this app.
+                // Your response should always inform the user that the application
+                // isn't licensed, but your behavior at that point can vary. You might
+                // provide the user a limited access version of your app or you can
+                // take them to Google Play to purchase the app.
+                // TODO implement goto market
+            }
+            displayResult("Not Licensed")
+            // TODO you may not abort if you have some other way to handle the fail case
+            abort()
+        }
+    }
+
+
+    private fun abort()
+    {
+        finishAffinity()
+        exitProcess(0)
+    }
+
+
+
 
     private fun resume() {
         val intent = intent

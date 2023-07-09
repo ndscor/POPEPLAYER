@@ -28,7 +28,7 @@ import org.videolan.libvlc.util.MediaBrowser
 import org.videolan.medialibrary.interfaces.Medialibrary
 import org.videolan.medialibrary.media.MediaLibraryItem
 import org.videolan.medialibrary.media.Storage
-import com.dewords.poperesources.AndroidDevices
+import org.videolan.resources.AndroidDevices
 import org.videolan.tools.livedata.LiveDataset
 import com.dewords.pope.R
 import com.dewords.pope.repository.DirectoryRepository

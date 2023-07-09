@@ -13,11 +13,11 @@ import androidx.fragment.app.commit
 import androidx.lifecycle.lifecycleScope
 import com.dewords.pope.BuildConfig
 import kotlinx.coroutines.launch
-import com.dewords.poperesources.ACTIVITY_RESULT_PREFERENCES
-import com.dewords.poperesources.EXTRA_FIRST_RUN
-import com.dewords.poperesources.EXTRA_UPGRADE
-import com.dewords.poperesources.PREF_FIRST_RUN
-import com.dewords.poperesources.util.startMedialibrary
+import org.videolan.resources.ACTIVITY_RESULT_PREFERENCES
+import org.videolan.resources.EXTRA_FIRST_RUN
+import org.videolan.resources.EXTRA_UPGRADE
+import org.videolan.resources.PREF_FIRST_RUN
+import org.videolan.resources.util.startMedialibrary
 import org.videolan.tools.*
 import com.dewords.pope.MediaParsingService
 import com.dewords.pope.R
@@ -37,6 +37,7 @@ class OnboardingActivity : AppCompatActivity(), OnboardingFragmentListener {
         setContentView(R.layout.activity_onboarding)
         showFragment(viewModel.currentFragment)
     }
+
 
     fun showFragment(fragmentName:FragmentName, backward:Boolean = false) {
         val fragment = supportFragmentManager.getFragment(Bundle(), fragmentName.name) ?:
@@ -64,7 +65,6 @@ class OnboardingActivity : AppCompatActivity(), OnboardingFragmentListener {
             replace(R.id.fragment_onboarding_placeholder, fragment, fragmentName.name)
         }
         viewModel.currentFragment = fragmentName
-        findViewById<View>(R.id.skip_button).setOnClickListener { onDone() }
         nextButton = findViewById(R.id.next_button)
         nextButton.setOnClickListener { onNext() }
     }

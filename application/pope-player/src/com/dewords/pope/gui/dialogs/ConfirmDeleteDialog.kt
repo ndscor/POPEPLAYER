@@ -37,7 +37,7 @@ import org.videolan.medialibrary.interfaces.media.Album
 import org.videolan.medialibrary.interfaces.media.MediaWrapper
 import org.videolan.medialibrary.interfaces.media.Playlist
 import org.videolan.medialibrary.media.MediaLibraryItem
-import com.dewords.poperesources.util.parcelableList
+import org.videolan.resources.util.parcelableList
 import com.dewords.pope.R
 import java.lang.IllegalStateException
 

@@ -12,7 +12,7 @@ import androidx.annotation.LayoutRes
 import androidx.lifecycle.lifecycleScope
 import com.google.android.material.bottomsheet.BottomSheetBehavior
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
-import com.dewords.poperesources.AndroidDevices
+import org.videolan.resources.AndroidDevices
 import org.videolan.tools.Settings
 import com.dewords.pope.R
 import com.dewords.pope.util.isTalkbackIsEnabled
@@ -37,7 +37,7 @@ abstract class VLCBottomSheetDialogFragment : BottomSheetDialogFragment() {
      * Apply bottom margin for Android TV
      */
     private fun applyOverscanMargin(view: View) {
-        val vm = requireActivity().resources.getDimensionPixelSize(com.dewords.poperesources.R.dimen.tv_overscan_vertical)
+        val vm = requireActivity().resources.getDimensionPixelSize(org.videolan.resources.R.dimen.tv_overscan_vertical)
         view.setPadding(view.paddingLeft, view.paddingTop, view.paddingRight, view.paddingBottom + vm)
     }
 

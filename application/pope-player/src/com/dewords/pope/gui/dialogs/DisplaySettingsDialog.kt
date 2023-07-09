@@ -40,10 +40,10 @@ import androidx.lifecycle.lifecycleScope
 import com.google.android.material.bottomsheet.BottomSheetBehavior.STATE_EXPANDED
 import kotlinx.coroutines.launch
 import org.videolan.medialibrary.interfaces.Medialibrary
-import com.dewords.poperesources.AppContextProvider
-import com.dewords.poperesources.GROUP_VIDEOS_FOLDER
-import com.dewords.poperesources.GROUP_VIDEOS_NAME
-import com.dewords.poperesources.GROUP_VIDEOS_NONE
+import org.videolan.resources.AppContextProvider
+import org.videolan.resources.GROUP_VIDEOS_FOLDER
+import org.videolan.resources.GROUP_VIDEOS_NAME
+import org.videolan.resources.GROUP_VIDEOS_NONE
 import org.videolan.tools.setGone
 import com.dewords.pope.R
 import com.dewords.pope.databinding.DialogDisplaySettingsBinding

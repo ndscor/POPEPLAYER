@@ -49,12 +49,7 @@
         android:title="@string/add_to_playlist"
             android:icon="@drawable/ic_am_addtoplaylist"
             app:showAsAction="ifRoom" />
-    <item
-        android:id="@+id/action_mode_audio_delete"
-        android:title="@string/delete"
-            android:icon="@drawable/ic_am_trash"
-        android:visible="false"
-            app:showAsAction="ifRoom" />
+
     <group android:id="@+id/phone_only" >
         <item
             android:id="@+id/action_mode_audio_set_song"

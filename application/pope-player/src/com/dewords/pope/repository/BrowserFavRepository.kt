@@ -28,14 +28,14 @@ import androidx.lifecycle.asLiveData
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import org.videolan.medialibrary.interfaces.media.MediaWrapper
-import com.dewords.poperesources.AppContextProvider
-import com.dewords.poperesources.TYPE_LOCAL_FAV
-import com.dewords.poperesources.TYPE_NETWORK_FAV
+import org.videolan.resources.AppContextProvider
+import org.videolan.resources.TYPE_LOCAL_FAV
+import org.videolan.resources.TYPE_NETWORK_FAV
 import org.videolan.tools.NetworkMonitor
 import org.videolan.tools.SingletonHolder
-import com.dewords.pope.database.BrowserFavDao
-import com.dewords.pope.database.MediaDatabase
-import com.dewords.pope.mediadb.models.BrowserFav
+import org.videolan.vlc.database.BrowserFavDao
+import org.videolan.vlc.database.MediaDatabase
+import org.videolan.vlc.mediadb.models.BrowserFav
 import com.dewords.pope.util.Permissions
 import com.dewords.pope.util.convertFavorites
 import java.util.*
@@ -93,5 +93,6 @@ class BrowserFavRepository(private val browserFavDao: BrowserFavDao) {
         }
     }
 
-    companion object : SingletonHolder<BrowserFavRepository, Context>({ BrowserFavRepository(MediaDatabase.getInstance(it).browserFavDao()) })
+    companion object : SingletonHolder<BrowserFavRepository, Context>({ BrowserFavRepository(
+        MediaDatabase.getInstance(it).browserFavDao()) })
 }

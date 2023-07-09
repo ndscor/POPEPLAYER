@@ -2,7 +2,7 @@ package com.dewords.pope.gui.onboarding
 
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.lifecycle.ViewModel
-import com.dewords.poperesources.AndroidDevices
+import org.videolan.resources.AndroidDevices
 
 class OnboardingViewModel : ViewModel() {
     var permissionAlreadyAsked: Boolean = false

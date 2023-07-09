@@ -340,7 +340,7 @@
                                 <PersistentState>
                                   <option name="values">
                                     <map>
-                                      <entry key="url" value="file:$USER_HOME$/Library/Android/sdk/icons/material/materialiconsround/info/round_info_24.xml" />
+                                      <entry key="url" value="file:$USER_HOME$/Library/Android/sdk/icons/material/materialiconsoutlined/info/outline_info_24.xml" />
                                     </map>
                                   </option>
                                 </PersistentState>
@@ -350,8 +350,9 @@
                         </option>
                         <option name="values">
                           <map>
+                            <entry key="autoMirrored" value="true" />
                             <entry key="color" value="ffffff" />
-                            <entry key="outputName" value="round_info_24" />
+                            <entry key="outputName" value="outline_info_24_w" />
                           </map>
                         </option>
                       </PersistentState>

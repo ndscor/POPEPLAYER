@@ -31,16 +31,15 @@ import org.videolan.libvlc.interfaces.IMedia
 import org.videolan.medialibrary.interfaces.media.MediaWrapper
 import org.videolan.tools.IOScopedObject
 import org.videolan.tools.SingletonHolder
-import com.dewords.pope.database.MediaDatabase
-import com.dewords.pope.database.SlaveDao
-import com.dewords.pope.mediadb.models.Slave
+import org.videolan.vlc.database.MediaDatabase
+import org.videolan.vlc.database.SlaveDao
 
 
-class SlaveRepository(private val slaveDao:SlaveDao) : IOScopedObject() {
+class SlaveRepository(private val slaveDao: SlaveDao) : IOScopedObject() {
 
     fun saveSlave(mediaPath: String, type: Int, priority: Int, uriString: String): Job {
         return launch {
-            slaveDao.insert(com.dewords.pope.mediadb.models.Slave(mediaPath, type, priority, uriString))
+            slaveDao.insert(org.videolan.vlc.mediadb.models.Slave(mediaPath, type, priority, uriString))
         }
     }
 
@@ -55,7 +54,7 @@ class SlaveRepository(private val slaveDao:SlaveDao) : IOScopedObject() {
             val slaves = try {
                 slaveDao.get(mrl)
             } catch (e: SQLiteException) {
-                emptyList<com.dewords.pope.mediadb.models.Slave>()
+                emptyList<org.videolan.vlc.mediadb.models.Slave>()
             }
             val mediaSlaves = slaves.map {
                 var uri = it.uri

@@ -10,7 +10,7 @@ import androidx.core.net.toUri
 import androidx.recyclerview.widget.RecyclerView
 import org.videolan.medialibrary.interfaces.media.MediaWrapper
 import org.videolan.medialibrary.media.MediaLibraryItem
-import com.dewords.poperesources.AndroidDevices
+import org.videolan.resources.AndroidDevices
 import com.dewords.pope.R
 import com.dewords.pope.viewmodels.browser.IPathOperationDelegate
 import com.dewords.pope.viewmodels.browser.PathOperationDelegate

@@ -30,7 +30,7 @@ import com.squareup.moshi.Moshi
 import com.squareup.moshi.Types
 import org.videolan.libvlc.interfaces.IMedia
 import org.videolan.libvlc.MediaPlayer
-import com.dewords.poperesources.AppContextProvider
+import org.videolan.resources.AppContextProvider
 import org.videolan.tools.firstLetterUppercase
 import com.dewords.pope.R
 import java.util.*

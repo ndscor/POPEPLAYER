@@ -15,7 +15,17 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2" xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation">
+    <string name="permissions_denied">Permissions denied.</string>
+    <string name="action_grant">Grant</string>
+    <string name="action_settings">"Settings"</string>
+    <string name="grant_access">Grant access</string>
 
+
+    <string name="bluetooth_title">Nearby devices</string>
+    <string name="permission_title">Storage Access</string>
+    <string name="permission_summary">Pope Player needs this permission to access your device storage for playing music &amp; Video</string>
+    <string name="music_title">Explore Music Files</string>
+    <string name="music_summary">Pope Player needs this permission to access your device storage to access &amp; playing music files</string>
     <!-- Menu item title that compress the selected documents [CHAR LIMIT=24] -->
     <string name="menu_compress" translatable="false">Compress</string>
     <!-- Menu item title that uncompress the selected documents [CHAR LIMIT=24] -->

@@ -40,7 +40,7 @@ import org.videolan.medialibrary.MLServiceLocator
 import org.videolan.medialibrary.interfaces.media.MediaWrapper
 import org.videolan.medialibrary.media.MediaLibraryItem
 import org.videolan.medialibrary.media.Storage
-import com.dewords.poperesources.CTX_CUSTOM_REMOVE
+import org.videolan.resources.CTX_CUSTOM_REMOVE
 import org.videolan.tools.NetworkMonitor
 import org.videolan.tools.setGone
 import org.videolan.tools.stripTrailingSlash

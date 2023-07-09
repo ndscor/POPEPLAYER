@@ -5,7 +5,7 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import org.videolan.medialibrary.interfaces.media.MediaWrapper
 import org.videolan.medialibrary.media.MediaLibraryItem
-import com.dewords.poperesources.AppContextProvider
+import org.videolan.resources.AppContextProvider
 import com.dewords.pope.media.MediaUtils
 import java.util.*
 

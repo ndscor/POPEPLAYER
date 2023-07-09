@@ -34,7 +34,7 @@ import android.util.Log
 import androidx.core.content.getSystemService
 import com.dewords.pope.BuildConfig
 import org.videolan.libvlc.util.AndroidUtil
-import com.dewords.poperesources.AndroidDevices
+import org.videolan.resources.AndroidDevices
 import org.videolan.tools.AUDIO_DUCKING
 import org.videolan.tools.RESUME_PLAYBACK
 import com.dewords.pope.PlaybackService

@@ -35,7 +35,7 @@ import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import org.videolan.libvlc.Dialog
 import org.videolan.medialibrary.interfaces.media.MediaWrapper
-import com.dewords.poperesources.CTX_FAV_ADD
+import org.videolan.resources.CTX_FAV_ADD
 import org.videolan.tools.NetworkMonitor
 import com.dewords.pope.R
 import com.dewords.pope.gui.SecondaryActivity

@@ -17,7 +17,7 @@ import androidx.recyclerview.widget.RecyclerView
 import org.videolan.medialibrary.interfaces.Medialibrary
 import org.videolan.medialibrary.media.MediaLibraryItem
 import org.videolan.medialibrary.media.SearchAggregate
-import com.dewords.poperesources.util.getFromMl
+import org.videolan.resources.util.getFromMl
 import org.videolan.tools.Settings
 import com.dewords.pope.R
 import com.dewords.pope.databinding.SearchActivityBinding

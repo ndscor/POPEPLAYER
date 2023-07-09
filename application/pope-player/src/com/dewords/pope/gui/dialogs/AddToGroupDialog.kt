@@ -36,8 +36,8 @@ import org.videolan.medialibrary.interfaces.media.MediaWrapper
 import org.videolan.medialibrary.interfaces.media.VideoGroup
 import org.videolan.medialibrary.media.DummyItem
 import org.videolan.medialibrary.media.MediaLibraryItem
-import com.dewords.poperesources.DUMMY_NEW_GROUP
-import com.dewords.poperesources.util.parcelableArray
+import org.videolan.resources.DUMMY_NEW_GROUP
+import org.videolan.resources.util.parcelableArray
 import org.videolan.tools.AppScope
 import org.videolan.tools.CoroutineContextProvider
 import org.videolan.tools.DependencyProvider

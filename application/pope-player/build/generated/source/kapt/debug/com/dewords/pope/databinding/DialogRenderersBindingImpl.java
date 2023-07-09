@@ -22,7 +22,7 @@ public class DialogRenderersBindingImpl extends DialogRenderersBinding implement
     private final androidx.constraintlayout.widget.ConstraintLayout mboundView0;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback13;
+    private final android.view.View.OnClickListener mCallback12;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -41,7 +41,7 @@ public class DialogRenderersBindingImpl extends DialogRenderersBinding implement
         this.renderersDisconnect.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback13 = new com.dewords.pope.generated.callback.OnClickListener(this, 1);
+        mCallback12 = new com.dewords.pope.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -103,7 +103,7 @@ public class DialogRenderersBindingImpl extends DialogRenderersBinding implement
         if ((dirtyFlags & 0x2L) != 0) {
             // api target 1
 
-            this.renderersDisconnect.setOnClickListener(mCallback13);
+            this.renderersDisconnect.setOnClickListener(mCallback12);
         }
     }
     // Listener Stub Implementations

@@ -19,7 +19,7 @@ public class PlaylistItemBindingImpl extends PlaylistItemBinding implements com.
     // views
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback17;
+    private final android.view.View.OnClickListener mCallback16;
     // values
     // listeners
     private OnClickListenerImpl mHolderOnMoveUpClickAndroidViewViewOnClickListener;
@@ -57,7 +57,7 @@ public class PlaylistItemBindingImpl extends PlaylistItemBinding implements com.
         this.tipsOverlay.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback17 = new com.dewords.pope.generated.callback.OnClickListener(this, 1);
+        mCallback16 = new com.dewords.pope.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -269,7 +269,7 @@ public class PlaylistItemBindingImpl extends PlaylistItemBinding implements com.
             // api target 1
 
             com.dewords.pope.gui.helpers.UiToolsKt.setEllipsizeModeByPref(this.audioItemTitle, true);
-            this.selector.setOnClickListener(mCallback17);
+            this.selector.setOnClickListener(mCallback16);
         }
         if ((dirtyFlags & 0x60L) != 0) {
             // api target 1

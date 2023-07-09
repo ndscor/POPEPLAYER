@@ -148,10 +148,7 @@ class BookmarkListDelegate(val activity: FragmentActivity, val service: Playback
                     }
                     true
                 }
-                R.id.bookmark_delete -> {
-                    bookmarkModel.delete(bookmark)
-                    true
-                }
+
                 else -> false
             }
         }

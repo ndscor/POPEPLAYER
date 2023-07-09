@@ -35,7 +35,7 @@ import androidx.annotation.MainThread
 import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.RecyclerView
 import org.videolan.medialibrary.interfaces.media.Bookmark
-import com.dewords.poperesources.UPDATE_PAYLOAD
+import org.videolan.resources.UPDATE_PAYLOAD
 import org.videolan.tools.Settings
 import com.dewords.pope.R
 import com.dewords.pope.databinding.BookmarkItemBinding

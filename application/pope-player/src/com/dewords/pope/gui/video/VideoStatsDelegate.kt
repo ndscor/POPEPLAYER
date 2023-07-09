@@ -40,7 +40,7 @@ import androidx.core.content.ContextCompat
 import androidx.core.widget.NestedScrollView
 import org.videolan.libvlc.Media
 import org.videolan.libvlc.interfaces.IMedia
-import com.dewords.liveplotgraph.LineGraph
+import org.videolan.liveplotgraph.LineGraph
 import com.dewords.pope.BuildConfig
 import org.videolan.tools.dp
 import org.videolan.tools.readableSize
@@ -48,7 +48,7 @@ import com.dewords.pope.R
 import com.dewords.pope.databinding.PlayerHudBinding
 import com.dewords.pope.gui.helpers.UiTools.isTablet
 import com.dewords.pope.util.LocaleUtil
-import com.dewords.pope.getAllTracks
+import org.videolan.vlc.getAllTracks
 
 class VideoStatsDelegate(private val player: VideoPlayerActivity, val scrolling: () -> Unit, val idle: () -> Unit) {
     lateinit var container: ConstraintLayout
