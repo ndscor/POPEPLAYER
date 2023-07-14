@@ -99,15 +99,7 @@ open class MainActivity : ContentActivity(),
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         Util.checkCpuCompatibility(this)
-        licenseCheckerCallback = MyLicenseCheckerCallback()
 
-
-         checker = LicenseChecker(
-            this,
-            ServerManagedPolicy(this, AESObfuscator(SALT, packageName, deviceId)),
-            BuildConfig.BASE64_PUBLIC_KEY // Your public licensing key.
-        )
-        doCheck()
 
         setContentView(R.layout.main)
 

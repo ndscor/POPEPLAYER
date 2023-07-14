@@ -130,15 +130,6 @@ class StartActivity : FragmentActivity() {
         super.onCreate(savedInstanceState)
 
 
-        licenseCheckerCallback = MyLicenseCheckerCallback()
-
-
-        checker = LicenseChecker(
-            this,
-            ServerManagedPolicy(this, AESObfuscator(SALT, packageName, deviceId)),
-            BASE64_PUBLIC_KEY // Your public licensing key.
-        )
-        doCheck()
 
         val uiModeManager = this.getSystemService(UI_MODE_SERVICE)
         if (uiModeManager == UiModeManager.MODE_NIGHT_YES) {
